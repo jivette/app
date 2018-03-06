@@ -1,0 +1,55 @@
+// Styles for all of the user pages:
+// Login, Signup, Support
+ $redLight: #ff6444;
+ $yellowLight: #00ad99;
+ $blueLight: #00ada9;
+
+page-user {
+    background: #eaeadd !important;
+
+    
+    
+    ion-content {
+      background: $redLight !important; 
+          ion-col {
+              width: 100%;
+              text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              button {
+                width: 50% !important;
+         
+                color: #fff;
+                background-color: #f53d3d05 !important;
+                border: 2px solid white;
+                font-weight: bold;
+              }
+          }
+    }
+
+  .logo {
+    padding: 20px 0;
+    min-height: 45vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    .logo-cont {
+        background: #e4e4e4;
+        border-radius: 250px;
+        padding: 40px 20px 0px;
+        overflow: hidden; 
+    }
+
+    img {
+      max-width: 150px;
+      margin-bottom: -10px
+    }
+  }
+
+  .list {
+    margin-bottom: 0;
+  }
+}

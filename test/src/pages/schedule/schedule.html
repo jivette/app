@@ -1,0 +1,44 @@
+
+<ion-content>
+  <global-header></global-header>
+
+  <ion-row class="avatar-square">
+    <img src="assets/img/habla-el.gif"/>
+  </ion-row>
+
+  <ion-row class="btn-factura">
+    <button ion-button icon-only color="danger">  
+      Pendientes
+    </button>
+    <button ion-button icon-only>  
+      Canceladas
+    </button>
+  </ion-row>
+
+  <ion-scroll scrollY="true" class="list-bill">
+    <ion-row sticky ion-item *ngFor="let factura of facturas" class="item-factura">
+        <ion-row class="buton-event">
+          <ion-icon ios="ios-create" md="md-create" (click)="editBill()" ></ion-icon>
+          <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+        </ion-row>
+        <ion-row class="content-factura" (click)="itemTapped(factura)">
+          <ion-row>
+            <b>{{ factura.name }}</b>
+          </ion-row>
+          <ion-row>
+            {{ factura.descripcion }}
+          </ion-row>
+          <ion-row class="price">
+            Q{{ factura.precio }}
+          </ion-row>
+        </ion-row>
+    </ion-row>  
+  </ion-scroll>
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="createBill()">   
+      <ion-icon ios="ios-add" md="md-add"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,54 @@
+
+page-factura-edit {
+
+	/*  background-image: url(../assets/img/bg.png);
+    	z-index: webkit-background-image: url(../assets/img/bg.png);
+    	background-size: 100% 100%;
+  	*/
+
+  	ion-content {
+	    background-repeat: no-repeat !important;
+	    background-color: $blueLight !important;
+  	}
+
+
+    .factura {
+    	width: 90vw;
+    	height: 80vh;
+    	margin-top: 10vh;
+    	margin-left: 5vw;
+        background-image: url(../assets/img/factura.png);
+        -webkit-background-image: url(../assets/img/factura.png);
+        background-size: 100% 100%;
+  		background-repeat: no-repeat !important;
+  		position: relative;
+    }
+
+
+	form.ng-untouched.ng-pristine.ng-valid {
+	    width: 70vw;
+	    margin-left: 10vw;
+	    position: absolute;
+	    height: 300px;
+	    top: 50%;
+	    margin-top: -150px;
+		
+		ion-input{
+			height: 40px !important;
+		}
+	}
+
+    .tarjetas {
+	    width: 100px;
+	    height: 110px;
+	    margin-left: 5vw;
+	    background-image: url(../assets/img/tarjetas.png);
+	    -webkit-background-image: url(../assets/img/tarjetas.png);
+	    background-size: 100% 100%;
+	    background-repeat: no-repeat !important;
+	    position: fixed;
+	    bottom: 0;
+	    left: 0;
+    }
+
+}
