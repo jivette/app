@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { AlertController, App, FabContainer, ItemSliding, List, ModalController, NavController, ToastController, LoadingController, Refresher } from 'ionic-angular';
+import { /*AlertController,*/ App,/* FabContainer, ItemSliding,*/ List,/* ModalController, */NavController/*, ToastController, LoadingController, Refresher */} from 'ionic-angular';
 
 /*
   To learn how to use third party libs in an
@@ -8,17 +8,17 @@ import { AlertController, App, FabContainer, ItemSliding, List, ModalController,
 */
 // import moment from 'moment';
 
-import { ConferenceData } from '../../providers/conference-data';
-import { UserData } from '../../providers/user-data';
+//import { ConferenceData } from '../../providers/conference-data';
+//import { UserData } from '../../providers/user-data';
 
-import { SessionDetailPage } from '../session-detail/session-detail';
-import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
+//import { SessionDetailPage } from '../session-detail/session-detail';
+//import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 import { FacturaDetailPage } from '../factura-detail/factura-detail';
 import { FacturaCreatePage } from '../factura-create/factura-create';
 import { FacturaEditPage } from '../factura-edit/factura-edit';
 
 import { FACTURAS } from '../mock-facturas';
-
+import { UserService } from '../../providers/user-service/user-service';
 
 @Component({
   selector: 'page-schedule',
@@ -29,32 +29,49 @@ export class SchedulePage {
   // @ViewChild('scheduleList') gets a reference to the list
   // with the variable #scheduleList, `read: List` tells it to return
   // the List and not a reference to the element
+  getfacturas: any[] = [];
+
   @ViewChild('scheduleList', { read: List }) scheduleList: List;
     facturas = FACTURAS;
 
-  dayIndex = 0;
+  /*dayIndex = 0;
   queryText = '';
   segment = 'all';
   excludeTracks: any = [];
   shownSessions: any = [];
   groups: any = [];
-  confDate: string;
+  confDate: string;*/
 
   constructor(
-    public alertCtrl: AlertController,
+   // public alertCtrl: AlertController,
     public app: App,
-    public loadingCtrl: LoadingController,
-    public modalCtrl: ModalController,
+  //  public loadingCtrl: LoadingController,
+  //  public modalCtrl: ModalController,
     public navCtrl: NavController,
-    public toastCtrl: ToastController,
-    public confData: ConferenceData,
-    public user: UserData,
+    public userService: UserService
+
+ //   public toastCtrl: ToastController,
+ //   public confData: ConferenceData,
+  //  public user: UserData,
   ) {
 
 
   }
 
   ionViewDidLoad() {
+    this.userService.getUsers()
+      .subscribe(
+        (data) => { // Success
+          this.getfacturas = data['results'];
+        },
+        (error) => {
+          console.error(error);
+        }
+      )
+  }
+
+
+  /*ionViewDidLoad() {
     this.app.setTitle('Schedule');
     this.updateSchedule();
   }
@@ -176,7 +193,7 @@ export class SchedulePage {
       }, 1000);
     });
   }
-
+*/
   itemTapped(factura) {
     this.navCtrl.push(FacturaDetailPage, {
       factura: factura

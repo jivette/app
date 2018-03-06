@@ -8,7 +8,7 @@ page-factura-edit {
 
   	ion-content {
 	    background-repeat: no-repeat !important;
-	    background-color: $blueLight !important;
+	    background-color: $greyLight !important;
   	}
 
 
@@ -25,7 +25,7 @@ page-factura-edit {
     }
 
 
-	form.ng-untouched.ng-pristine.ng-valid {
+	form {
 	    width: 70vw;
 	    margin-left: 10vw;
 	    position: absolute;
@@ -33,9 +33,58 @@ page-factura-edit {
 	    top: 50%;
 	    margin-top: -150px;
 		
-		ion-input{
-			height: 40px !important;
+		ion-item {
+			background: #efefef !important;
+			margin: 0 0 10px !important;
+			height: 35px !important;
+			border-radius: 5px !important;
+			font-size: 12px !important;
+			overflow: hidden !important;
+			
+			.item-inner {
+				border: 0 !important;
+			}
+
+			&.price {
+				width: 150px !important;
+				font-size: 15px !important;
+				color: black;
+				ion-input {
+					width: 80%;
+					color: black;
+					input {
+						margin: 0 !important;
+						width: 100% !important;
+					}
+				}
+			}
+
+			&.item-no-factura {
+				width: 150px !important;
+				color: $redLight;
+				font-size: 15px !important;
+				
+				ion-input {
+					width: 80%;
+				}
+			}
+
+			ion-input, ion-datetime{
+						
+				&.no-factura {
+					color: $redLight;
+				}
+			}
+		
 		}
+		.button-ios {
+			background-color: $redLight !important; 
+			width: 150px;
+			height: 40px;
+			float: right;
+			margin: 10px 0;
+		}
+
 	}
 
     .tarjetas {

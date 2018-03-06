@@ -4,37 +4,34 @@
 
   <ion-row class="factura">
 		    <form (ngSubmit)="logForm()">
-		      <ion-item>
-		        <ion-label>Todo</ion-label>
-		        <ion-input type="text" [(ngModel)]="todo.nombre_factura" name="title"></ion-input>
-	        </ion-item>
+					<img src="assets/img/claro.png" alt="">	
 	
-			<ion-list>
-			  <ion-item>
-			    <ion-label>Proveedores</ion-label>
-			    <ion-select [(ngModel)]="gaming">
-			      <ion-option value="nes">NES</ion-option>
-			      <ion-option value="n64">Nintendo64</ion-option>
-			      <ion-option value="ps">PlayStation</ion-option>
-			      <ion-option value="genesis">Sega Genesis</ion-option>
-			      <ion-option value="saturn">Sega Saturn</ion-option>
-			      <ion-option value="snes">SNES</ion-option>
-			    </ion-select>
-			  </ion-item>
-			</ion-list>		     
-	
-		      <ion-item>
+		      <ion-item class="item-no-factura">
+  		        <ion-label>NO:</ion-label>
+		          <ion-input class="no-factura" type="number" [(ngModel)]="todo.numero_factura" name="numero_factura"></ion-input>
+		      </ion-item>
+
+					<ion-item>
+						<ion-label>Nombre de factura:</ion-label>
+						<ion-input type="text" [(ngModel)]="todo.nombre_factura" name="nombre_factura"></ion-input>
+					</ion-item>
+
+					<ion-item>
 		        <ion-label>Fecha de emision:</ion-label>
-		          <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="todo.fecha_emision" name="fecha_emision"></ion-datetime>
+		          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="todo.fecha_emision" name="fecha_emision"></ion-datetime>
 		      </ion-item>
 
 		      <ion-item>
 		        <ion-label>Fecha de pago:</ion-label>
-		          <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="todo.fecha_pago" name="fecha_pago"></ion-datetime>
+		          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="todo.fecha_pago" name="fecha_pago"></ion-datetime>
 		      </ion-item>
 
+					<ion-item class="price">
+						<ion-label>Monto:  Q</ion-label>
+						<ion-input type="number" [(ngModel)]="todo.monto_pagar" name="monto_pagar"></ion-input>
+					</ion-item>
 
-		      <button ion-button type="submit" block>Add Todo</button>
+		      <button ion-button type="submit" block>Recuerdame</button>
 		    </form>
 
 	  <ion-row class="tarjetas">
