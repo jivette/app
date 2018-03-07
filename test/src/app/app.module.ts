@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { NgModule/*, ErrorHandler */} from '@angular/core';
+import { HttpModule } from '@angular/http';
 
-import { IonicApp, IonicModule/*, IonicErrorHandler */} from 'ionic-angular';
+import { IonicApp, IonicModule } from 'ionic-angular';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -31,8 +32,8 @@ import { FacturaDetailPage } from '../pages/factura-detail/factura-detail';
 import { FacturaCreatePage } from '../pages/factura-create/factura-create';
 import { FacturaEditPage } from '../pages/factura-edit/factura-edit';
 
-//import { ConferenceData } from '../providers/conference-data';
-//import { UserData } from '../providers/user-data';
+import { ConferenceData } from '../providers/conference-data';
+import { UserData } from '../providers/user-data';
 
 import { GooglePlus } from '@ionic-native/google-plus';
 import { UserService } from '../providers/user-service/user-service';
@@ -62,6 +63,7 @@ import { UserService } from '../providers/user-service/user-service';
   imports: [
     BrowserModule,
     HttpClientModule,
+    HttpModule,
     IonicModule.forRoot(ConferenceApp, {}, {
       links: [
         //{ component: TabsPage, name: 'TabsPage', segment: 'tabs-page' },
@@ -106,10 +108,13 @@ import { UserService } from '../providers/user-service/user-service';
     FacturaEditPage
   ],
   providers: [
+    HttpClientModule,
     UserService,
     InAppBrowser,
     SplashScreen,
-    GooglePlus
+    GooglePlus,
+    ConferenceData,
+    UserData
   ]
 })
 export class AppModule { }

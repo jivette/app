@@ -1,5 +1,8 @@
-global-header {
-    width: 50px;
+.toolbar-background {
+    background: $blueLight;
+    border: 0 !important;
+    color:white;
+  /*  width: 50px;
     height: 120px;
     position: absolute;
     right: 0;
@@ -9,13 +12,34 @@ global-header {
     top: 0;
     padding: 15px;
     flex-direction: column;
+*/
+}
 
-    .button-ios, .button-md.activated, .button-md {
+ion-header {
+    ion-title {
+        .toolbar-title-ios {
+            color: white !important;
+        }
+    }
+
+    .button-ios, .button-md.activated, .button-md,
+    .bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {
 	    width: 40px;
 	    height: 40px;
 	    background-color: rgba(255,255,255,0) !important;
 	    color: black;
         box-shadow: none !important;
-	}
-}
+        color: white !important;
+    }
+    
+    button.back-button.disable-hover.bar-button.bar-button-ios.back-button-ios.bar-button-default.bar-button-default-ios.show-back-button {
+        margin: 0 ;
 
+        span {
+            span {
+                display: none
+            }
+        }
+    }
+
+}

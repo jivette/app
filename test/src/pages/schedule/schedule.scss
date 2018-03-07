@@ -58,14 +58,45 @@ page-schedule {
 	
 	ion-row {
 		&.avatar-square {
-			background: $blueLight;
+			background: $greyLight;
 	    	height: 40vh;
 	    	display: flex;
 	    	align-items: flex-end;
 	    	justify-content: center;
 			width: 100%;
 			float: left;
-
+			position: relative;
+			
+			.message-avatar {
+				position: absolute;
+				background: white;
+				width: 100px;
+				height: 70px;
+				border-radius: 100px;
+				padding: 10px;
+				text-align: center;
+				font-size: 12px;
+				display: flex;
+				align-items: center;
+				border: 1px solid;
+				right: 25px;
+				top: 50%;
+				margin-top: -40px;
+				
+				&:after {
+					content:"";
+					    width: 0;
+						height: 0;
+						border-right: 10px solid transparent;
+						border-top: 10px solid transparent;
+						border-left: 10px solid transparent;
+						border-bottom: 10px solid #ffff;
+						position: absolute;
+						left: 0;
+						margin-left: -10px;
+				}
+			}
+	
 			.icon {
 			    position: absolute;
 			    width: 100px;
@@ -89,7 +120,7 @@ page-schedule {
 
 			button {
 			    width: 150px;
-			    font-size: 12px;
+			    font-size: 14px;
 			    font-family: calibri;
 
 			    &:nth-child(1) {

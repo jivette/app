@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { /*AlertController,*/ App,/* FabContainer, ItemSliding,*/ List,/* ModalController, */NavController/*, ToastController, LoadingController, Refresher */} from 'ionic-angular';
+import { /*AlertController,*//* App, FabContainer, ItemSliding,*/ List,/* ModalController, */NavController,/* ToastController, LoadingController, Refresher */} from 'ionic-angular';
 
 /*
   To learn how to use third party libs in an
@@ -22,7 +22,9 @@ import { UserService } from '../../providers/user-service/user-service';
 
 @Component({
   selector: 'page-schedule',
-  templateUrl: 'schedule.html'
+  templateUrl: 'schedule.html',
+  providers: [UserService]
+
 })
 export class SchedulePage {
   // the list is a child of the schedule page
@@ -41,16 +43,16 @@ export class SchedulePage {
   shownSessions: any = [];
   groups: any = [];
   confDate: string;*/
+  number = 56156165;
 
   constructor(
    // public alertCtrl: AlertController,
-    public app: App,
+    //public app: App,
   //  public loadingCtrl: LoadingController,
   //  public modalCtrl: ModalController,
     public navCtrl: NavController,
-    public userService: UserService
-
- //   public toastCtrl: ToastController,
+    public userService: UserService,
+   // public toastCtrl: ToastController,
  //   public confData: ConferenceData,
   //  public user: UserData,
   ) {
@@ -59,15 +61,19 @@ export class SchedulePage {
   }
 
   ionViewDidLoad() {
-    this.userService.getUsers()
+  
+    this.userService.getUsers(this.number)
       .subscribe(
         (data) => { // Success
           this.getfacturas = data['results'];
+          console.log(this.getfacturas);
         },
         (error) => {
           console.error(error);
         }
       )
+
+
   }
 
 
