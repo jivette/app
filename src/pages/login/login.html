@@ -1,16 +1,20 @@
 <ion-content>
 	<div class="logo">
 		<div class="logo-cont">
-			<img src="assets/img/habla-el.gif" alt="Ionic logo">
+			<img src="assets/img/logo.png" alt="Ionic logo">
 		</div>
 	</div>
 
+	<ion-row responsive-xs>
+		<h1>Bienvenido a Terecuerdo</h1>
+		<h6>Inicia sesión para empezar</h6>
+	</ion-row>
 
 	<ion-row responsive-xs>
 		<ion-col>
 			<button ion-button (click)="loginGoogle()" color="danger" block>
-	            <ion-icon ios="ios-google-plus" md="md-create"></ion-icon>
-				Google Plus
+				<ion-icon ios="logo-googleplus" md="logo-googleplus"></ion-icon>
+ 				Login
 			</button>
 		</ion-col>
 	</ion-row>

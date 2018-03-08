@@ -10,8 +10,18 @@ page-user {
     
     
     ion-content {
-      background: $redLight !important; 
-          ion-col {
+      background: $blueLight !important; 
+
+      h1, h6 {
+        margin: 0 auto;
+        color: $greyLight;
+      }
+
+      h6 {
+        margin-bottom: 20px;
+      }
+
+      ion-col {
               width: 100%;
               text-align: center;
               display: flex;
@@ -20,11 +30,12 @@ page-user {
 
               button {
                 width: 50% !important;
-         
                 color: #fff;
-                background-color: #f53d3d05 !important;
-                border: 2px solid white;
+                background-color: #d13734 !important;
                 font-weight: bold;
+                ion-icon {
+                  margin-right: 10px;
+                }
               }
           }
     }
@@ -37,14 +48,18 @@ page-user {
     justify-content: center;
 
     .logo-cont {
-        background: #e4e4e4;
+        //background: #e4e4e4;
         border-radius: 250px;
-        padding: 40px 20px 0px;
+        //padding: 40px 20px 0px;
         overflow: hidden; 
+        width: 150px;
+        height: 150px;  
+        width: 250px;
+        height: 210px;
     }
 
     img {
-      max-width: 150px;
+      max-width: 250px;
       margin-bottom: -10px
     }
   }

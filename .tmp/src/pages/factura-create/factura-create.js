@@ -25,7 +25,7 @@ var FacturaCreatePage = (function () {
     };
     FacturaCreatePage = __decorate([
         Component({
-            selector: 'page-factura-create',template:/*ion-inline-start:"/home/ivette/Documents/app/src/pages/factura-create/factura-create.html"*/'\n<ion-content>\n  <global-header></global-header>\n    \n  <ion-row class="avatar-square">\n    <img src="assets/img/personaje.png"/>\n  </ion-row>\n\n \n</ion-content>'/*ion-inline-end:"/home/ivette/Documents/app/src/pages/factura-create/factura-create.html"*/,
+            selector: 'page-factura-create',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/factura-create/factura-create.html"*/'\n<ion-content>\n  <global-header></global-header>\n    \n  <ion-row class="avatar-square">\n    <img src="assets/img/personaje.png"/>\n  </ion-row>\n\n \n</ion-content>'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/factura-create/factura-create.html"*/,
         }),
         __metadata("design:paramtypes", [NavController, NavParams])
     ], FacturaCreatePage);

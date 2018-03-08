@@ -54,6 +54,8 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "^3.1.5",
+    "node-sass": "^4.7.2",
+    "rebuild-node-sass": "^1.1.0",
     "typescript": "~2.4.2"
   },
   "config": {

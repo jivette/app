@@ -23,7 +23,7 @@ var TabsPage = (function () {
         this.mySelectedIndex = navParams.data.tabIndex || 0;
     }
     TabsPage = __decorate([
-        Component({template:/*ion-inline-start:"/home/ivette/Documents/app/src/pages/tabs-page/tabs-page.html"*/'<ion-tabs [selectedIndex]="mySelectedIndex" name="conference">\n  <ion-tab [root]="tab1Root" tabTitle="Schedule" tabIcon="calendar" tabUrlPath="conference-schedule"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Speakers" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Map" tabIcon="map"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/ivette/Documents/app/src/pages/tabs-page/tabs-page.html"*/
+        Component({template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/tabs-page/tabs-page.html"*/'<ion-tabs [selectedIndex]="mySelectedIndex" name="conference">\n  <ion-tab [root]="tab1Root" tabTitle="Schedule" tabIcon="calendar" tabUrlPath="conference-schedule"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Speakers" tabIcon="contacts"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Map" tabIcon="map"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="About" tabIcon="information-circle"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/tabs-page/tabs-page.html"*/
         }),
         __metadata("design:paramtypes", [NavParams])
     ], TabsPage);
