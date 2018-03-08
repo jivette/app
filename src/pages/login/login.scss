@@ -6,15 +6,19 @@
 
 page-user {
     background: #eaeadd !important;
-
     
     
     ion-content {
-      background: $blueLight !important; 
+    //  background: $blueLight !important; 
+      background-image: url(../assets/img/bg3.png);
+      background-color: $blueLight !important;
+      background-blend-mode: multiply;
 
       h1, h6 {
         margin: 0 auto;
-        color: $greyLight;
+        color: white;
+        width: 100%;
+        text-align: center;
       }
 
       h6 {
@@ -48,9 +52,7 @@ page-user {
     justify-content: center;
 
     .logo-cont {
-        //background: #e4e4e4;
         border-radius: 250px;
-        //padding: 40px 20px 0px;
         overflow: hidden; 
         width: 150px;
         height: 150px;  

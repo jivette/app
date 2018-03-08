@@ -3,8 +3,9 @@
   <global-header></global-header>
 
   <ion-row class="factura">
-		    <form (ngSubmit)="logForm()">
-					<img src="assets/img/claro.png" alt="">	
+			<img src="../assets/img/claro.png" alt=""  class="logo">	
+
+			<form (ngSubmit)="logForm()">
 	
 		      <ion-item class="item-no-factura">
   		        <ion-label>NO:</ion-label>
@@ -15,6 +16,20 @@
 						<ion-label>Nombre de factura:</ion-label>
 						<ion-input type="text" [(ngModel)]="todo.nombre_factura" name="nombre_factura"></ion-input>
 					</ion-item>
+
+					<ion-list>
+						<ion-item>
+							<ion-label>Provedor</ion-label>
+							<ion-select>
+								<ion-option value="nes">Claro</ion-option>
+								<ion-option value="n64">Nintendo64</ion-option>
+								<ion-option value="ps">PlayStation</ion-option>
+								<ion-option value="genesis">Sega Genesis</ion-option>
+								<ion-option value="saturn">Sega Saturn</ion-option>
+								<ion-option value="snes">SNES</ion-option>
+							</ion-select>
+						</ion-item>
+					</ion-list>
 
 					<ion-item>
 		        <ion-label>Fecha de emision:</ion-label>

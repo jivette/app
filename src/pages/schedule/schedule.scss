@@ -36,7 +36,7 @@ page-schedule {
 
 	.ion-fab, .fab-md.activated, .fab-md {
 	    color: #fff;
-	    background-color: #656062 !important;
+	    background-color: $redLight !important;
         width: 50px;
 	    height: 50px;
 	    border-radius: 50px;
@@ -66,7 +66,8 @@ page-schedule {
 			width: 100%;
 			float: left;
 			position: relative;
-			
+			background-color: $blueLight !important;
+
 			.message-avatar {
 				position: absolute;
 				background: white;
@@ -90,7 +91,7 @@ page-schedule {
 						border-right: 10px solid transparent;
 						border-top: 10px solid transparent;
 						border-left: 10px solid transparent;
-						border-bottom: 10px solid #ffff;
+						border-bottom: 10px solid white;
 						position: absolute;
 						left: 0;
 						margin-left: -10px;
