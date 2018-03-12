@@ -31,12 +31,19 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
 import { FacturaDetailPage } from '../pages/factura-detail/factura-detail';
 import { FacturaCreatePage } from '../pages/factura-create/factura-create';
 import { FacturaEditPage } from '../pages/factura-edit/factura-edit';
+import { SettingsPage } from '../pages/settings/settings';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 
 import { GooglePlus } from '@ionic-native/google-plus';
-import { UserService } from '../providers/user-service/user-service';
+import { BillService } from '../providers/bill-service/bill-service';
+import { AnimationService, AnimatesDirective } from 'css-animator';
+import {IonSimpleWizard} from '../pages/ion-simple-wizard/ion-simple-wizard.component';
+import {IonSimpleWizardStep} from '../pages/ion-simple-wizard/ion-simple-wizard.step.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GetUserProvider } from '../providers/get-user/get-user';
+import { BillCreateProvider } from '../providers/bill-create/bill-create';
 
 @NgModule({
   declarations: [
@@ -58,12 +65,17 @@ import { UserService } from '../providers/user-service/user-service';
     //SupportPage,
     FacturaDetailPage,
     FacturaCreatePage,
-    FacturaEditPage
+    FacturaEditPage,
+    SettingsPage,
+    AnimatesDirective,
+    IonSimpleWizard,
+    IonSimpleWizardStep
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     HttpModule,
+    BrowserAnimationsModule,
     IonicModule.forRoot(ConferenceApp, {}, {
       links: [
         //{ component: TabsPage, name: 'TabsPage', segment: 'tabs-page' },
@@ -81,6 +93,7 @@ import { UserService } from '../providers/user-service/user-service';
         { component: FacturaDetailPage, name: 'FacturaDetailPage', segment: 'factura-detail' },
         { component: FacturaCreatePage, name: 'FacturaCreatePage', segment: 'factura-create' },
         { component: FacturaEditPage, name: 'FacturaEditPage', segment: 'factura-edit' },
+        { component: SettingsPage, name: 'SettingsPage', segment: 'settings' },
        // { component: SignupPage, name: 'SignupPage', segment: 'signup' }
       ]
     }),
@@ -106,16 +119,20 @@ import { UserService } from '../providers/user-service/user-service';
     FacturaDetailPage,
     FacturaCreatePage,
     FacturaEditPage,
-    TutorialPage
+    TutorialPage,
+    SettingsPage
   ],
   providers: [
     HttpClientModule,
-    UserService,
+    BillService,
     InAppBrowser,
     SplashScreen,
     GooglePlus,
     ConferenceData,
-    UserData
+    UserData,
+    AnimationService,
+    GetUserProvider,
+    BillCreateProvider
   ]
 })
 export class AppModule { }

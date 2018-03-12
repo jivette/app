@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { BillCreateProvider } from '../../providers/bill-create/bill-create';
 
 /**
  * Generated class for the FacturaEditPage page.
@@ -14,17 +15,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'factura-edit.html',
 })
 export class FacturaEditPage {
+  //selectedItem: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+    public billCreateProvider: BillCreateProvider
+  ) {
+    this.data = navParams.get('data');
+    
   }
 
-  todo = {}
+  data = {}
   logForm() {
-    console.log(this.todo);
+    console.log(this.data);
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FacturaEditPage');
+    //console.log(this.selectedItem);
   }
 
 }

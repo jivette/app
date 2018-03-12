@@ -5,50 +5,60 @@
   <ion-row class="factura">
 			<img src="../assets/img/claro.png" alt=""  class="logo">	
 
+	
 			<form (ngSubmit)="logForm()">
 	
 		      <ion-item class="item-no-factura">
   		        <ion-label>NO:</ion-label>
-		          <ion-input class="no-factura" type="number" [(ngModel)]="todo.numero_factura" name="numero_factura"></ion-input>
+		          <ion-input class="no-factura" type="number" [(ngModel)]="data.numero_factura" name="numero_factura"></ion-input>
 		      </ion-item>
 
 					<ion-item>
 						<ion-label>Nombre de factura:</ion-label>
-						<ion-input type="text" [(ngModel)]="todo.nombre_factura" name="nombre_factura"></ion-input>
+						<ion-input type="text" [(ngModel)]="data.nombre_factura" name="nombre_factura"></ion-input>
 					</ion-item>
 
 					<ion-list>
 						<ion-item>
 							<ion-label>Provedor</ion-label>
 							<ion-select>
-								<ion-option value="nes">Claro</ion-option>
-								<ion-option value="n64">Nintendo64</ion-option>
-								<ion-option value="ps">PlayStation</ion-option>
-								<ion-option value="genesis">Sega Genesis</ion-option>
-								<ion-option value="saturn">Sega Saturn</ion-option>
-								<ion-option value="snes">SNES</ion-option>
+						<ion-option value="nes">CLaro</ion-option>
+						<ion-option value="n64">Tigo</ion-option>
 							</ion-select>
 						</ion-item>
 					</ion-list>
 
 					<ion-item>
-		        <ion-label>Fecha de emision:</ion-label>
-		          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="todo.fecha_emision" name="fecha_emision"></ion-datetime>
-		      </ion-item>
+						<ion-label>NO Servicio:</ion-label>
+						<ion-input type="number" [(ngModel)]="data.numero_servicio" name="numero_servicio"></ion-input>
+					</ion-item>
 
 		      <ion-item>
 		        <ion-label>Fecha de pago:</ion-label>
-		          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="todo.fecha_pago" name="fecha_pago"></ion-datetime>
+		          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="data.fecha_pago" name="fecha_pago"></ion-datetime>
 		      </ion-item>
 
+					<ion-list>
+						<ion-item>
+							<ion-label>Recuerdame en</ion-label>
+							<ion-select>
+								<ion-option value="nes">una semana antes</ion-option>
+								<ion-option value="n64">1 dia antes</ion-option>
+								<ion-option value="snes">1 hora antes</ion-option>
+							</ion-select>
+						</ion-item>
+					</ion-list>
+
+					
 					<ion-item class="price">
 						<ion-label>Monto:  Q</ion-label>
-						<ion-input type="number" [(ngModel)]="todo.monto_pagar" name="monto_pagar"></ion-input>
+						<ion-input type="number" [(ngModel)]="data.monto_pagar" name="monto_pagar"></ion-input>
 					</ion-item>
+
+
 
 		      <button ion-button type="submit" block>Recuerdame</button>
 		    </form>
-
 	  <ion-row class="tarjetas">
 	  </ion-row>
   </ion-row>

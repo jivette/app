@@ -53,7 +53,8 @@ page-schedule {
 	    position: absolute;
 	    bottom: 0;
 	    width: 100%;
-	    margin: 0
+		margin: 0;   
+		background-color: #efefef;
 	}
 	
 	ion-row {
@@ -66,24 +67,29 @@ page-schedule {
 			width: 100%;
 			float: left;
 			position: relative;
-			background-color: $blueLight !important;
-
+			background-color: #00bfba !important;
+			-webkit-background-image: url(../assets/img/textura.jpg);
+			background-image: url(../assets/img/textura.jpg);
+			background-size: 100% 100%;
+			background-blend-mode: overlay;
+			
 			.message-avatar {
 				position: absolute;
-				background: white;
+				background: $greyLight;
 				width: 100px;
 				height: 70px;
-				border-radius: 100px;
+				border-radius: 10px;
 				padding: 10px;
 				text-align: center;
 				font-size: 12px;
 				display: flex;
 				align-items: center;
-				border: 1px solid;
+				border: 0;
 				right: 25px;
 				top: 50%;
 				margin-top: -40px;
-				
+				color: white;
+
 				&:after {
 					content:"";
 					    width: 0;
@@ -91,7 +97,7 @@ page-schedule {
 						border-right: 10px solid transparent;
 						border-top: 10px solid transparent;
 						border-left: 10px solid transparent;
-						border-bottom: 10px solid white;
+						border-bottom: 10px solid $greyLight;
 						position: absolute;
 						left: 0;
 						margin-left: -10px;
@@ -118,19 +124,42 @@ page-schedule {
 			width: 100%;
 			float: left;
 			height: 60px;
+			position: relative;
 
+		/*	&:after {
+				content: "";
+				width: 92vw;
+				height: 361px;
+				border-radius: 286vw;
+				-webkit-box-shadow: 30px 10px 0 #d9534f;
+				box-shadow: 108px 10px 0 #ffffff;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-268deg);
+				top: 0;
+				position: absolute;
+				margin-top: -62vh;
+				z-index: 0;
+			}
+*/
+		
 			button {
 			    width: 150px;
 			    font-size: 14px;
 			    font-family: calibri;
 
 			    &:nth-child(1) {
-				    background: $redLight;
-				    color: white;
+				    background: white;
+				    color: $greyLight;
+					box-shadow: none !important;
+					border-right: 1px solid $greyLight;
 				}
 			    &:nth-child(2) {
 				    background: white;
-				    color: black;
+				    color: $greyLight;
+					box-shadow: none !important;
 				}
 			}
 		}
@@ -151,7 +180,7 @@ page-schedule {
 	    width: 80%;
 	    margin: 0 auto;
 	    margin: 20px auto;
-	    border: 1px solid grey;
+	    border: 1px solid gainsboro;
 	    border-radius: 10px;
 
 		.item-inner {
@@ -160,6 +189,10 @@ page-schedule {
 		    box-sizing: border-box;
 	        border: 0;
     		border-radius: 10px;
+
+			ion-label.label.label-md img {
+				width: 40px;
+			}
 			
 			.content-factura {
 	    		position: relative;
@@ -167,17 +200,17 @@ page-schedule {
 			    display: flex;
 			    flex-direction: column;
 			    background: gainsboro;
-			    padding: 10px;
+			    padding: 5px 10px;
 			    border-radius: 10px;
-			    margin-top: 20px;
+			    margin-top: 5px;
 				color:$greyLight;
+				font-size: 13px;
 
 				.price {
 				    width: 100%;
 				    display: flex !important;
 				    font-weight: bold;
 				    justify-content: flex-end;
-				    padding: 5px 20px;
 				}
 			}
 

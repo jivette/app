@@ -1,3 +1,137 @@
 page-settings {
+    background-repeat: no-repeat !important;
+    background-color: white;
 
+  @each $track, $value in auxiliary-categories() {
+   ion-item-sliding[track=#{$track}] ion-label {
+     border-left: 2px solid $value;
+     padding-left: 10px;
+   }
+
+   	>ion-content { 
+		width: 100vw;
+		background: white !important;
+		height: 100vh;
+	}
+
+	.ion-fab, .fab-md.activated, .fab-md {
+	    color: #fff;
+	    background-color: $redLight !important;
+        width: 50px;
+	    height: 50px;
+	    border-radius: 50px;
+	    font-size: 30px;
+	}
+
+	.item-inner {
+        border: none !important;
+	}
+
+	.list-bill {
+	    height: calc(100% - (40vh + 60px));
+	    overflow: auto;
+	    position: absolute;
+	    bottom: 0;
+	    width: 100%;
+		margin: 0;   
+		background-color: #efefef;
+	}
+	
+    .save {
+        background-color: $greyLight !important; 
+        width: 150px;
+        height: 35px;
+        float: right;
+        margin: 10px auto;
+        color: white;
+        border-radius: 5px;
+    }
+
+    ion-grid {
+        margin-top: 50px;
+        float: left;
+        text-align: center;
+
+        img {
+            height: 100px;
+            margin: 0 auto;
+        }
+    }
+        
+    ion-row {
+		&.avatar-square {
+			background: $greyLight;
+	    	height: 40vh;
+	    	display: flex;
+	    	align-items: flex-end;
+	    	justify-content: center;
+			width: 100%;
+			float: left;
+			position: relative;
+			background-color: #581102 !important;
+			-webkit-background-image: url(../assets/img/textura.jpg);
+			background-image: url(../assets/img/textura.jpg);
+			background-size: 100% 100%;
+			background-blend-mode: overlay;
+			
+			.message-avatar {
+				position: absolute;
+				background: $blueLight;
+				width: 100px;
+				height: 70px;
+				border-radius: 10px;
+				padding: 10px;
+				text-align: center;
+				font-size: 12px;
+				display: flex;
+				align-items: center;
+				border: 0;
+				right: 25px;
+				top: 50%;
+				margin-top: -40px;
+				color: white;
+				 transition: visibility 0s, opacity 0.5s linear;
+
+				&:after {
+					content:"";
+					    width: 0;
+						height: 0;
+						border-right: 10px solid transparent;
+						border-top: 10px solid transparent;
+						border-left: 10px solid transparent;
+						border-bottom: 10px solid $blueLight;
+						position: absolute;
+						left: 0;
+						margin-left: -10px;
+				}
+			}
+	
+			.icon {
+			    position: absolute;
+			    width: 100px;
+			    height: auto !important;
+			    left: 0;
+			    top: 0;
+			}
+
+			img {
+			    height: 30vh;
+			    margin: 0 auto;
+			}
+		}
+		&.buton-event {
+		    position: absolute;
+		    top: 5px;
+		    right: 0;
+		    width: 50px;
+		    color: $greyLight;
+
+		    ion-icon {
+		    	margin-right: 10px
+		    }
+		}
+	}
+
+  }
 }
+

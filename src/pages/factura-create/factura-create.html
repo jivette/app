@@ -4,21 +4,45 @@
     
   <ion-row class="avatar-square">
     <img src="assets/img/personaje.png"/>
-    <ion-list>
-      <ion-item>
-        <ion-label>Provedor</ion-label>
-        <ion-select>
-          <ion-option value="nes">Claro</ion-option>
-          <ion-option value="n64">Nintendo64</ion-option>
-          <ion-option value="ps">PlayStation</ion-option>
-          <ion-option value="genesis">Sega Genesis</ion-option>
-          <ion-option value="saturn">Sega Saturn</ion-option>
-          <ion-option value="snes">SNES</ion-option>
-        </ion-select>
-      </ion-item>
-    </ion-list>
+
+    <ion-simple-wizard [(step)]="step" [showSteps]="false" (finish)="onFinish()" [finishIcon]="'done-all'" [(stepCondition)]="stepCondition">
+      <ion-wizard-step>
+        <ion-card class="card-wizard">
+          <ion-card-content>
+            <p>
+              Selecciona un proveedor
+              <ion-list>
+                <ion-item>
+                  <ion-select (ionChange)="selectProvider($event)">
+                    <ion-option value="nes">CLaro</ion-option>
+                    <ion-option value="n64">Tigo</ion-option>
+                  </ion-select>
+
+                </ion-item>
+              </ion-list>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-wizard-step>
+      <ion-wizard-step>
+        <ion-card class="card-wizard">
+          <ion-card-content>
+            <p>
+              Nombre de factura
+              <ion-list>
+                <ion-item>
+                  <ion-input [(ngModel)]="data.nombre_factura" name="nombre_factura" (input)="textChange($event)" type="text" placeholder="Edit to continue"></ion-input>
+                </ion-item>
+              </ion-list>
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-wizard-step>
+
+    </ion-simple-wizard>
 
   </ion-row>
+
 
  
 </ion-content>

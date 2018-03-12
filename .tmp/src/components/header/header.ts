@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 
 import { Storage } from '@ionic/storage';
 import { LoginPage } from '../../pages/login/login';
+import { SettingsPage } from '../../pages/settings/settings';
 
 /**
  * Generated class for the HeaderComponent component.
@@ -26,6 +27,10 @@ export class HeaderComponent {
   logoutGoogle(){
     this.googlePlus.logout();
     this.navCtrl.push(LoginPage);
+  }
+
+  settings(){
+    this.navCtrl.push(SettingsPage);
   }
 
 }

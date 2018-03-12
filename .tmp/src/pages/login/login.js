@@ -14,15 +14,18 @@ import { SchedulePage } from '../schedule/schedule';
 import { SignupPage } from '../signup/signup';
 //import { GooglePlus } from '@ionic-native/google-plus';
 import { Storage } from '@ionic/storage';
+import { GetUserProvider } from '../../providers/get-user/get-user';
 var LoginPage = (function () {
     function LoginPage(navCtrl, userData, 
         //private googlePlus: GooglePlus, 
-        storage) {
+        getUserProvider, storage) {
         this.navCtrl = navCtrl;
         this.userData = userData;
+        this.getUserProvider = getUserProvider;
         this.storage = storage;
         this.login = { username: '', password: '' };
         this.submitted = false;
+        this.users = [];
     }
     LoginPage.prototype.onLogin = function (form) {
         this.submitted = true;
@@ -35,7 +38,26 @@ var LoginPage = (function () {
         this.navCtrl.push(SignupPage);
     };
     LoginPage.prototype.loginGoogle = function () {
-        this.navCtrl.push(SchedulePage);
+        var _this = this;
+        var user = {
+            token: "56156165",
+            nombre: "Ivette",
+            correo: "correo@gmail.com"
+        };
+        this.getUserProvider.getUser(user)
+            .subscribe(function (data) {
+            if (data.code == 200) {
+                _this.storage.set('user', user);
+                _this.storage.set('facturas', data.facturas);
+                _this.users = data;
+                _this.navCtrl.push(SchedulePage);
+            }
+            else {
+                alert("error!");
+            }
+        }, function (error) {
+            console.error(error);
+        });
         /*    this.googlePlus.login({})
             .then((res) => {
               if (res) {
@@ -50,6 +72,7 @@ var LoginPage = (function () {
         }),
         __metadata("design:paramtypes", [NavController,
             UserData,
+            GetUserProvider,
             Storage])
     ], LoginPage);
     return LoginPage;

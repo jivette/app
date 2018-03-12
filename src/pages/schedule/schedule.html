@@ -8,29 +8,30 @@
   </ion-row>
 
   <ion-row class="btn-factura">
-    <button ion-button icon-only color="danger">  
+    <button ion-button icon-only color="danger" (click)="getPendientes()">  
       Pendientes
     </button>
-    <button ion-button icon-only>  
+    <button ion-button icon-only (click)="getCanceladas()">  
       Canceladas
     </button>
   </ion-row>
 
   <ion-scroll scrollY="true" class="list-bill">
-    <ion-row sticky ion-item *ngFor="let factura of facturas" class="item-factura">
-        <ion-row class="buton-event">
-          <ion-icon ios="ios-create" md="md-create" (click)="editBill()" ></ion-icon>
+    <ion-row sticky ion-item *ngFor="let factura of getfacturas" class="item-factura">
+          <img src="../assets/img/claro.png" alt="" class="logo">
+          <ion-row class="buton-event">
+          <ion-icon ios="ios-create" md="md-create" (click)="editBill(factura)" ></ion-icon>
           <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
         </ion-row>
         <ion-row class="content-factura" (click)="itemTapped(factura)">
           <ion-row>
-            <b>{{ factura.name }}</b>
+            <b>{{ factura.no_factura }}</b>
           </ion-row>
           <ion-row>
-            {{ factura.descripcion }}
+            <b>Fecha de pago:</b> {{ factura.fecha_pago }}
           </ion-row>
           <ion-row class="price">
-            Q{{ factura.precio }}
+            <b>Q{{ factura.valor_factura }}</b>
           </ion-row>
         </ion-row>
     </ion-row>  

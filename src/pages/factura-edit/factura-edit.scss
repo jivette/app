@@ -13,10 +13,10 @@ page-factura-edit {
 
 
     .factura {
-    	width: 90vw;
-    	height: 80vh;
+    	width: 100vw;
+    	height: 85vh;
     	margin-top: 10vh;
-    	margin-left: 5vw;
+    	margin-left: 0;
         background-image: url(../assets/img/factura.png);
         -webkit-background-image: url(../assets/img/factura.png);
         background-size: 100% 100%;
@@ -35,7 +35,7 @@ page-factura-edit {
 
 
 	form {
-	    width: 65vw;
+	    width: 75vw;
 	    margin-left: 10vw;
 	    position: absolute;
 	    height: 300px;

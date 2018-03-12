@@ -7,8 +7,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+//import { AnimationService, AnimationBuilder } from 'css-animator';
 /**
  * Generated class for the SettingsPage page.
  *
@@ -16,18 +17,28 @@ import { NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 var SettingsPage = (function () {
-    function SettingsPage(navCtrl, navParams) {
+    //private animator: AnimationBuilder;
+    function SettingsPage(navCtrl, navParams /*, animationService: AnimationService*/) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
+        this.navParams = navParams; /*, animationService: AnimationService*/
+        this.image = "habla-el.gif";
+        //this.animator = animationService.builder();
     }
-    SettingsPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad SettingsPage');
+    SettingsPage.prototype.avatar = function (avatar) {
+        this.image = avatar;
     };
+    SettingsPage.prototype.ionViewDidLoad = function () {
+        // this.animator.setType('flipInX').show(this.myElem.nativeElement);
+    };
+    __decorate([
+        ViewChild('#message'),
+        __metadata("design:type", Object)
+    ], SettingsPage.prototype, "myElem", void 0);
     SettingsPage = __decorate([
         Component({
-            selector: 'page-settings',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/settings/settings.html"*/'<!--\n  Generated template for the SettingsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>settings</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/settings/settings.html"*/,
+            selector: 'page-settings',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/settings/settings.html"*/'<ion-content>\n  <global-header></global-header>\n\n  <ion-row class="avatar-square">\n    <img src="assets/img/{{ image }}" />\n    <div class="message-avatar" id="message">¡Hola, yo sere tu asistente!</div>\n  </ion-row>\n  <ion-grid>\n    <h2>Selecciona tu asistente</h2><br>\n    <ion-row>\n      <ion-col col-4>\n        <img src="../assets/img/habla-ella.gif" (click)="avatar(\'habla-ella.gif\')" alt="">\n      </ion-col>\n      <ion-col col-4>\n        <img src="../assets/img/fac.png" (click)="avatar(\'fac.png\')" alt="">\n      </ion-col>\n      <ion-col col-4>\n        <img src="../assets/img/habla-el.gif" (click)="avatar(\'habla-el.gif\')" alt="">\n      </ion-col>\n    </ion-row>\n    <button class="save">Guardar</button>\n  </ion-grid>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/settings/settings.html"*/,
         }),
-        __metadata("design:paramtypes", [NavController, NavParams])
+        __metadata("design:paramtypes", [NavController, NavParams /*, animationService: AnimationService*/])
     ], SettingsPage);
     return SettingsPage;
 }());

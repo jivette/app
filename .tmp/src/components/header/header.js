@@ -12,6 +12,7 @@ import { GooglePlus } from '@ionic-native/google-plus';
 import { NavController } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { LoginPage } from '../../pages/login/login';
+import { SettingsPage } from '../../pages/settings/settings';
 /**
  * Generated class for the HeaderComponent component.
  *
@@ -28,9 +29,12 @@ var HeaderComponent = (function () {
         this.googlePlus.logout();
         this.navCtrl.push(LoginPage);
     };
+    HeaderComponent.prototype.settings = function () {
+        this.navCtrl.push(SettingsPage);
+    };
     HeaderComponent = __decorate([
         Component({
-            selector: 'global-header',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/components/header/header.html"*/'<!-- Generated template for the HeaderComponent component -->\n<ion-header>\n  <ion-navbar>\n    \n    <ion-buttons>\n      <button ion-button icon-only (click)="presentFilter()">\n        <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-buttons end>\n    <button ion-button icon-only (click)="logoutGoogle()">\n      <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>\n    </button>\n    </ion-buttons>\n\n  </ion-navbar>\n  </ion-header>'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/components/header/header.html"*/
+            selector: 'global-header',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/components/header/header.html"*/'<!-- Generated template for the HeaderComponent component -->\n<ion-header>\n  <ion-navbar>\n    \n    <ion-buttons>\n      <button ion-button icon-only (click)="settings()">\n        <ion-icon ios="ios-options-outline" md="md-options"></ion-icon>\n      </button>\n    </ion-buttons>\n\n    <ion-buttons end>\n    <button ion-button icon-only (click)="logoutGoogle()">\n      <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>\n    </button>\n    </ion-buttons>\n\n  </ion-navbar>\n  </ion-header>'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/components/header/header.html"*/
         }),
         __metadata("design:paramtypes", [GooglePlus, Storage, NavController])
     ], HeaderComponent);

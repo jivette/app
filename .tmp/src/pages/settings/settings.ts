@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild  } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+//import { AnimationService, AnimationBuilder } from 'css-animator';
 
 /**
  * Generated class for the SettingsPage page.
@@ -14,12 +15,23 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'settings.html',
 })
 export class SettingsPage {
+  @ViewChild('#message') myElem;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  image:any;
+  //private animator: AnimationBuilder;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams/*, animationService: AnimationService*/) {
+    this.image = "habla-el.gif";
+    //this.animator = animationService.builder();
+
+  }
+
+  avatar(avatar){
+    this.image = avatar;
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingsPage');
+   // this.animator.setType('flipInX').show(this.myElem.nativeElement);
   }
 
 }
