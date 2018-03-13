@@ -78,14 +78,13 @@ export class FacturaCreatePage {
   textChange(e) {
     if (e.target.value && e.target.value.trim() !== '') {
       this.stepCondition = true;
-      console.log("esto es data" + this.data);
     } else {
       this.stepCondition = false;
     }
   }
   
-  selectProvider(e) {
-      this.data.proveedor = e;
+  selectProvider() {
+    //  this.data.proveedor = e;
       this.stepCondition = true;
   }
   

@@ -3,7 +3,7 @@
   <global-header></global-header>
     
   <ion-row class="avatar-square">
-    <img src="assets/img/personaje.png"/>
+    <img src="assets/img/ella/personaje.png"/>
 
     <ion-simple-wizard [(step)]="step" [showSteps]="false" (finish)="onFinish()" [finishIcon]="'done-all'" [(stepCondition)]="stepCondition">
       <ion-wizard-step>
@@ -13,9 +13,9 @@
               Selecciona un proveedor
               <ion-list>
                 <ion-item>
-                  <ion-select (ionChange)="selectProvider($event)">
-                    <ion-option value="nes">CLaro</ion-option>
-                    <ion-option value="n64">Tigo</ion-option>
+                  <ion-select [(ngModel)]="data.proveedor_id" name="proveedor_id" (ionChange)="selectProvider()">
+                    <ion-option value="1">CLaro</ion-option>
+                    <ion-option value="2">Tigo</ion-option>
                   </ion-select>
 
                 </ion-item>

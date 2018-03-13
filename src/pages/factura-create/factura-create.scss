@@ -77,13 +77,22 @@ page-factura-create {
 			}
 
 			img {
-				width: auto;
+/*				width: auto;
 				margin: 0 auto;
 				position: absolute;
 				height: 50vh;
 				bottom: 0;
 				margin-bottom: -32vh;
 				left: 6vw;
+*/
+
+				    width: auto;
+					margin: 0 auto;
+					position: absolute;
+					height: 65vh;
+					bottom: 0;
+					margin-bottom: -37vh;
+					left: 2vw;
 			}
 		}
 		&.btn-factura {

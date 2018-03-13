@@ -61,8 +61,10 @@ export class LoginPage {
         (data) => { // Success
           if(data.code == 200){
             this.storage.set('user', user);
-            this.storage.set('facturas', data.facturas);
-            this.users = data;
+            let val = JSON.stringify(data.facturas);
+            this.storage.set('facturas', val);
+            
+            //this.users = data;
 
             this.navCtrl.push(SchedulePage);
           } else {

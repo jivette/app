@@ -18,10 +18,12 @@ export class SettingsPage {
   @ViewChild('#message') myElem;
 
   image:any;
+  classSelector = "active";
+  name = "";
   //private animator: AnimationBuilder;
 
   constructor(public navCtrl: NavController, public navParams: NavParams/*, animationService: AnimationService*/) {
-    this.image = "habla-el.gif";
+    this.image = "ella";
     //this.animator = animationService.builder();
 
   }

@@ -7,10 +7,9 @@
 
 	
 			<form (ngSubmit)="logForm()">
-	
 		      <ion-item class="item-no-factura">
   		        <ion-label>NO:</ion-label>
-		          <ion-input class="no-factura" type="number" [(ngModel)]="data.numero_factura" name="numero_factura"></ion-input>
+		          <ion-input class="no-factura" type="number" [(ngModel)]="data.no_factura" name="no_factura"></ion-input>
 		      </ion-item>
 
 					<ion-item>
@@ -21,16 +20,16 @@
 					<ion-list>
 						<ion-item>
 							<ion-label>Provedor</ion-label>
-							<ion-select>
-						<ion-option value="nes">CLaro</ion-option>
-						<ion-option value="n64">Tigo</ion-option>
+							<ion-select [(ngModel)]="data.proveedor_id" name="proveedor_id">
+						<ion-option value="1">CLaro</ion-option>
+						<ion-option value="2">Tigo</ion-option>
 							</ion-select>
 						</ion-item>
 					</ion-list>
 
 					<ion-item>
 						<ion-label>NO Servicio:</ion-label>
-						<ion-input type="number" [(ngModel)]="data.numero_servicio" name="numero_servicio"></ion-input>
+						<ion-input type="number" [(ngModel)]="data.no_servicio" name="no_servicio"></ion-input>
 					</ion-item>
 
 		      <ion-item>
@@ -52,7 +51,7 @@
 					
 					<ion-item class="price">
 						<ion-label>Monto:  Q</ion-label>
-						<ion-input type="number" [(ngModel)]="data.monto_pagar" name="monto_pagar"></ion-input>
+						<ion-input type="number" [(ngModel)]="data.valor_factura" name="valor_factura"></ion-input>
 					</ion-item>
 
 

@@ -48,8 +48,9 @@ var LoginPage = (function () {
             .subscribe(function (data) {
             if (data.code == 200) {
                 _this.storage.set('user', user);
-                _this.storage.set('facturas', data.facturas);
-                _this.users = data;
+                var val = JSON.stringify(data.facturas);
+                _this.storage.set('facturas', val);
+                //this.users = data;
                 _this.navCtrl.push(SchedulePage);
             }
             else {
@@ -68,7 +69,7 @@ var LoginPage = (function () {
     };
     LoginPage = __decorate([
         Component({
-            selector: 'page-user',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/login/login.html"*/'<ion-content>\n	<div class="logo">\n		<div class="logo-cont">\n			<img src="assets/img/logo.png" alt="Ionic logo">\n		</div>\n	</div>\n\n	<ion-row responsive-xs>\n		<h1>¡Bienvenido!</h1>\n		<h6>Inicia sesión para empezar</h6>\n	</ion-row>\n\n	<ion-row responsive-xs>\n		<ion-col>\n			<button ion-button (click)="loginGoogle()" color="danger" block>\n				<ion-icon ios="logo-googleplus" md="logo-googleplus"></ion-icon>\n 				Iniciar sesión\n			</button>\n		</ion-col>\n	</ion-row>\n</ion-content>\n'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/login/login.html"*/
+            selector: 'page-user',template:/*ion-inline-start:"/home/ivette/Documents/app/src/pages/login/login.html"*/'<ion-content>\n	<div class="logo">\n		<div class="logo-cont">\n			<img src="assets/img/logo.png" alt="Ionic logo">\n		</div>\n	</div>\n\n	<ion-row responsive-xs>\n		<h1>¡Bienvenido!</h1>\n		<h6>Inicia sesión para empezar</h6>\n	</ion-row>\n\n	<ion-row responsive-xs>\n		<ion-col>\n			<button ion-button (click)="loginGoogle()" color="danger" block>\n				<ion-icon ios="logo-googleplus" md="logo-googleplus"></ion-icon>\n 				Iniciar sesión\n			</button>\n		</ion-col>\n	</ion-row>\n</ion-content>\n'/*ion-inline-end:"/home/ivette/Documents/app/src/pages/login/login.html"*/
         }),
         __metadata("design:paramtypes", [NavController,
             UserData,

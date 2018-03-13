@@ -22,14 +22,15 @@ export class SchedulePage {
     public navCtrl: NavController,
     public alertController: AlertController,
     public storage: Storage
-  ) {
-
-     this.localFacturas = this.storage.get("facturas");
-
-  }
+  ){}
 
   ionViewDidLoad() {
-    this.getfacturas = this.localFacturas.pendientes;
+    this.storage.get('facturas').then((facturas) => {
+      this.localFacturas = JSON.parse(facturas);
+
+      this.getfacturas = this.localFacturas.pendientes;
+    });
+
   }
 
   getPendientes(){

@@ -2,20 +2,20 @@
   <global-header></global-header>
 
   <ion-row class="avatar-square">
-    <img src="assets/img/{{ image }}" />
+    <img src="../assets/img/{{image}}/habla.gif" />
     <div class="message-avatar" id="message">¡Hola, yo sere tu asistente!</div>
   </ion-row>
   <ion-grid>
     <h2>Selecciona tu asistente</h2><br>
     <ion-row>
-      <ion-col col-4>
-        <img src="../assets/img/habla-ella.gif" (click)="avatar('habla-ella.gif')" alt="">
+      <ion-col col-4 class="option">
+        <img src="../assets/img/ella/habla.gif" (click)="avatar('ella')" alt="">
       </ion-col>
-      <ion-col col-4>
-        <img src="../assets/img/fac.png" (click)="avatar('fac.png')" alt="">
+      <ion-col col-4 class="option">
+        <img src="../assets/img/factura/habla.gif" (click)="avatar('factura')" alt="">
       </ion-col>
-      <ion-col col-4>
-        <img src="../assets/img/habla-el.gif" (click)="avatar('habla-el.gif')" alt="">
+      <ion-col col-4 class="option">
+        <img src="../assets/img/el/habla.gif" (click)="avatar('el')" alt="">
       </ion-col>
     </ion-row>
     <button class="save">Guardar</button>

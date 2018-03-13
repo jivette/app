@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
 import { BillCreateProvider } from '../../providers/bill-create/bill-create';
+import { ModalPageEditPage } from '../modal-page-edit/modal-page-edit';
 
 /**
  * Generated class for the FacturaEditPage page.
@@ -17,20 +18,24 @@ import { BillCreateProvider } from '../../providers/bill-create/bill-create';
 export class FacturaEditPage {
   //selectedItem: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, 
-    public billCreateProvider: BillCreateProvider
+  data = {}
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public billCreateProvider: BillCreateProvider, public modalCtrl: ModalController
   ) {
     this.data = navParams.get('data');
-    
   }
 
-  data = {}
   logForm() {
     console.log(this.data);
   }
 
+  otro() {
+    let modal = this.modalCtrl.create(ModalPageEditPage);
+    modal.present();
+  }
+
   ionViewDidLoad() {
-    //console.log(this.selectedItem);
+    this.otro();
   }
 
 }

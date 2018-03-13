@@ -45,6 +45,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GetUserProvider } from '../providers/get-user/get-user';
 import { BillCreateProvider } from '../providers/bill-create/bill-create';
 
+import { ModalPageEditPage } from '../pages/modal-page-edit/modal-page-edit';
+
 @NgModule({
   declarations: [
     ConferenceApp,
@@ -69,7 +71,8 @@ import { BillCreateProvider } from '../providers/bill-create/bill-create';
     SettingsPage,
     AnimatesDirective,
     IonSimpleWizard,
-    IonSimpleWizardStep
+    IonSimpleWizardStep,
+    ModalPageEditPage
   ],
   imports: [
     BrowserModule,
@@ -94,6 +97,7 @@ import { BillCreateProvider } from '../providers/bill-create/bill-create';
         { component: FacturaCreatePage, name: 'FacturaCreatePage', segment: 'factura-create' },
         { component: FacturaEditPage, name: 'FacturaEditPage', segment: 'factura-edit' },
         { component: SettingsPage, name: 'SettingsPage', segment: 'settings' },
+        { component: ModalPageEditPage, name: 'ModalPageEditPage', segment: 'modal-page-edit' },
        // { component: SignupPage, name: 'SignupPage', segment: 'signup' }
       ]
     }),
@@ -120,7 +124,8 @@ import { BillCreateProvider } from '../providers/bill-create/bill-create';
     FacturaCreatePage,
     FacturaEditPage,
     TutorialPage,
-    SettingsPage
+    SettingsPage,
+    ModalPageEditPage
   ],
   providers: [
     HttpClientModule,

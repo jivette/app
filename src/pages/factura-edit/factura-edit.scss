@@ -8,8 +8,15 @@ page-factura-edit {
 
   	ion-content {
 	    background-repeat: no-repeat !important;
-	    background-color: $greyLight !important;
-  	}
+	    background-color: $blueLight !important;
+	  
+			//background-color: #581102 !important;
+			-webkit-background-image: url(../assets/img/textura.jpg);
+			background-image: url(../assets/img/textura.jpg);
+			background-size: 100% 100%;
+			background-blend-mode: overlay;
+
+	}
 
 
     .factura {

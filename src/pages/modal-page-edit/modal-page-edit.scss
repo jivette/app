@@ -1,0 +1,40 @@
+page-modal-page-edit {
+    ion-content {
+        top: 20%;
+        left: 10%;
+        width: 80%;
+        height: 60%;
+        border-radius: 10px !important;
+
+        .scroll-content {
+            margin: 0 !important;
+            overflow: hidden !important;
+            border-radius: 20px;
+
+            .circle {
+                width: 45vw;
+                height: 45vw;
+                border-radius: 45vw;
+                background-size: 127%;
+                background-position: center top;
+                margin: 0 auto;
+                
+            }
+
+            .message {
+                width: 80%;
+                margin: 25px auto;
+                text-align: center;
+            }
+
+            button {
+                margin: 0 auto;
+                width: 150px;
+                height: 35px;
+                background: red;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+

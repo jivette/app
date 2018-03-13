@@ -42,6 +42,7 @@ import { IonSimpleWizardStep } from '../pages/ion-simple-wizard/ion-simple-wizar
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GetUserProvider } from '../providers/get-user/get-user';
 import { BillCreateProvider } from '../providers/bill-create/bill-create';
+import { ModalPageEditPage } from '../pages/modal-page-edit/modal-page-edit';
 var AppModule = (function () {
     function AppModule() {
     }
@@ -70,7 +71,8 @@ var AppModule = (function () {
                 SettingsPage,
                 AnimatesDirective,
                 IonSimpleWizard,
-                IonSimpleWizardStep
+                IonSimpleWizardStep,
+                ModalPageEditPage
             ],
             imports: [
                 BrowserModule,
@@ -95,6 +97,7 @@ var AppModule = (function () {
                         { component: FacturaCreatePage, name: 'FacturaCreatePage', segment: 'factura-create' },
                         { component: FacturaEditPage, name: 'FacturaEditPage', segment: 'factura-edit' },
                         { component: SettingsPage, name: 'SettingsPage', segment: 'settings' },
+                        { component: ModalPageEditPage, name: 'ModalPageEditPage', segment: 'modal-page-edit' },
                     ]
                 }),
                 IonicStorageModule.forRoot()
@@ -120,7 +123,8 @@ var AppModule = (function () {
                 FacturaCreatePage,
                 FacturaEditPage,
                 TutorialPage,
-                SettingsPage
+                SettingsPage,
+                ModalPageEditPage
             ],
             providers: [
                 HttpClientModule,
