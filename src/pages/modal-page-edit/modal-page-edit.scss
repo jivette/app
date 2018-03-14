@@ -4,21 +4,31 @@ page-modal-page-edit {
         left: 10%;
         width: 80%;
         height: 60%;
-        border-radius: 10px !important;
+        border-radius: 20px !important;
 
         .scroll-content {
             margin: 0 !important;
             overflow: hidden !important;
             border-radius: 20px;
+            padding: 0 !important;
 
             .circle {
-                width: 45vw;
+                width: 100%;
                 height: 45vw;
-                border-radius: 45vw;
-                background-size: 127%;
-                background-position: center top;
-                margin: 0 auto;
-                
+                float: left;
+                background: rgba(0, 173, 169, 0.5019607843137255);
+                background-image: url(../assets/img/bg33.png);
+                -webkit-background-image: url(../assets/img/bg33.png);
+                background-size: 100% 100%;
+    			background-blend-mode: overlay;
+
+                margin-bottom: 20px;
+ 
+                img {
+                    width: auto !important;
+                    height: 45vw;
+                    margin: 0 auto;
+                }
             }
 
             .message {
@@ -31,7 +41,7 @@ page-modal-page-edit {
                 margin: 0 auto;
                 width: 150px;
                 height: 35px;
-                background: red;
+                background: $redLight;
                 border-radius: 5px;
             }
         }

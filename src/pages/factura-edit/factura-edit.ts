@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 import { BillCreateProvider } from '../../providers/bill-create/bill-create';
 import { ModalPageEditPage } from '../modal-page-edit/modal-page-edit';
 
@@ -18,7 +18,11 @@ import { ModalPageEditPage } from '../modal-page-edit/modal-page-edit';
 export class FacturaEditPage {
   //selectedItem: any;
 
-  data = {}
+  data = {
+    id: ""
+  };
+  proveedores: any[] = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public billCreateProvider: BillCreateProvider, public modalCtrl: ModalController
   ) {
@@ -29,13 +33,30 @@ export class FacturaEditPage {
     console.log(this.data);
   }
 
-  otro() {
+  showModal() {
     let modal = this.modalCtrl.create(ModalPageEditPage);
     modal.present();
   }
 
   ionViewDidLoad() {
-    this.otro();
+    this.billCreateProvider.getProveedor()
+    .subscribe(
+      (data) => { // Success
+        if (data.code == 200) {
+
+          this.proveedores = data.proveedores;
+        } else {
+          alert("error!");
+        }
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+
+    if (this.data.id == "") {
+      this.showModal();
+    }
   }
 
 }

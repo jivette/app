@@ -69,11 +69,11 @@ page-settings {
 			width: 100%;
 			float: left;
 			position: relative;
-			background-color: #581102 !important;
+			background-color: $redLight !important;
 			-webkit-background-image: url(../assets/img/textura.jpg);
 			background-image: url(../assets/img/textura.jpg);
 			background-size: 100% 100%;
-			background-blend-mode: overlay;
+			background-blend-mode: darken;
 			
 			.message-avatar {
 				position: absolute;

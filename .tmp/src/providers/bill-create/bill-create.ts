@@ -15,7 +15,7 @@ export class BillCreateProvider {
   constructor(public http: HttpClient) {
   }
 
-  createBill(data): Observable<any> {
-    return this.http.post("api/recuerdame/api/create_factura", data);
+  getProveedor(): Observable<any> {
+    return this.http.post("api/recuerdame/api/proveedores","");
   }
 }

@@ -14,10 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'factura-detail.html',
 })
 export class FacturaDetailPage {
-  selectedItem: any;
+  data: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.selectedItem = navParams.get('factura');
+    this.data = navParams.get('factura');
   }
 
   ionViewDidLoad() {

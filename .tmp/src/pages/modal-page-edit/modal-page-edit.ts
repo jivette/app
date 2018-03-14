@@ -22,7 +22,7 @@ export class ModalPageEditPage {
   public closeModal() {
     this.viewCtrl.dismiss();
   }
-  
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ModalPageEditPage');
   }

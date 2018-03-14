@@ -1,3 +1,116 @@
 page-factura-detail {
 
+  	ion-content {
+        background-repeat: no-repeat !important;
+        background-color: #08080e !important;
+        -webkit-background-image: url(../assets/img/textura.jpg);
+        background-image: url(../assets/img/textura.jpg);
+        background-size: 100% 100%;
+        background-blend-mode: luminosity;
+	}
+
+
+    .factura {
+    	width: 100vw;
+    	height: 85vh;
+    	margin-top: 10vh;
+    	margin-left: 0;
+        background-image: url(../assets/img/factura.png);
+        -webkit-background-image: url(../assets/img/factura.png);
+        background-size: 100% 100%;
+  		background-repeat: no-repeat !important;
+  		position: relative;
+  
+	
+		.logo {
+			height: 40px;
+			position: absolute;
+			top: 5vh;
+			right: 10vw;
+			z-index: 5;
+		}
+	}
+
+
+	form {
+	    width: 75vw;
+	    margin-left: 10vw;
+	    position: absolute;
+	    height: 300px;
+	    top: 50%;
+	    margin-top: -150px;
+		
+		ion-item {
+			background: #efefef !important;
+			margin: 0 0 10px !important;
+			height: 35px !important;
+			min-height: 35px !important;
+			border-radius: 5px !important;
+			font-size: 12px !important;
+			overflow: hidden !important;
+		
+			&.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+			 &.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+				box-shadow: none !important;
+			}
+
+			.item-inner {
+				border: 0 !important;
+			}
+
+			&.price {
+				width: 150px !important;
+				font-size: 15px !important;
+				color: black;
+				ion-input {
+					width: 80%;
+					color: black;
+					input {
+						margin: 0 !important;
+						width: 100% !important;
+					}
+				}
+			}
+
+			&.item-no-factura {
+				width: 150px !important;
+				color: $redLight;
+				font-size: 15px !important;
+				
+				ion-input {
+					width: 80%;
+				}
+			}
+
+			ion-input, ion-datetime{
+						
+				&.no-factura {
+					color: $redLight;
+				}
+			}
+		
+		}
+		.button-ios, .button-md {
+			background-color: $redLight !important; 
+			width: 150px;
+			height: 35px;
+			float: right;
+			margin: 10px 0;
+		}
+
+	}
+
+    .tarjetas {
+	    width: 100px;
+	    height: 110px;
+	    margin-left: 5vw;
+	    background-image: url(../assets/img/tarjetas.png);
+	    -webkit-background-image: url(../assets/img/tarjetas.png);
+	    background-size: 100% 100%;
+	    background-repeat: no-repeat !important;
+	    position: fixed;
+	    bottom: 0;
+	    left: 0;
+    }
+
 }

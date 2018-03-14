@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, Events } from 'ionic-angular';
 import { FacturaEditPage } from '../factura-edit/factura-edit';
+import { BillCreateProvider } from '../../providers/bill-create/bill-create';
 
 /**
  * Generated class for the FacturaCreatePage page.
@@ -20,13 +21,16 @@ export class FacturaCreatePage {
   stepDefaultCondition: any;
   currentStep: any;
   data = {
-    proveedor: '',
+    id: ""
   };
+
+  proveedores:any[] = [];
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
     public alertCtrl: AlertController, 
+    public billCreateProvider: BillCreateProvider, 
     public evts: Events
   ) {
     
@@ -95,7 +99,21 @@ export class FacturaCreatePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FacturaCreatePage');
+    this.billCreateProvider.getProveedor()
+    .subscribe(
+      (data) => { // Success
+        if (data.code == 200) {
+
+          this.proveedores = data.proveedores;
+        } else {
+          alert("error!");
+        }
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+
   }
 
 }

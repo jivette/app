@@ -14,8 +14,7 @@
               <ion-list>
                 <ion-item>
                   <ion-select [(ngModel)]="data.proveedor_id" name="proveedor_id" (ionChange)="selectProvider()">
-                    <ion-option value="1">CLaro</ion-option>
-                    <ion-option value="2">Tigo</ion-option>
+                    <ion-option value="{{proveedor.id}}" *ngFor="let proveedor of proveedores">{{proveedor.nombre}}</ion-option>
                   </ion-select>
 
                 </ion-item>

@@ -1,6 +1,61 @@
 <ion-content>
-  <h4 text-center *ngIf="selectedItem">
-    You navigated here from <b>{{selectedItem.name}}</b>
-  </h4>
+  <global-header></global-header>
+
+  <ion-row class="factura">
+    <img src="../assets/img/claro.png" alt="" class="logo">
+
+
+    <form (ngSubmit)="logForm()">
+      <ion-item class="item-no-factura">
+        <ion-label>NO:</ion-label>
+        <ion-input disabled="true" class="no-factura" type="number" [(ngModel)]="data.no_factura" name="no_factura"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nombre de factura:</ion-label>
+        <ion-input disabled="true" type="text" [(ngModel)]="data.nombre_factura" name="nombre_factura"></ion-input>
+      </ion-item>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Provedor</ion-label>
+          <ion-select [(ngModel)]="data.proveedor_id" name="proveedor_id" disabled="true">
+            <ion-option value="1">CLaro</ion-option>
+            <ion-option value="2">Tigo</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <ion-item>
+        <ion-label>NO Servicio:</ion-label>
+        <ion-input disabled="true" type="number" [(ngModel)]="data.no_servicio" name="no_servicio"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Fecha de pago:</ion-label>
+        <ion-datetime disabled="true" displayFormat="MMM DD YYYY" [(ngModel)]="data.fecha_pago" name="fecha_pago"></ion-datetime>
+      </ion-item>
+
+      <ion-list>
+        <ion-item>
+          <ion-label>Recuerdame en</ion-label>
+          <ion-select disabled="true">
+            <ion-option value="nes">una semana antes</ion-option>
+            <ion-option value="n64">1 dia antes</ion-option>
+            <ion-option value="snes">1 hora antes</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-item class="price">
+        <ion-label>Monto: Q</ion-label>
+        <ion-input disabled="true" type="number" [(ngModel)]="data.valor_factura" name="valor_factura"></ion-input>
+      </ion-item>
+
+    </form>
+    <ion-row class="tarjetas">
+    </ion-row>
+  </ion-row>
+
 </ion-content>
- 

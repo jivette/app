@@ -30,7 +30,7 @@ var ModalPageEditPage = (function () {
     };
     ModalPageEditPage = __decorate([
         Component({
-            selector: 'page-modal-page-edit',template:/*ion-inline-start:"/home/ivette/Documents/app/src/pages/modal-page-edit/modal-page-edit.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>ModalPage</ion-title>\n    <ion-buttons end>\n      <button ion-button (click)="closeModal()">Close</button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>'/*ion-inline-end:"/home/ivette/Documents/app/src/pages/modal-page-edit/modal-page-edit.html"*/,
+            selector: 'page-modal-page-edit',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/modal-page-edit/modal-page-edit.html"*/'<ion-content padding>\n    <ion-row class="circle">\n        <img src="../assets/img/ella/habla.gif" alt=""> \n    </ion-row>\n    <ion-row class="message">\n        ¡Muy bien!  Haz creado tu factura... Ahora puedes llenar el resto de informaciòn para que pueda recordarte.\n    </ion-row>\n    <ion-row>\n      <button ion-button (click)="closeModal()">Continuar</button>\n    </ion-row>\n</ion-content>'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/modal-page-edit/modal-page-edit.html"*/,
         }),
         __metadata("design:paramtypes", [NavController, ViewController, NavParams])
     ], ModalPageEditPage);

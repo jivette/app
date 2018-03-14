@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-//import { ViewController } from 'ionic-angular';
+import { ViewController } from 'ionic-angular';
 
 /**
  * Generated class for the ModalPageEditPage page.
@@ -16,12 +16,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ModalPageEditPage {
 
-  constructor(public navCtrl: NavController,/* public viewCtrl: ViewController, */public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public viewCtrl: ViewController, public navParams: NavParams) {
   }
 
-  /*public closeModal() {
+  public closeModal() {
     this.viewCtrl.dismiss();
-  }*/
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ModalPageEditPage');

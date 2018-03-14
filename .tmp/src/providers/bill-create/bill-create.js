@@ -21,8 +21,8 @@ var BillCreateProvider = (function () {
     function BillCreateProvider(http) {
         this.http = http;
     }
-    BillCreateProvider.prototype.createBill = function (data) {
-        return this.http.post("api/recuerdame/api/create_factura", data);
+    BillCreateProvider.prototype.getProveedor = function () {
+        return this.http.post("api/recuerdame/api/proveedores", "");
     };
     BillCreateProvider = __decorate([
         Injectable(),

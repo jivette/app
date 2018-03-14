@@ -131,7 +131,7 @@ var ConferenceApp = (function () {
         __metadata("design:type", Nav)
     ], ConferenceApp.prototype, "nav", void 0);
     ConferenceApp = __decorate([
-        Component({template:/*ion-inline-start:"/home/ivette/Documents/app/src/app/app.template.html"*/'\n<ion-split-pane>\n\n  <!-- main navigation -->\n  <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main name="app"></ion-nav>\n\n</ion-split-pane>\n'/*ion-inline-end:"/home/ivette/Documents/app/src/app/app.template.html"*/
+        Component({template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/app/app.template.html"*/'\n<ion-split-pane>\n\n  <!-- main navigation -->\n  <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main name="app"></ion-nav>\n\n</ion-split-pane>\n'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/app/app.template.html"*/
         }),
         __metadata("design:paramtypes", [Events,
             UserData,

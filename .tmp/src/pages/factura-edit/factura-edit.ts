@@ -18,23 +18,45 @@ import { ModalPageEditPage } from '../modal-page-edit/modal-page-edit';
 export class FacturaEditPage {
   //selectedItem: any;
 
-  data = {}
+  data = {
+    id: ""
+  };
+  proveedores: any[] = [];
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
-    public billCreateProvider: BillCreateProvider, public modalCtrl: ModalController,
-    public modalPageEditPage: ModalPageEditPage
+    public billCreateProvider: BillCreateProvider, public modalCtrl: ModalController
   ) {
-    
     this.data = navParams.get('data');
-    console.log(this.data);
   }
 
   logForm() {
     console.log(this.data);
   }
 
+  showModal() {
+    let modal = this.modalCtrl.create(ModalPageEditPage);
+    modal.present();
+  }
+
   ionViewDidLoad() {
-    let modalPage = this.modalCtrl.create('this.modalPageEditPage');
-    modalPage.present();
+    this.billCreateProvider.getProveedor()
+    .subscribe(
+      (data) => { // Success
+        if (data.code == 200) {
+
+          this.proveedores = data.proveedores;
+        } else {
+          alert("error!");
+        }
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+
+    if (this.data.id == "") {
+      this.showModal();
+    }
   }
 
 }

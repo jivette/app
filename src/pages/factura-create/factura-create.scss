@@ -27,11 +27,13 @@ page-factura-create {
 
    	>ion-content { 
 		width: 100vw;
-	    background-image: url(../assets/img/tarjetas3.png);
+	    background-image: url(../assets/img/tarjetas.png);
 		height: 100vh;
 		background-size: auto 24vh;
-		background-position:bottom left;
+		background-position:bottom right;
 		background-repeat: no-repeat;
+		
+		
 	}
 
 	.fab-ios {
@@ -55,18 +57,18 @@ page-factura-create {
 	ion-row {
 		&.avatar-square {
 			background: $redLight;
-	    	height: 40vh;
+	    	height: 50vh;
 	    	display: flex;
 	    	align-items: flex-end;
 	    	justify-content: center;
 			width: 100%;
 			float: left;
 			position: relative;
-			background-color: #581102 !important;
+			background-color: $redLight !important;
 			-webkit-background-image: url(../assets/img/textura.jpg);
 			background-image: url(../assets/img/textura.jpg);
 			background-size: 100% 100%;
-			background-blend-mode: overlay;
+			background-blend-mode: darken;
 			
 			.icon {
 			    position: absolute;
@@ -182,7 +184,7 @@ page-factura-create {
 		width: 55vw !important;
 		height: 50PX;
 		text-align: center;
-		margin-top: 40vh;
+		margin-top: 50vh;
 		margin-left: -12vw;
 		left: 50% !important;
 		bottom: inherit !important;
