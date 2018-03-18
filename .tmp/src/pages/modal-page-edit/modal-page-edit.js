@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { ViewController } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 /**
  * Generated class for the ModalPageEditPage page.
  *
@@ -17,10 +18,15 @@ import { ViewController } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 var ModalPageEditPage = (function () {
-    function ModalPageEditPage(navCtrl, viewCtrl, navParams) {
+    function ModalPageEditPage(navCtrl, storage, viewCtrl, navParams) {
+        var _this = this;
         this.navCtrl = navCtrl;
+        this.storage = storage;
         this.viewCtrl = viewCtrl;
         this.navParams = navParams;
+        this.storage.get('avatar').then(function (avatar) {
+            _this.dir = JSON.parse(avatar);
+        });
     }
     ModalPageEditPage.prototype.closeModal = function () {
         this.viewCtrl.dismiss();
@@ -30,9 +36,11 @@ var ModalPageEditPage = (function () {
     };
     ModalPageEditPage = __decorate([
         Component({
-            selector: 'page-modal-page-edit',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/modal-page-edit/modal-page-edit.html"*/'<ion-content padding>\n    <ion-row class="circle">\n        <img src="../assets/img/ella/habla.gif" alt=""> \n    </ion-row>\n    <ion-row class="message">\n        ¡Muy bien!  Haz creado tu factura... Ahora puedes llenar el resto de informaciòn para que pueda recordarte.\n    </ion-row>\n    <ion-row>\n      <button ion-button (click)="closeModal()">Continuar</button>\n    </ion-row>\n</ion-content>'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/modal-page-edit/modal-page-edit.html"*/,
+            selector: 'page-modal-page-edit',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/modal-page-edit/modal-page-edit.html"*/'<ion-content padding>\n    <ion-row class="circle">\n        <img src="../assets/img/{{ dir }}/habla.gif" alt=""> \n    </ion-row>\n    <ion-row class="message">\n        ¡Muy bien! Ahora puedes llenar el resto de informaciòn para que pueda recordarte.\n    </ion-row>\n    <ion-row>\n      <button ion-button (click)="closeModal()">Continuar</button>\n    </ion-row>\n</ion-content>'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/modal-page-edit/modal-page-edit.html"*/,
         }),
-        __metadata("design:paramtypes", [NavController, ViewController, NavParams])
+        __metadata("design:paramtypes", [NavController,
+            Storage,
+            ViewController, NavParams])
     ], ModalPageEditPage);
     return ModalPageEditPage;
 }());

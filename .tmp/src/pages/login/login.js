@@ -47,7 +47,10 @@ var LoginPage = (function () {
         this.getUserProvider.getUser(user)
             .subscribe(function (data) {
             if (data.code == 200) {
-                _this.storage.set('user', user);
+                var token = JSON.stringify(user.token);
+                _this.storage.set('token', token);
+                var avatar = JSON.stringify("ella");
+                _this.storage.set('avatar', avatar);
                 var val = JSON.stringify(data.facturas);
                 _this.storage.set('facturas', val);
                 //this.users = data;

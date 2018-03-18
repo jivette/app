@@ -17,7 +17,12 @@ export class GetUserProvider {
 
   getUser(data): Observable<any> {
 
-    return this.http.post("api/recuerdame/api/obtenerUsuario", data);
+    return this.http.post("api/terecuerdo/api/obtenerUsuario", data);
+  }
+
+
+  getSetting(data): Observable<any> {
+    return this.http.post("api/terecuerdo/api/editarConfiguracion", data);
   }
 
 }

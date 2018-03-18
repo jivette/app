@@ -3,37 +3,58 @@
   <global-header></global-header>
 
   <ion-row class="avatar-square">
-    <img src="assets/img/ella/habla.gif"/>
-    <div class="message-avatar">¡Hola, este es tu dashboard!</div>
+    <ion-row class="overflow_{{ emptyBill }}">
+    </ion-row>
+    <img src="assets/img/{{dir}}/habla.gif"/>
+    <div class="message-avatar">{{messageAvatarHome}}</div>
   </ion-row>
 
   <ion-row class="btn-factura">
-    <button ion-button icon-only color="danger" (click)="getPendientes()">  
+    <button (click)="activeButton = 'a'" 
+    [ngClass]="{ 'active': activeButton === 'a' }"
+     ion-button icon-only color="danger" (click)="getPendientes()" >  
       Pendientes
     </button>
-    <button ion-button icon-only (click)="getCanceladas()">  
+    <button ion-button icon-only (click)="getCanceladas()"
+    (click)="activeButton = 'b'" 
+    [ngClass]="{ 'active': activeButton === 'b' }">  
       Canceladas
     </button>
   </ion-row>
 
   <ion-scroll scrollY="true" class="list-bill">
+  
+
     <ion-row sticky ion-item *ngFor="let factura of getfacturas" class="item-factura">
+      <ion-list>
+        <ion-item-sliding #item>
+          
+          <ion-item>
           <img src="../assets/img/claro.png" alt="" class="logo">
-          <ion-row class="buton-event">
-          <ion-icon ios="ios-create" md="md-create" (click)="editBill(factura)" ></ion-icon>
-          <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
-        </ion-row>
-        <ion-row class="content-factura" (click)="itemTapped(factura)">
-          <ion-row>
-            <b>{{ factura.no_factura }}</b>
+            <ion-row class="buton-event">
+            <ion-icon ios="ios-create" md="md-create" (click)="editBill(factura)" ></ion-icon>
+            <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
           </ion-row>
-          <ion-row>
-            <b>Fecha de pago:</b> {{ factura.fecha_pago }}
+          <ion-row class="content-factura" (click)="itemTapped(factura)">
+            <ion-row>
+              <b>{{ factura.no_factura }}</b>
+            </ion-row>
+            <ion-row>
+              <b>Fecha de pago:</b> {{ factura.fecha_pago }}
+            </ion-row>
+            <ion-row class="price">
+              <b>Q{{ factura.valor_factura }}</b>
+            </ion-row>
           </ion-row>
-          <ion-row class="price">
-            <b>Q{{ factura.valor_factura }}</b>
-          </ion-row>
-        </ion-row>
+        </ion-item>
+
+          <ion-item-options side="right">
+            <button ion-button color="danger" (click)="cancelBill(factura)">
+              Cancelar <ion-icon name="checkbox-outline"></ion-icon>
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </ion-list>
     </ion-row>  
   </ion-scroll>
 
@@ -44,3 +65,7 @@
   </ion-fab>
 
 </ion-content>
+
+<ion-row class="overflow_{{ emptyBill }}">
+    <img class="arrow" src="assets/img/share.png" />
+</ion-row> 

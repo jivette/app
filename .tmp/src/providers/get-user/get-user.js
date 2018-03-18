@@ -22,7 +22,10 @@ var GetUserProvider = (function () {
         this.http = http;
     }
     GetUserProvider.prototype.getUser = function (data) {
-        return this.http.post("api/recuerdame/api/obtenerUsuario", data);
+        return this.http.post("api/terecuerdo/api/obtenerUsuario", data);
+    };
+    GetUserProvider.prototype.getSetting = function (data) {
+        return this.http.post("api/terecuerdo/api/editarConfiguracion", data);
     };
     GetUserProvider = __decorate([
         Injectable(),

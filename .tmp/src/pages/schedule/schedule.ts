@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 
-import { AlertController,/* App, ModalController, */NavController} from 'ionic-angular';
+import { AlertController,/* App, ModalController, */NavController, ToastController} from 'ionic-angular';
 
 import { FacturaDetailPage } from '../factura-detail/factura-detail';
 import { FacturaCreatePage } from '../factura-create/factura-create';
 import { FacturaEditPage } from '../factura-edit/factura-edit';
 import { Storage } from '@ionic/storage';
+import { BillCreateProvider } from '../../providers/bill-create/bill-create';
 
 
 @Component({
@@ -16,12 +17,15 @@ import { Storage } from '@ionic/storage';
 })
 export class SchedulePage {
   getfacturas: any[] = [];
-  localFacturas:any;
-
+  localFacturas:any; 
+  dir:any;
+  tokenCode:any;
   constructor(
     public navCtrl: NavController,
     public alertController: AlertController,
-    public storage: Storage
+    public billCreateProvider: BillCreateProvider,
+    public storage: Storage,
+    public toastCtrl: ToastController
   ){}
 
   ionViewDidLoad() {
@@ -29,6 +33,16 @@ export class SchedulePage {
       this.localFacturas = JSON.parse(facturas);
 
       this.getfacturas = this.localFacturas.pendientes;
+    });
+
+    this.storage.get('avatar').then((avatar) => {
+      this.dir = JSON.parse(avatar);
+      console.log(this.dir);
+    });
+
+
+    this.storage.get('token').then((token) => {
+      this.tokenCode = JSON.parse(token);
     });
 
   }
@@ -54,5 +68,40 @@ export class SchedulePage {
       data: factura
     });
   }
+  cancelBill(estado){
+    console.log(estado);
+    estado = {
+      uuid: estado.uuid,
+      estado_id: 2,
+      token: this.tokenCode
+    };
+    
+    console.log(estado);
+    this.billCreateProvider.refreshStatus(estado)
+      .subscribe(
+        (data) => { // Success
+          console.log(data);
+          if (data.code == 200) {
 
+            let toast = this.toastCtrl.create({
+              message: 'tu factura se a cancelado',
+              duration: 3000,
+              position: 'top'
+            });
+
+            toast.onDidDismiss(() => {
+              console.log('Dismissed toast');
+            });
+
+            toast.present();
+
+          } else {
+            alert("error!");
+          }
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
+  }
 }

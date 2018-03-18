@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 
 import { UserData } from '../../providers/user-data';
 
@@ -29,6 +29,7 @@ export class LoginPage {
     public userData: UserData, 
     //private googlePlus: GooglePlus, 
     public getUserProvider: GetUserProvider,
+    private alertCtrl: AlertController,
     public storage: Storage) { }
 
   onLogin(form: NgForm) {
@@ -49,9 +50,8 @@ export class LoginPage {
   correo:any;
 
   loginGoogle(){
-
     let user = {
-      token : "56156165",
+      token : "33333333",
       nombre : "Ivette",
       correo : "correo@gmail.com"
     }
@@ -60,7 +60,12 @@ export class LoginPage {
       .subscribe(
         (data) => { // Success
           if(data.code == 200){
-            this.storage.set('user', user);
+            let token = JSON.stringify(user.token);
+            this.storage.set('token', token);
+            
+            let avatar = JSON.stringify("ella");
+            this.storage.set('avatar', avatar);
+           
             let val = JSON.stringify(data.facturas);
             this.storage.set('facturas', val);
             
@@ -68,13 +73,20 @@ export class LoginPage {
 
             this.navCtrl.push(SchedulePage);
           } else {
-            alert("error!");
+            let alert = this.alertCtrl.create({
+              title: 'Ha ocurrido un error!',
+              subTitle: 'Verifica tu conexión',
+              buttons: ['Aceptar']
+            });
+            alert.present();
           }
         },
         (error) => {
           console.error(error);
         }
     )
+
+
 
 /*    this.googlePlus.login({})
     .then((res) => {

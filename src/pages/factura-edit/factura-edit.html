@@ -6,7 +6,7 @@
 			<img src="../assets/img/claro.png" alt=""  class="logo">	
 
 	
-			<form (ngSubmit)="logForm()">
+			<form>
 		      <ion-item class="item-no-factura">
   		        <ion-label>NO:</ion-label>
 		          <ion-input class="no-factura" type="number" [(ngModel)]="data.no_factura" name="no_factura"></ion-input>
@@ -14,7 +14,7 @@
 
 					<ion-item>
 						<ion-label>Nombre de factura:</ion-label>
-						<ion-input type="text" [(ngModel)]="data.nombre_factura" name="nombre_factura"></ion-input>
+						<ion-input type="text" [(ngModel)]="data.nombre" name="nombre"></ion-input>
 					</ion-item>
 
 					<ion-list>
@@ -38,12 +38,8 @@
 
 					<ion-list>
 						<ion-item>
-							<ion-label>Recuerdame en</ion-label>
-							<ion-select>
-								<ion-option value="nes">una semana antes</ion-option>
-								<ion-option value="n64">1 dia antes</ion-option>
-								<ion-option value="snes">1 hora antes</ion-option>
-							</ion-select>
+							<ion-label>En cuantos días te recuerdo</ion-label>
+						<ion-input type="number" max="30" [(ngModel)]="data.dias" name="dias"></ion-input>
 						</ion-item>
 					</ion-list>
 
@@ -55,10 +51,11 @@
 
 
 
-		      <button ion-button type="submit" block>Recuerdame</button>
+		      <button ion-button (click)="save()" block>Recuerdame</button>
 		    </form>
 	  <ion-row class="tarjetas">
 	  </ion-row>
   </ion-row>
 
 </ion-content>
+ 

@@ -49,7 +49,6 @@ export class LoginPage {
   correo:any;
 
   loginGoogle(){
-
     let user = {
       token : "56156165",
       nombre : "Ivette",
@@ -60,7 +59,12 @@ export class LoginPage {
       .subscribe(
         (data) => { // Success
           if(data.code == 200){
-            this.storage.set('user', user);
+            let token = JSON.stringify(user.token);
+            this.storage.set('token', token);
+            
+            let avatar = JSON.stringify("ella");
+            this.storage.set('avatar', avatar);
+           
             let val = JSON.stringify(data.facturas);
             this.storage.set('facturas', val);
             
@@ -75,6 +79,8 @@ export class LoginPage {
           console.error(error);
         }
     )
+
+
 
 /*    this.googlePlus.login({})
     .then((res) => {

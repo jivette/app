@@ -89,6 +89,7 @@ page-schedule {
 				top: 50%;
 				margin-top: -40px;
 				color: white;
+				z-index: 2;
 
 				&:after {
 					content:"";
@@ -114,7 +115,9 @@ page-schedule {
 
 			img {
 			    height: 30vh;
-			    margin: 0 auto;
+				margin: 0 auto;
+				position: relative;
+				z-index: 2;
 			}
 		}
 		&.btn-factura {
@@ -154,7 +157,7 @@ page-schedule {
 				    background: white;
 				    color: $greyLight;
 					box-shadow: none !important;
-					border-right: 1px solid $greyLight;
+					//border-right: 1px solid $greyLight;
 				}
 			    &:nth-child(2) {
 				    background: white;
@@ -188,11 +191,13 @@ page-schedule {
 		}
 
 		.item-inner {
-		    width: 94%;
-		    margin: 0 3%;
 		    box-sizing: border-box;
 	        border: 0;
     		border-radius: 10px;
+
+			ion-list.list.list-md{
+				margin: 0 !important;
+			}	
 
 			ion-label.label.label-md img {
 				width: 40px;
@@ -224,4 +229,64 @@ page-schedule {
 		}
 	}
   }
+}
+
+.btn-factura button.active {
+    background: #fa6343 !important;
+    color: white !important;
+}
+
+.list-md ion-item-options .button {
+	width: 100px !important;
+	text-transform: capitalize;
+	
+	span {
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+
+		ion-icon {
+			margin-top: 10px;
+			font-size: 30px;
+		}
+	}
+}
+
+.overflow_true {
+    width: 100%;
+    height: 60vh;
+    position: fixed;
+    z-index: 20;
+    background: rgba(0,0,0, 0.48);
+    bottom: 0;
+		.arrow {
+			width: 150px;
+			transform: rotate(45deg);
+			position: absolute;
+			left: 50%;
+			bottom: 10%;
+			margin-left: -75px;
+//			-webkit-transition: width 2s;
+			//transition: width 2s;
+//			animation-name: example;
+//			animation-duration: 4s;		
+		}
+}
+
+.avatar-square {
+	.overflow_true {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 1;
+		background: rgba(0,0,0, 0.48);
+		bottom: 0;
+
+	}	
+
+	@keyframes example {
+		30%   {width:50px;}
+		70%  {width:100px;}
+		100%  {width:150px;}
+	}
 }

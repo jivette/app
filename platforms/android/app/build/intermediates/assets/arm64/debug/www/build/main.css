@@ -39917,8 +39917,12 @@ ion-navbar.toolbar {
   display: none;
 }
 
+ion-modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .toolbar-background {
-  background: #00ada9;
+  background-color: rgba(255, 255, 255, 0) !important;
   border: 0 !important;
   color: white;
 }
@@ -39944,6 +39948,13 @@ ion-header button.back-button.disable-hover.bar-button.bar-button-ios.back-butto
 
 ion-header button.back-button.disable-hover.bar-button.bar-button-ios.back-button-ios.bar-button-default.bar-button-default-ios.show-back-button span span {
   display: none;
+}
+
+.header-md::after,
+.tabs-md[tabsPlacement="top"] >
+.tabbar::after, .footer-md::before,
+.tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none !important;
 }
 
 .about-header {
@@ -40000,7 +40011,7 @@ page-factura-create > ion-content {
   background-image: url(../assets/img/tarjetas.png);
   height: 100vh;
   background-size: auto 24vh;
-  background-position: bottom left;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 
@@ -40024,7 +40035,7 @@ page-factura-create .list-ios {
 
 page-factura-create ion-row.avatar-square {
   background: #ff6444;
-  height: 40vh;
+  height: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40040,6 +40051,11 @@ page-factura-create ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
 }
 
 page-factura-create ion-row.avatar-square .icon {
@@ -40051,13 +40067,21 @@ page-factura-create ion-row.avatar-square .icon {
 }
 
 page-factura-create ion-row.avatar-square img {
+  /*				width: auto;
+				margin: 0 auto;
+				position: absolute;
+				height: 50vh;
+				bottom: 0;
+				margin-bottom: -32vh;
+				left: 6vw;
+*/
   width: auto;
   margin: 0 auto;
   position: absolute;
-  height: 50vh;
+  height: 65vh;
   bottom: 0;
-  margin-bottom: -25vh;
-  left: 10vw;
+  margin-bottom: -37vh;
+  left: 2vw;
 }
 
 page-factura-create ion-row.btn-factura {
@@ -40170,7 +40194,7 @@ page-factura-create > ion-content {
   background-image: url(../assets/img/tarjetas.png);
   height: 100vh;
   background-size: auto 24vh;
-  background-position: bottom left;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 
@@ -40194,7 +40218,7 @@ page-factura-create .list-ios {
 
 page-factura-create ion-row.avatar-square {
   background: #ff6444;
-  height: 40vh;
+  height: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40210,6 +40234,11 @@ page-factura-create ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
 }
 
 page-factura-create ion-row.avatar-square .icon {
@@ -40221,13 +40250,21 @@ page-factura-create ion-row.avatar-square .icon {
 }
 
 page-factura-create ion-row.avatar-square img {
+  /*				width: auto;
+				margin: 0 auto;
+				position: absolute;
+				height: 50vh;
+				bottom: 0;
+				margin-bottom: -32vh;
+				left: 6vw;
+*/
   width: auto;
   margin: 0 auto;
   position: absolute;
-  height: 50vh;
+  height: 65vh;
   bottom: 0;
-  margin-bottom: -25vh;
-  left: 10vw;
+  margin-bottom: -37vh;
+  left: 2vw;
 }
 
 page-factura-create ion-row.btn-factura {
@@ -40340,7 +40377,7 @@ page-factura-create > ion-content {
   background-image: url(../assets/img/tarjetas.png);
   height: 100vh;
   background-size: auto 24vh;
-  background-position: bottom left;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 
@@ -40364,7 +40401,7 @@ page-factura-create .list-ios {
 
 page-factura-create ion-row.avatar-square {
   background: #ff6444;
-  height: 40vh;
+  height: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40380,6 +40417,11 @@ page-factura-create ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
 }
 
 page-factura-create ion-row.avatar-square .icon {
@@ -40391,13 +40433,21 @@ page-factura-create ion-row.avatar-square .icon {
 }
 
 page-factura-create ion-row.avatar-square img {
+  /*				width: auto;
+				margin: 0 auto;
+				position: absolute;
+				height: 50vh;
+				bottom: 0;
+				margin-bottom: -32vh;
+				left: 6vw;
+*/
   width: auto;
   margin: 0 auto;
   position: absolute;
-  height: 50vh;
+  height: 65vh;
   bottom: 0;
-  margin-bottom: -25vh;
-  left: 10vw;
+  margin-bottom: -37vh;
+  left: 2vw;
 }
 
 page-factura-create ion-row.btn-factura {
@@ -40510,7 +40560,7 @@ page-factura-create > ion-content {
   background-image: url(../assets/img/tarjetas.png);
   height: 100vh;
   background-size: auto 24vh;
-  background-position: bottom left;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 
@@ -40534,7 +40584,7 @@ page-factura-create .list-ios {
 
 page-factura-create ion-row.avatar-square {
   background: #ff6444;
-  height: 40vh;
+  height: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40550,6 +40600,11 @@ page-factura-create ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
 }
 
 page-factura-create ion-row.avatar-square .icon {
@@ -40561,13 +40616,21 @@ page-factura-create ion-row.avatar-square .icon {
 }
 
 page-factura-create ion-row.avatar-square img {
+  /*				width: auto;
+				margin: 0 auto;
+				position: absolute;
+				height: 50vh;
+				bottom: 0;
+				margin-bottom: -32vh;
+				left: 6vw;
+*/
   width: auto;
   margin: 0 auto;
   position: absolute;
-  height: 50vh;
+  height: 65vh;
   bottom: 0;
-  margin-bottom: -25vh;
-  left: 10vw;
+  margin-bottom: -37vh;
+  left: 2vw;
 }
 
 page-factura-create ion-row.btn-factura {
@@ -40680,7 +40743,7 @@ page-factura-create > ion-content {
   background-image: url(../assets/img/tarjetas.png);
   height: 100vh;
   background-size: auto 24vh;
-  background-position: bottom left;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 
@@ -40704,7 +40767,7 @@ page-factura-create .list-ios {
 
 page-factura-create ion-row.avatar-square {
   background: #ff6444;
-  height: 40vh;
+  height: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40720,6 +40783,11 @@ page-factura-create ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
 }
 
 page-factura-create ion-row.avatar-square .icon {
@@ -40731,13 +40799,21 @@ page-factura-create ion-row.avatar-square .icon {
 }
 
 page-factura-create ion-row.avatar-square img {
+  /*				width: auto;
+				margin: 0 auto;
+				position: absolute;
+				height: 50vh;
+				bottom: 0;
+				margin-bottom: -32vh;
+				left: 6vw;
+*/
   width: auto;
   margin: 0 auto;
   position: absolute;
-  height: 50vh;
+  height: 65vh;
   bottom: 0;
-  margin-bottom: -25vh;
-  left: 10vw;
+  margin-bottom: -37vh;
+  left: 2vw;
 }
 
 page-factura-create ion-row.btn-factura {
@@ -40850,7 +40926,7 @@ page-factura-create > ion-content {
   background-image: url(../assets/img/tarjetas.png);
   height: 100vh;
   background-size: auto 24vh;
-  background-position: bottom left;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 
@@ -40874,7 +40950,7 @@ page-factura-create .list-ios {
 
 page-factura-create ion-row.avatar-square {
   background: #ff6444;
-  height: 40vh;
+  height: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40890,6 +40966,11 @@ page-factura-create ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
 }
 
 page-factura-create ion-row.avatar-square .icon {
@@ -40901,13 +40982,21 @@ page-factura-create ion-row.avatar-square .icon {
 }
 
 page-factura-create ion-row.avatar-square img {
+  /*				width: auto;
+				margin: 0 auto;
+				position: absolute;
+				height: 50vh;
+				bottom: 0;
+				margin-bottom: -32vh;
+				left: 6vw;
+*/
   width: auto;
   margin: 0 auto;
   position: absolute;
-  height: 50vh;
+  height: 65vh;
   bottom: 0;
-  margin-bottom: -25vh;
-  left: 10vw;
+  margin-bottom: -37vh;
+  left: 2vw;
 }
 
 page-factura-create ion-row.btn-factura {
@@ -41020,7 +41109,7 @@ page-factura-create > ion-content {
   background-image: url(../assets/img/tarjetas.png);
   height: 100vh;
   background-size: auto 24vh;
-  background-position: bottom left;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 
@@ -41044,7 +41133,7 @@ page-factura-create .list-ios {
 
 page-factura-create ion-row.avatar-square {
   background: #ff6444;
-  height: 40vh;
+  height: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41060,6 +41149,11 @@ page-factura-create ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
 }
 
 page-factura-create ion-row.avatar-square .icon {
@@ -41071,13 +41165,21 @@ page-factura-create ion-row.avatar-square .icon {
 }
 
 page-factura-create ion-row.avatar-square img {
+  /*				width: auto;
+				margin: 0 auto;
+				position: absolute;
+				height: 50vh;
+				bottom: 0;
+				margin-bottom: -32vh;
+				left: 6vw;
+*/
   width: auto;
   margin: 0 auto;
   position: absolute;
-  height: 50vh;
+  height: 65vh;
   bottom: 0;
-  margin-bottom: -25vh;
-  left: 10vw;
+  margin-bottom: -37vh;
+  left: 2vw;
 }
 
 page-factura-create ion-row.btn-factura {
@@ -41190,7 +41292,7 @@ page-factura-create > ion-content {
   background-image: url(../assets/img/tarjetas.png);
   height: 100vh;
   background-size: auto 24vh;
-  background-position: bottom left;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 
@@ -41214,7 +41316,7 @@ page-factura-create .list-ios {
 
 page-factura-create ion-row.avatar-square {
   background: #ff6444;
-  height: 40vh;
+  height: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41230,6 +41332,11 @@ page-factura-create ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
 }
 
 page-factura-create ion-row.avatar-square .icon {
@@ -41241,13 +41348,21 @@ page-factura-create ion-row.avatar-square .icon {
 }
 
 page-factura-create ion-row.avatar-square img {
+  /*				width: auto;
+				margin: 0 auto;
+				position: absolute;
+				height: 50vh;
+				bottom: 0;
+				margin-bottom: -32vh;
+				left: 6vw;
+*/
   width: auto;
   margin: 0 auto;
   position: absolute;
-  height: 50vh;
+  height: 65vh;
   bottom: 0;
-  margin-bottom: -25vh;
-  left: 10vw;
+  margin-bottom: -37vh;
+  left: 2vw;
 }
 
 page-factura-create ion-row.btn-factura {
@@ -41360,7 +41475,7 @@ page-factura-create > ion-content {
   background-image: url(../assets/img/tarjetas.png);
   height: 100vh;
   background-size: auto 24vh;
-  background-position: bottom left;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 
@@ -41384,7 +41499,7 @@ page-factura-create .list-ios {
 
 page-factura-create ion-row.avatar-square {
   background: #ff6444;
-  height: 40vh;
+  height: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41400,6 +41515,11 @@ page-factura-create ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
 }
 
 page-factura-create ion-row.avatar-square .icon {
@@ -41411,13 +41531,21 @@ page-factura-create ion-row.avatar-square .icon {
 }
 
 page-factura-create ion-row.avatar-square img {
+  /*				width: auto;
+				margin: 0 auto;
+				position: absolute;
+				height: 50vh;
+				bottom: 0;
+				margin-bottom: -32vh;
+				left: 6vw;
+*/
   width: auto;
   margin: 0 auto;
   position: absolute;
-  height: 50vh;
+  height: 65vh;
   bottom: 0;
-  margin-bottom: -25vh;
-  left: 10vw;
+  margin-bottom: -37vh;
+  left: 2vw;
 }
 
 page-factura-create ion-row.btn-factura {
@@ -41530,7 +41658,7 @@ page-factura-create > ion-content {
   background-image: url(../assets/img/tarjetas.png);
   height: 100vh;
   background-size: auto 24vh;
-  background-position: bottom left;
+  background-position: bottom right;
   background-repeat: no-repeat;
 }
 
@@ -41554,7 +41682,7 @@ page-factura-create .list-ios {
 
 page-factura-create ion-row.avatar-square {
   background: #ff6444;
-  height: 40vh;
+  height: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -41570,6 +41698,11 @@ page-factura-create ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
 }
 
 page-factura-create ion-row.avatar-square .icon {
@@ -41581,13 +41714,21 @@ page-factura-create ion-row.avatar-square .icon {
 }
 
 page-factura-create ion-row.avatar-square img {
+  /*				width: auto;
+				margin: 0 auto;
+				position: absolute;
+				height: 50vh;
+				bottom: 0;
+				margin-bottom: -32vh;
+				left: 6vw;
+*/
   width: auto;
   margin: 0 auto;
   position: absolute;
-  height: 50vh;
+  height: 65vh;
   bottom: 0;
-  margin-bottom: -25vh;
-  left: 10vw;
+  margin-bottom: -37vh;
+  left: 2vw;
 }
 
 page-factura-create ion-row.btn-factura {
@@ -41690,6 +41831,190 @@ page-factura-create .item-factura .item-inner [icon-only] ion-icon {
   font-weight: bold;
 }
 
+page-factura-create .ion-wizard-footer {
+  position: fixed;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  top: 0;
+  z-index: 100;
+  display: block;
+  width: 55vw !important;
+  height: 50PX;
+  text-align: center;
+  margin-top: 50vh;
+  margin-left: -12vw;
+  left: 50% !important;
+  bottom: inherit !important;
+}
+
+page-factura-create .ion-wizard-footer button {
+  width: 70px;
+  height: 30px;
+  background: #00ada9;
+  color: white;
+  border-radius: 10px;
+}
+
+page-factura-create .ion-wizard-footer button icon-icon, page-factura-create .ion-wizard-footer button .icon {
+  padding: 10px 0;
+  width: 100%;
+  font-size: 15px;
+}
+
+page-factura-create .ion-wizard-footer ion-fab[right] {
+  right: 0 !important;
+}
+
+page-factura-create ion-wizard-step {
+  left: 50%;
+  top: initial !important;
+  min-height: 20vh;
+  margin-top: 0;
+  width: 65vw !important;
+  margin-left: -16vw;
+  bottom: 0 !important;
+}
+
+page-factura-create ion-list {
+  margin-top: 4px  !important;
+}
+
+page-factura-create ion-list ion-item {
+  border-radius: 10px;
+  min-height: 35px !important;
+}
+
+page-factura-create .card-md {
+  background: rgba(255, 255, 255, 0);
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-factura-create .card-md p {
+  color: white;
+  margin-bottom: 15px;
+}
+
+page-factura-create .card-md ion-select {
+  width: 100% !important;
+  max-width: 100%;
+  height: 35px !important;
+  padding: 8px 3px 0 !important;
+}
+
+page-factura-create .card-wizard-icon {
+  font-size: 10em;
+}
+
+page-factura-detail ion-content {
+  background-repeat: no-repeat !important;
+  background-color: #08080e !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: luminosity;
+}
+
+page-factura-detail .factura {
+  width: 100vw;
+  height: 85vh;
+  margin-top: 10vh;
+  margin-left: 0;
+  background-image: url(../assets/img/factura.png);
+  -webkit-background-image: url(../assets/img/factura.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat !important;
+  position: relative;
+}
+
+page-factura-detail .factura .logo {
+  height: 40px;
+  position: absolute;
+  top: 5vh;
+  right: 10vw;
+  z-index: 5;
+}
+
+page-factura-detail form {
+  width: 75vw;
+  margin-left: 10vw;
+  position: absolute;
+  height: 300px;
+  top: 50%;
+  margin-top: -150px;
+}
+
+page-factura-detail form ion-item {
+  background: #efefef !important;
+  margin: 0 0 10px !important;
+  height: 35px !important;
+  min-height: 35px !important;
+  border-radius: 5px !important;
+  font-size: 12px !important;
+  overflow: hidden !important;
+}
+
+page-factura-detail form ion-item.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner,
+page-factura-detail form ion-item.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-factura-detail form ion-item .item-inner {
+  border: 0 !important;
+}
+
+page-factura-detail form ion-item.price {
+  width: 150px !important;
+  font-size: 15px !important;
+  color: black;
+}
+
+page-factura-detail form ion-item.price ion-input {
+  width: 80%;
+  color: black;
+}
+
+page-factura-detail form ion-item.price ion-input input {
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+page-factura-detail form ion-item.item-no-factura {
+  width: 150px !important;
+  color: #ff6444;
+  font-size: 15px !important;
+}
+
+page-factura-detail form ion-item.item-no-factura ion-input {
+  width: 80%;
+}
+
+page-factura-detail form ion-item ion-input.no-factura, page-factura-detail form ion-item ion-datetime.no-factura {
+  color: #ff6444;
+}
+
+page-factura-detail form .button-ios, page-factura-detail form .button-md {
+  background-color: #ff6444 !important;
+  width: 150px;
+  height: 35px;
+  float: right;
+  margin: 10px 0;
+}
+
+page-factura-detail .tarjetas {
+  width: 100px;
+  height: 110px;
+  margin-left: 5vw;
+  background-image: url(../assets/img/tarjetas.png);
+  -webkit-background-image: url(../assets/img/tarjetas.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat !important;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
 page-factura-edit {
   /*  background-image: url(../assets/img/bg.png);
     	z-index: webkit-background-image: url(../assets/img/bg.png);
@@ -41700,13 +42025,17 @@ page-factura-edit {
 page-factura-edit ion-content {
   background-repeat: no-repeat !important;
   background-color: #474143 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: hue;
 }
 
 page-factura-edit .factura {
-  width: 90vw;
-  height: 80vh;
+  width: 100vw;
+  height: 85vh;
   margin-top: 10vh;
-  margin-left: 5vw;
+  margin-left: 0;
   background-image: url(../assets/img/factura.png);
   -webkit-background-image: url(../assets/img/factura.png);
   background-size: 100% 100%;
@@ -41723,7 +42052,7 @@ page-factura-edit .factura .logo {
 }
 
 page-factura-edit form {
-  width: 65vw;
+  width: 75vw;
   margin-left: 10vw;
   position: absolute;
   height: 300px;
@@ -41797,9 +42126,35 @@ page-factura-edit .tarjetas {
   -webkit-background-image: url(../assets/img/tarjetas.png);
   background-size: 100% 100%;
   background-repeat: no-repeat !important;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
+  margin-bottom: -30PX;
+}
+
+ion-simple-wizard :host {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+ion-simple-wizard .ion-wizard-footer {
+  position: fixed;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: block;
+  width: 100%;
+  height: 50PX;
+  text-align: center;
 }
 
 page-user {
@@ -41916,6 +42271,53 @@ ion-app._gmaps_cdv_ .nav-decor {
   background-color: transparent !important;
 }
 
+page-modal-page-edit ion-content {
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  height: 60%;
+  border-radius: 20px !important;
+}
+
+page-modal-page-edit ion-content .scroll-content {
+  margin: 0 !important;
+  overflow: hidden !important;
+  border-radius: 20px;
+  padding: 0 !important;
+}
+
+page-modal-page-edit ion-content .scroll-content .circle {
+  width: 100%;
+  height: 45vw;
+  float: left;
+  background: rgba(0, 173, 169, 0.501961);
+  background-image: url(../assets/img/bg33.png);
+  -webkit-background-image: url(../assets/img/bg33.png);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
+  margin-bottom: 20px;
+}
+
+page-modal-page-edit ion-content .scroll-content .circle img {
+  width: auto !important;
+  height: 45vw;
+  margin: 0 auto;
+}
+
+page-modal-page-edit ion-content .scroll-content .message {
+  width: 80%;
+  margin: 25px auto;
+  text-align: center;
+}
+
+page-modal-page-edit ion-content .scroll-content button {
+  margin: 0 auto;
+  width: 150px;
+  height: 35px;
+  background: #ff6444;
+  border-radius: 5px;
+}
+
 page-schedule {
   /*     background-image: url(../assets/img/bg.png);
      -webkit-background-image: url(../assets/img/bg.png);
@@ -41956,6 +42358,7 @@ page-schedule .list-bill {
   bottom: 0;
   width: 100%;
   margin: 0;
+  background-color: #efefef;
 }
 
 page-schedule ion-row.avatar-square {
@@ -41976,15 +42379,19 @@ page-schedule ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
-  background-color: #00ada9 !important;
+  background-color: #00bfba !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
 }
 
 page-schedule ion-row.avatar-square .message-avatar {
   position: absolute;
-  background: white;
+  background: #474143;
   width: 100px;
   height: 70px;
-  border-radius: 100px;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
   font-size: 12px;
@@ -41996,10 +42403,11 @@ page-schedule ion-row.avatar-square .message-avatar {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid;
+  border: 0;
   right: 25px;
   top: 50%;
   margin-top: -40px;
+  color: white;
 }
 
 page-schedule ion-row.avatar-square .message-avatar:after {
@@ -42009,7 +42417,7 @@ page-schedule ion-row.avatar-square .message-avatar:after {
   border-right: 10px solid transparent;
   border-top: 10px solid transparent;
   border-left: 10px solid transparent;
-  border-bottom: 10px solid white;
+  border-bottom: 10px solid #474143;
   position: absolute;
   left: 0;
   margin-left: -10px;
@@ -42044,6 +42452,25 @@ page-schedule ion-row.btn-factura {
   width: 100%;
   float: left;
   height: 60px;
+  position: relative;
+  /*	&:after {
+				content: "";
+				width: 92vw;
+				height: 361px;
+				border-radius: 286vw;
+				-webkit-box-shadow: 30px 10px 0 #d9534f;
+				box-shadow: 108px 10px 0 #ffffff;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-268deg);
+				top: 0;
+				position: absolute;
+				margin-top: -62vh;
+				z-index: 0;
+			}
+*/
 }
 
 page-schedule ion-row.btn-factura button {
@@ -42053,13 +42480,17 @@ page-schedule ion-row.btn-factura button {
 }
 
 page-schedule ion-row.btn-factura button:nth-child(1) {
-  background: #ff6444;
-  color: white;
+  background: white;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.btn-factura button:nth-child(2) {
   background: white;
-  color: black;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.buton-event {
@@ -42078,17 +42509,27 @@ page-schedule .item-factura {
   width: 80%;
   margin: 0 auto;
   margin: 20px auto;
-  border: 1px solid grey;
+  border: 1px solid gainsboro;
   border-radius: 10px;
 }
 
+page-schedule .item-factura .logo {
+  width: 40px;
+}
+
 page-schedule .item-factura .item-inner {
-  width: 94%;
-  margin: 0 3%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0;
   border-radius: 10px;
+}
+
+page-schedule .item-factura .item-inner ion-list.list.list-md {
+  margin: 0 !important;
+}
+
+page-schedule .item-factura .item-inner ion-label.label.label-md img {
+  width: 40px;
 }
 
 page-schedule .item-factura .item-inner .content-factura {
@@ -42104,10 +42545,11 @@ page-schedule .item-factura .item-inner .content-factura {
   -ms-flex-direction: column;
   flex-direction: column;
   background: gainsboro;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   color: #474143;
+  font-size: 13px;
 }
 
 page-schedule .item-factura .item-inner .content-factura .price {
@@ -42121,7 +42563,6 @@ page-schedule .item-factura .item-inner .content-factura .price {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 20px;
 }
 
 page-schedule .item-factura .item-inner [icon-only] ion-icon {
@@ -42159,6 +42600,7 @@ page-schedule .list-bill {
   bottom: 0;
   width: 100%;
   margin: 0;
+  background-color: #efefef;
 }
 
 page-schedule ion-row.avatar-square {
@@ -42179,15 +42621,19 @@ page-schedule ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
-  background-color: #00ada9 !important;
+  background-color: #00bfba !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
 }
 
 page-schedule ion-row.avatar-square .message-avatar {
   position: absolute;
-  background: white;
+  background: #474143;
   width: 100px;
   height: 70px;
-  border-radius: 100px;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
   font-size: 12px;
@@ -42199,10 +42645,11 @@ page-schedule ion-row.avatar-square .message-avatar {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid;
+  border: 0;
   right: 25px;
   top: 50%;
   margin-top: -40px;
+  color: white;
 }
 
 page-schedule ion-row.avatar-square .message-avatar:after {
@@ -42212,7 +42659,7 @@ page-schedule ion-row.avatar-square .message-avatar:after {
   border-right: 10px solid transparent;
   border-top: 10px solid transparent;
   border-left: 10px solid transparent;
-  border-bottom: 10px solid white;
+  border-bottom: 10px solid #474143;
   position: absolute;
   left: 0;
   margin-left: -10px;
@@ -42247,6 +42694,25 @@ page-schedule ion-row.btn-factura {
   width: 100%;
   float: left;
   height: 60px;
+  position: relative;
+  /*	&:after {
+				content: "";
+				width: 92vw;
+				height: 361px;
+				border-radius: 286vw;
+				-webkit-box-shadow: 30px 10px 0 #d9534f;
+				box-shadow: 108px 10px 0 #ffffff;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-268deg);
+				top: 0;
+				position: absolute;
+				margin-top: -62vh;
+				z-index: 0;
+			}
+*/
 }
 
 page-schedule ion-row.btn-factura button {
@@ -42256,13 +42722,17 @@ page-schedule ion-row.btn-factura button {
 }
 
 page-schedule ion-row.btn-factura button:nth-child(1) {
-  background: #ff6444;
-  color: white;
+  background: white;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.btn-factura button:nth-child(2) {
   background: white;
-  color: black;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.buton-event {
@@ -42281,17 +42751,27 @@ page-schedule .item-factura {
   width: 80%;
   margin: 0 auto;
   margin: 20px auto;
-  border: 1px solid grey;
+  border: 1px solid gainsboro;
   border-radius: 10px;
 }
 
+page-schedule .item-factura .logo {
+  width: 40px;
+}
+
 page-schedule .item-factura .item-inner {
-  width: 94%;
-  margin: 0 3%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0;
   border-radius: 10px;
+}
+
+page-schedule .item-factura .item-inner ion-list.list.list-md {
+  margin: 0 !important;
+}
+
+page-schedule .item-factura .item-inner ion-label.label.label-md img {
+  width: 40px;
 }
 
 page-schedule .item-factura .item-inner .content-factura {
@@ -42307,10 +42787,11 @@ page-schedule .item-factura .item-inner .content-factura {
   -ms-flex-direction: column;
   flex-direction: column;
   background: gainsboro;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   color: #474143;
+  font-size: 13px;
 }
 
 page-schedule .item-factura .item-inner .content-factura .price {
@@ -42324,7 +42805,6 @@ page-schedule .item-factura .item-inner .content-factura .price {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 20px;
 }
 
 page-schedule .item-factura .item-inner [icon-only] ion-icon {
@@ -42362,6 +42842,7 @@ page-schedule .list-bill {
   bottom: 0;
   width: 100%;
   margin: 0;
+  background-color: #efefef;
 }
 
 page-schedule ion-row.avatar-square {
@@ -42382,15 +42863,19 @@ page-schedule ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
-  background-color: #00ada9 !important;
+  background-color: #00bfba !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
 }
 
 page-schedule ion-row.avatar-square .message-avatar {
   position: absolute;
-  background: white;
+  background: #474143;
   width: 100px;
   height: 70px;
-  border-radius: 100px;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
   font-size: 12px;
@@ -42402,10 +42887,11 @@ page-schedule ion-row.avatar-square .message-avatar {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid;
+  border: 0;
   right: 25px;
   top: 50%;
   margin-top: -40px;
+  color: white;
 }
 
 page-schedule ion-row.avatar-square .message-avatar:after {
@@ -42415,7 +42901,7 @@ page-schedule ion-row.avatar-square .message-avatar:after {
   border-right: 10px solid transparent;
   border-top: 10px solid transparent;
   border-left: 10px solid transparent;
-  border-bottom: 10px solid white;
+  border-bottom: 10px solid #474143;
   position: absolute;
   left: 0;
   margin-left: -10px;
@@ -42450,6 +42936,25 @@ page-schedule ion-row.btn-factura {
   width: 100%;
   float: left;
   height: 60px;
+  position: relative;
+  /*	&:after {
+				content: "";
+				width: 92vw;
+				height: 361px;
+				border-radius: 286vw;
+				-webkit-box-shadow: 30px 10px 0 #d9534f;
+				box-shadow: 108px 10px 0 #ffffff;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-268deg);
+				top: 0;
+				position: absolute;
+				margin-top: -62vh;
+				z-index: 0;
+			}
+*/
 }
 
 page-schedule ion-row.btn-factura button {
@@ -42459,13 +42964,17 @@ page-schedule ion-row.btn-factura button {
 }
 
 page-schedule ion-row.btn-factura button:nth-child(1) {
-  background: #ff6444;
-  color: white;
+  background: white;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.btn-factura button:nth-child(2) {
   background: white;
-  color: black;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.buton-event {
@@ -42484,17 +42993,27 @@ page-schedule .item-factura {
   width: 80%;
   margin: 0 auto;
   margin: 20px auto;
-  border: 1px solid grey;
+  border: 1px solid gainsboro;
   border-radius: 10px;
 }
 
+page-schedule .item-factura .logo {
+  width: 40px;
+}
+
 page-schedule .item-factura .item-inner {
-  width: 94%;
-  margin: 0 3%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0;
   border-radius: 10px;
+}
+
+page-schedule .item-factura .item-inner ion-list.list.list-md {
+  margin: 0 !important;
+}
+
+page-schedule .item-factura .item-inner ion-label.label.label-md img {
+  width: 40px;
 }
 
 page-schedule .item-factura .item-inner .content-factura {
@@ -42510,10 +43029,11 @@ page-schedule .item-factura .item-inner .content-factura {
   -ms-flex-direction: column;
   flex-direction: column;
   background: gainsboro;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   color: #474143;
+  font-size: 13px;
 }
 
 page-schedule .item-factura .item-inner .content-factura .price {
@@ -42527,7 +43047,6 @@ page-schedule .item-factura .item-inner .content-factura .price {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 20px;
 }
 
 page-schedule .item-factura .item-inner [icon-only] ion-icon {
@@ -42565,6 +43084,7 @@ page-schedule .list-bill {
   bottom: 0;
   width: 100%;
   margin: 0;
+  background-color: #efefef;
 }
 
 page-schedule ion-row.avatar-square {
@@ -42585,15 +43105,19 @@ page-schedule ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
-  background-color: #00ada9 !important;
+  background-color: #00bfba !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
 }
 
 page-schedule ion-row.avatar-square .message-avatar {
   position: absolute;
-  background: white;
+  background: #474143;
   width: 100px;
   height: 70px;
-  border-radius: 100px;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
   font-size: 12px;
@@ -42605,10 +43129,11 @@ page-schedule ion-row.avatar-square .message-avatar {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid;
+  border: 0;
   right: 25px;
   top: 50%;
   margin-top: -40px;
+  color: white;
 }
 
 page-schedule ion-row.avatar-square .message-avatar:after {
@@ -42618,7 +43143,7 @@ page-schedule ion-row.avatar-square .message-avatar:after {
   border-right: 10px solid transparent;
   border-top: 10px solid transparent;
   border-left: 10px solid transparent;
-  border-bottom: 10px solid white;
+  border-bottom: 10px solid #474143;
   position: absolute;
   left: 0;
   margin-left: -10px;
@@ -42653,6 +43178,25 @@ page-schedule ion-row.btn-factura {
   width: 100%;
   float: left;
   height: 60px;
+  position: relative;
+  /*	&:after {
+				content: "";
+				width: 92vw;
+				height: 361px;
+				border-radius: 286vw;
+				-webkit-box-shadow: 30px 10px 0 #d9534f;
+				box-shadow: 108px 10px 0 #ffffff;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-268deg);
+				top: 0;
+				position: absolute;
+				margin-top: -62vh;
+				z-index: 0;
+			}
+*/
 }
 
 page-schedule ion-row.btn-factura button {
@@ -42662,13 +43206,17 @@ page-schedule ion-row.btn-factura button {
 }
 
 page-schedule ion-row.btn-factura button:nth-child(1) {
-  background: #ff6444;
-  color: white;
+  background: white;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.btn-factura button:nth-child(2) {
   background: white;
-  color: black;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.buton-event {
@@ -42687,17 +43235,27 @@ page-schedule .item-factura {
   width: 80%;
   margin: 0 auto;
   margin: 20px auto;
-  border: 1px solid grey;
+  border: 1px solid gainsboro;
   border-radius: 10px;
 }
 
+page-schedule .item-factura .logo {
+  width: 40px;
+}
+
 page-schedule .item-factura .item-inner {
-  width: 94%;
-  margin: 0 3%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0;
   border-radius: 10px;
+}
+
+page-schedule .item-factura .item-inner ion-list.list.list-md {
+  margin: 0 !important;
+}
+
+page-schedule .item-factura .item-inner ion-label.label.label-md img {
+  width: 40px;
 }
 
 page-schedule .item-factura .item-inner .content-factura {
@@ -42713,10 +43271,11 @@ page-schedule .item-factura .item-inner .content-factura {
   -ms-flex-direction: column;
   flex-direction: column;
   background: gainsboro;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   color: #474143;
+  font-size: 13px;
 }
 
 page-schedule .item-factura .item-inner .content-factura .price {
@@ -42730,7 +43289,6 @@ page-schedule .item-factura .item-inner .content-factura .price {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 20px;
 }
 
 page-schedule .item-factura .item-inner [icon-only] ion-icon {
@@ -42768,6 +43326,7 @@ page-schedule .list-bill {
   bottom: 0;
   width: 100%;
   margin: 0;
+  background-color: #efefef;
 }
 
 page-schedule ion-row.avatar-square {
@@ -42788,15 +43347,19 @@ page-schedule ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
-  background-color: #00ada9 !important;
+  background-color: #00bfba !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
 }
 
 page-schedule ion-row.avatar-square .message-avatar {
   position: absolute;
-  background: white;
+  background: #474143;
   width: 100px;
   height: 70px;
-  border-radius: 100px;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
   font-size: 12px;
@@ -42808,10 +43371,11 @@ page-schedule ion-row.avatar-square .message-avatar {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid;
+  border: 0;
   right: 25px;
   top: 50%;
   margin-top: -40px;
+  color: white;
 }
 
 page-schedule ion-row.avatar-square .message-avatar:after {
@@ -42821,7 +43385,7 @@ page-schedule ion-row.avatar-square .message-avatar:after {
   border-right: 10px solid transparent;
   border-top: 10px solid transparent;
   border-left: 10px solid transparent;
-  border-bottom: 10px solid white;
+  border-bottom: 10px solid #474143;
   position: absolute;
   left: 0;
   margin-left: -10px;
@@ -42856,6 +43420,25 @@ page-schedule ion-row.btn-factura {
   width: 100%;
   float: left;
   height: 60px;
+  position: relative;
+  /*	&:after {
+				content: "";
+				width: 92vw;
+				height: 361px;
+				border-radius: 286vw;
+				-webkit-box-shadow: 30px 10px 0 #d9534f;
+				box-shadow: 108px 10px 0 #ffffff;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-268deg);
+				top: 0;
+				position: absolute;
+				margin-top: -62vh;
+				z-index: 0;
+			}
+*/
 }
 
 page-schedule ion-row.btn-factura button {
@@ -42865,13 +43448,17 @@ page-schedule ion-row.btn-factura button {
 }
 
 page-schedule ion-row.btn-factura button:nth-child(1) {
-  background: #ff6444;
-  color: white;
+  background: white;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.btn-factura button:nth-child(2) {
   background: white;
-  color: black;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.buton-event {
@@ -42890,17 +43477,27 @@ page-schedule .item-factura {
   width: 80%;
   margin: 0 auto;
   margin: 20px auto;
-  border: 1px solid grey;
+  border: 1px solid gainsboro;
   border-radius: 10px;
 }
 
+page-schedule .item-factura .logo {
+  width: 40px;
+}
+
 page-schedule .item-factura .item-inner {
-  width: 94%;
-  margin: 0 3%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0;
   border-radius: 10px;
+}
+
+page-schedule .item-factura .item-inner ion-list.list.list-md {
+  margin: 0 !important;
+}
+
+page-schedule .item-factura .item-inner ion-label.label.label-md img {
+  width: 40px;
 }
 
 page-schedule .item-factura .item-inner .content-factura {
@@ -42916,10 +43513,11 @@ page-schedule .item-factura .item-inner .content-factura {
   -ms-flex-direction: column;
   flex-direction: column;
   background: gainsboro;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   color: #474143;
+  font-size: 13px;
 }
 
 page-schedule .item-factura .item-inner .content-factura .price {
@@ -42933,7 +43531,6 @@ page-schedule .item-factura .item-inner .content-factura .price {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 20px;
 }
 
 page-schedule .item-factura .item-inner [icon-only] ion-icon {
@@ -42971,6 +43568,7 @@ page-schedule .list-bill {
   bottom: 0;
   width: 100%;
   margin: 0;
+  background-color: #efefef;
 }
 
 page-schedule ion-row.avatar-square {
@@ -42991,15 +43589,19 @@ page-schedule ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
-  background-color: #00ada9 !important;
+  background-color: #00bfba !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
 }
 
 page-schedule ion-row.avatar-square .message-avatar {
   position: absolute;
-  background: white;
+  background: #474143;
   width: 100px;
   height: 70px;
-  border-radius: 100px;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
   font-size: 12px;
@@ -43011,10 +43613,11 @@ page-schedule ion-row.avatar-square .message-avatar {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid;
+  border: 0;
   right: 25px;
   top: 50%;
   margin-top: -40px;
+  color: white;
 }
 
 page-schedule ion-row.avatar-square .message-avatar:after {
@@ -43024,7 +43627,7 @@ page-schedule ion-row.avatar-square .message-avatar:after {
   border-right: 10px solid transparent;
   border-top: 10px solid transparent;
   border-left: 10px solid transparent;
-  border-bottom: 10px solid white;
+  border-bottom: 10px solid #474143;
   position: absolute;
   left: 0;
   margin-left: -10px;
@@ -43059,6 +43662,25 @@ page-schedule ion-row.btn-factura {
   width: 100%;
   float: left;
   height: 60px;
+  position: relative;
+  /*	&:after {
+				content: "";
+				width: 92vw;
+				height: 361px;
+				border-radius: 286vw;
+				-webkit-box-shadow: 30px 10px 0 #d9534f;
+				box-shadow: 108px 10px 0 #ffffff;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-268deg);
+				top: 0;
+				position: absolute;
+				margin-top: -62vh;
+				z-index: 0;
+			}
+*/
 }
 
 page-schedule ion-row.btn-factura button {
@@ -43068,13 +43690,17 @@ page-schedule ion-row.btn-factura button {
 }
 
 page-schedule ion-row.btn-factura button:nth-child(1) {
-  background: #ff6444;
-  color: white;
+  background: white;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.btn-factura button:nth-child(2) {
   background: white;
-  color: black;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.buton-event {
@@ -43093,17 +43719,27 @@ page-schedule .item-factura {
   width: 80%;
   margin: 0 auto;
   margin: 20px auto;
-  border: 1px solid grey;
+  border: 1px solid gainsboro;
   border-radius: 10px;
 }
 
+page-schedule .item-factura .logo {
+  width: 40px;
+}
+
 page-schedule .item-factura .item-inner {
-  width: 94%;
-  margin: 0 3%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0;
   border-radius: 10px;
+}
+
+page-schedule .item-factura .item-inner ion-list.list.list-md {
+  margin: 0 !important;
+}
+
+page-schedule .item-factura .item-inner ion-label.label.label-md img {
+  width: 40px;
 }
 
 page-schedule .item-factura .item-inner .content-factura {
@@ -43119,10 +43755,11 @@ page-schedule .item-factura .item-inner .content-factura {
   -ms-flex-direction: column;
   flex-direction: column;
   background: gainsboro;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   color: #474143;
+  font-size: 13px;
 }
 
 page-schedule .item-factura .item-inner .content-factura .price {
@@ -43136,7 +43773,6 @@ page-schedule .item-factura .item-inner .content-factura .price {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 20px;
 }
 
 page-schedule .item-factura .item-inner [icon-only] ion-icon {
@@ -43174,6 +43810,7 @@ page-schedule .list-bill {
   bottom: 0;
   width: 100%;
   margin: 0;
+  background-color: #efefef;
 }
 
 page-schedule ion-row.avatar-square {
@@ -43194,15 +43831,19 @@ page-schedule ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
-  background-color: #00ada9 !important;
+  background-color: #00bfba !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
 }
 
 page-schedule ion-row.avatar-square .message-avatar {
   position: absolute;
-  background: white;
+  background: #474143;
   width: 100px;
   height: 70px;
-  border-radius: 100px;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
   font-size: 12px;
@@ -43214,10 +43855,11 @@ page-schedule ion-row.avatar-square .message-avatar {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid;
+  border: 0;
   right: 25px;
   top: 50%;
   margin-top: -40px;
+  color: white;
 }
 
 page-schedule ion-row.avatar-square .message-avatar:after {
@@ -43227,7 +43869,7 @@ page-schedule ion-row.avatar-square .message-avatar:after {
   border-right: 10px solid transparent;
   border-top: 10px solid transparent;
   border-left: 10px solid transparent;
-  border-bottom: 10px solid white;
+  border-bottom: 10px solid #474143;
   position: absolute;
   left: 0;
   margin-left: -10px;
@@ -43262,6 +43904,25 @@ page-schedule ion-row.btn-factura {
   width: 100%;
   float: left;
   height: 60px;
+  position: relative;
+  /*	&:after {
+				content: "";
+				width: 92vw;
+				height: 361px;
+				border-radius: 286vw;
+				-webkit-box-shadow: 30px 10px 0 #d9534f;
+				box-shadow: 108px 10px 0 #ffffff;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-268deg);
+				top: 0;
+				position: absolute;
+				margin-top: -62vh;
+				z-index: 0;
+			}
+*/
 }
 
 page-schedule ion-row.btn-factura button {
@@ -43271,13 +43932,17 @@ page-schedule ion-row.btn-factura button {
 }
 
 page-schedule ion-row.btn-factura button:nth-child(1) {
-  background: #ff6444;
-  color: white;
+  background: white;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.btn-factura button:nth-child(2) {
   background: white;
-  color: black;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.buton-event {
@@ -43296,17 +43961,27 @@ page-schedule .item-factura {
   width: 80%;
   margin: 0 auto;
   margin: 20px auto;
-  border: 1px solid grey;
+  border: 1px solid gainsboro;
   border-radius: 10px;
 }
 
+page-schedule .item-factura .logo {
+  width: 40px;
+}
+
 page-schedule .item-factura .item-inner {
-  width: 94%;
-  margin: 0 3%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0;
   border-radius: 10px;
+}
+
+page-schedule .item-factura .item-inner ion-list.list.list-md {
+  margin: 0 !important;
+}
+
+page-schedule .item-factura .item-inner ion-label.label.label-md img {
+  width: 40px;
 }
 
 page-schedule .item-factura .item-inner .content-factura {
@@ -43322,10 +43997,11 @@ page-schedule .item-factura .item-inner .content-factura {
   -ms-flex-direction: column;
   flex-direction: column;
   background: gainsboro;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   color: #474143;
+  font-size: 13px;
 }
 
 page-schedule .item-factura .item-inner .content-factura .price {
@@ -43339,7 +44015,6 @@ page-schedule .item-factura .item-inner .content-factura .price {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 20px;
 }
 
 page-schedule .item-factura .item-inner [icon-only] ion-icon {
@@ -43377,6 +44052,7 @@ page-schedule .list-bill {
   bottom: 0;
   width: 100%;
   margin: 0;
+  background-color: #efefef;
 }
 
 page-schedule ion-row.avatar-square {
@@ -43397,15 +44073,19 @@ page-schedule ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
-  background-color: #00ada9 !important;
+  background-color: #00bfba !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
 }
 
 page-schedule ion-row.avatar-square .message-avatar {
   position: absolute;
-  background: white;
+  background: #474143;
   width: 100px;
   height: 70px;
-  border-radius: 100px;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
   font-size: 12px;
@@ -43417,10 +44097,11 @@ page-schedule ion-row.avatar-square .message-avatar {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid;
+  border: 0;
   right: 25px;
   top: 50%;
   margin-top: -40px;
+  color: white;
 }
 
 page-schedule ion-row.avatar-square .message-avatar:after {
@@ -43430,7 +44111,7 @@ page-schedule ion-row.avatar-square .message-avatar:after {
   border-right: 10px solid transparent;
   border-top: 10px solid transparent;
   border-left: 10px solid transparent;
-  border-bottom: 10px solid white;
+  border-bottom: 10px solid #474143;
   position: absolute;
   left: 0;
   margin-left: -10px;
@@ -43465,6 +44146,25 @@ page-schedule ion-row.btn-factura {
   width: 100%;
   float: left;
   height: 60px;
+  position: relative;
+  /*	&:after {
+				content: "";
+				width: 92vw;
+				height: 361px;
+				border-radius: 286vw;
+				-webkit-box-shadow: 30px 10px 0 #d9534f;
+				box-shadow: 108px 10px 0 #ffffff;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-268deg);
+				top: 0;
+				position: absolute;
+				margin-top: -62vh;
+				z-index: 0;
+			}
+*/
 }
 
 page-schedule ion-row.btn-factura button {
@@ -43474,13 +44174,17 @@ page-schedule ion-row.btn-factura button {
 }
 
 page-schedule ion-row.btn-factura button:nth-child(1) {
-  background: #ff6444;
-  color: white;
+  background: white;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.btn-factura button:nth-child(2) {
   background: white;
-  color: black;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.buton-event {
@@ -43499,17 +44203,27 @@ page-schedule .item-factura {
   width: 80%;
   margin: 0 auto;
   margin: 20px auto;
-  border: 1px solid grey;
+  border: 1px solid gainsboro;
   border-radius: 10px;
 }
 
+page-schedule .item-factura .logo {
+  width: 40px;
+}
+
 page-schedule .item-factura .item-inner {
-  width: 94%;
-  margin: 0 3%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0;
   border-radius: 10px;
+}
+
+page-schedule .item-factura .item-inner ion-list.list.list-md {
+  margin: 0 !important;
+}
+
+page-schedule .item-factura .item-inner ion-label.label.label-md img {
+  width: 40px;
 }
 
 page-schedule .item-factura .item-inner .content-factura {
@@ -43525,10 +44239,11 @@ page-schedule .item-factura .item-inner .content-factura {
   -ms-flex-direction: column;
   flex-direction: column;
   background: gainsboro;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   color: #474143;
+  font-size: 13px;
 }
 
 page-schedule .item-factura .item-inner .content-factura .price {
@@ -43542,7 +44257,6 @@ page-schedule .item-factura .item-inner .content-factura .price {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 20px;
 }
 
 page-schedule .item-factura .item-inner [icon-only] ion-icon {
@@ -43580,6 +44294,7 @@ page-schedule .list-bill {
   bottom: 0;
   width: 100%;
   margin: 0;
+  background-color: #efefef;
 }
 
 page-schedule ion-row.avatar-square {
@@ -43600,15 +44315,19 @@ page-schedule ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
-  background-color: #00ada9 !important;
+  background-color: #00bfba !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
 }
 
 page-schedule ion-row.avatar-square .message-avatar {
   position: absolute;
-  background: white;
+  background: #474143;
   width: 100px;
   height: 70px;
-  border-radius: 100px;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
   font-size: 12px;
@@ -43620,10 +44339,11 @@ page-schedule ion-row.avatar-square .message-avatar {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid;
+  border: 0;
   right: 25px;
   top: 50%;
   margin-top: -40px;
+  color: white;
 }
 
 page-schedule ion-row.avatar-square .message-avatar:after {
@@ -43633,7 +44353,7 @@ page-schedule ion-row.avatar-square .message-avatar:after {
   border-right: 10px solid transparent;
   border-top: 10px solid transparent;
   border-left: 10px solid transparent;
-  border-bottom: 10px solid white;
+  border-bottom: 10px solid #474143;
   position: absolute;
   left: 0;
   margin-left: -10px;
@@ -43668,6 +44388,25 @@ page-schedule ion-row.btn-factura {
   width: 100%;
   float: left;
   height: 60px;
+  position: relative;
+  /*	&:after {
+				content: "";
+				width: 92vw;
+				height: 361px;
+				border-radius: 286vw;
+				-webkit-box-shadow: 30px 10px 0 #d9534f;
+				box-shadow: 108px 10px 0 #ffffff;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-268deg);
+				top: 0;
+				position: absolute;
+				margin-top: -62vh;
+				z-index: 0;
+			}
+*/
 }
 
 page-schedule ion-row.btn-factura button {
@@ -43677,13 +44416,17 @@ page-schedule ion-row.btn-factura button {
 }
 
 page-schedule ion-row.btn-factura button:nth-child(1) {
-  background: #ff6444;
-  color: white;
+  background: white;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.btn-factura button:nth-child(2) {
   background: white;
-  color: black;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.buton-event {
@@ -43702,17 +44445,27 @@ page-schedule .item-factura {
   width: 80%;
   margin: 0 auto;
   margin: 20px auto;
-  border: 1px solid grey;
+  border: 1px solid gainsboro;
   border-radius: 10px;
 }
 
+page-schedule .item-factura .logo {
+  width: 40px;
+}
+
 page-schedule .item-factura .item-inner {
-  width: 94%;
-  margin: 0 3%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0;
   border-radius: 10px;
+}
+
+page-schedule .item-factura .item-inner ion-list.list.list-md {
+  margin: 0 !important;
+}
+
+page-schedule .item-factura .item-inner ion-label.label.label-md img {
+  width: 40px;
 }
 
 page-schedule .item-factura .item-inner .content-factura {
@@ -43728,10 +44481,11 @@ page-schedule .item-factura .item-inner .content-factura {
   -ms-flex-direction: column;
   flex-direction: column;
   background: gainsboro;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   color: #474143;
+  font-size: 13px;
 }
 
 page-schedule .item-factura .item-inner .content-factura .price {
@@ -43745,7 +44499,6 @@ page-schedule .item-factura .item-inner .content-factura .price {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 20px;
 }
 
 page-schedule .item-factura .item-inner [icon-only] ion-icon {
@@ -43783,6 +44536,7 @@ page-schedule .list-bill {
   bottom: 0;
   width: 100%;
   margin: 0;
+  background-color: #efefef;
 }
 
 page-schedule ion-row.avatar-square {
@@ -43803,15 +44557,19 @@ page-schedule ion-row.avatar-square {
   width: 100%;
   float: left;
   position: relative;
-  background-color: #00ada9 !important;
+  background-color: #00bfba !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
 }
 
 page-schedule ion-row.avatar-square .message-avatar {
   position: absolute;
-  background: white;
+  background: #474143;
   width: 100px;
   height: 70px;
-  border-radius: 100px;
+  border-radius: 10px;
   padding: 10px;
   text-align: center;
   font-size: 12px;
@@ -43823,10 +44581,11 @@ page-schedule ion-row.avatar-square .message-avatar {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 1px solid;
+  border: 0;
   right: 25px;
   top: 50%;
   margin-top: -40px;
+  color: white;
 }
 
 page-schedule ion-row.avatar-square .message-avatar:after {
@@ -43836,7 +44595,7 @@ page-schedule ion-row.avatar-square .message-avatar:after {
   border-right: 10px solid transparent;
   border-top: 10px solid transparent;
   border-left: 10px solid transparent;
-  border-bottom: 10px solid white;
+  border-bottom: 10px solid #474143;
   position: absolute;
   left: 0;
   margin-left: -10px;
@@ -43871,6 +44630,25 @@ page-schedule ion-row.btn-factura {
   width: 100%;
   float: left;
   height: 60px;
+  position: relative;
+  /*	&:after {
+				content: "";
+				width: 92vw;
+				height: 361px;
+				border-radius: 286vw;
+				-webkit-box-shadow: 30px 10px 0 #d9534f;
+				box-shadow: 108px 10px 0 #ffffff;
+				-webkit-transform: rotate(-45deg);
+				-moz-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-268deg);
+				top: 0;
+				position: absolute;
+				margin-top: -62vh;
+				z-index: 0;
+			}
+*/
 }
 
 page-schedule ion-row.btn-factura button {
@@ -43880,13 +44658,17 @@ page-schedule ion-row.btn-factura button {
 }
 
 page-schedule ion-row.btn-factura button:nth-child(1) {
-  background: #ff6444;
-  color: white;
+  background: white;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.btn-factura button:nth-child(2) {
   background: white;
-  color: black;
+  color: #474143;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 page-schedule ion-row.buton-event {
@@ -43905,17 +44687,27 @@ page-schedule .item-factura {
   width: 80%;
   margin: 0 auto;
   margin: 20px auto;
-  border: 1px solid grey;
+  border: 1px solid gainsboro;
   border-radius: 10px;
 }
 
+page-schedule .item-factura .logo {
+  width: 40px;
+}
+
 page-schedule .item-factura .item-inner {
-  width: 94%;
-  margin: 0 3%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 0;
   border-radius: 10px;
+}
+
+page-schedule .item-factura .item-inner ion-list.list.list-md {
+  margin: 0 !important;
+}
+
+page-schedule .item-factura .item-inner ion-label.label.label-md img {
+  width: 40px;
 }
 
 page-schedule .item-factura .item-inner .content-factura {
@@ -43931,10 +44723,11 @@ page-schedule .item-factura .item-inner .content-factura {
   -ms-flex-direction: column;
   flex-direction: column;
   background: gainsboro;
-  padding: 10px;
+  padding: 5px 10px;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 5px;
   color: #474143;
+  font-size: 13px;
 }
 
 page-schedule .item-factura .item-inner .content-factura .price {
@@ -43948,11 +44741,1485 @@ page-schedule .item-factura .item-inner .content-factura .price {
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 5px 20px;
 }
 
 page-schedule .item-factura .item-inner [icon-only] ion-icon {
   font-weight: bold;
+}
+
+.btn-factura button.active {
+  background: #fa6343 !important;
+  color: white !important;
+}
+
+.list-md ion-item-options .button {
+  width: 100px !important;
+  text-transform: capitalize;
+}
+
+.list-md ion-item-options .button span {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.list-md ion-item-options .button span ion-icon {
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+page-settings {
+  background-repeat: no-repeat !important;
+  background-color: white;
+}
+
+page-settings ion-item-sliding[track=ionic] ion-label {
+  border-left: 2px solid #488aff;
+  padding-left: 10px;
+}
+
+page-settings > ion-content {
+  width: 100vw;
+  background: white !important;
+  height: 100vh;
+}
+
+page-settings .ion-fab, page-settings .fab-md.activated, page-settings .fab-md {
+  color: #fff;
+  background-color: #ff6444 !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+page-settings .item-inner {
+  border: none !important;
+}
+
+page-settings .list-bill {
+  height: calc(100% - (40vh + 60px));
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #efefef;
+}
+
+page-settings .save {
+  background-color: #474143 !important;
+  width: 150px;
+  height: 35px;
+  float: right;
+  margin: 10px auto;
+  color: white;
+  border-radius: 5px;
+}
+
+page-settings ion-grid {
+  margin-top: 50px;
+  float: left;
+  text-align: center;
+}
+
+page-settings ion-grid img {
+  height: 100px;
+  margin: 0 auto;
+}
+
+page-settings ion-row.avatar-square {
+  background: #474143;
+  height: 40vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
+}
+
+page-settings ion-row.avatar-square .message-avatar {
+  position: absolute;
+  background: #00ada9;
+  width: 100px;
+  height: 70px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0;
+  right: 25px;
+  top: 50%;
+  margin-top: -40px;
+  color: white;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+page-settings ion-row.avatar-square .message-avatar:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #00ada9;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+}
+
+page-settings ion-row.avatar-square .icon {
+  position: absolute;
+  width: 100px;
+  height: auto !important;
+  left: 0;
+  top: 0;
+}
+
+page-settings ion-row.avatar-square img {
+  height: 30vh;
+  margin: 0 auto;
+}
+
+page-settings ion-row.buton-event {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 50px;
+  color: #474143;
+}
+
+page-settings ion-row.buton-event ion-icon {
+  margin-right: 10px;
+}
+
+page-settings ion-item-sliding[track=angular] ion-label {
+  border-left: 2px solid #AC282B;
+  padding-left: 10px;
+}
+
+page-settings > ion-content {
+  width: 100vw;
+  background: white !important;
+  height: 100vh;
+}
+
+page-settings .ion-fab, page-settings .fab-md.activated, page-settings .fab-md {
+  color: #fff;
+  background-color: #ff6444 !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+page-settings .item-inner {
+  border: none !important;
+}
+
+page-settings .list-bill {
+  height: calc(100% - (40vh + 60px));
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #efefef;
+}
+
+page-settings .save {
+  background-color: #474143 !important;
+  width: 150px;
+  height: 35px;
+  float: right;
+  margin: 10px auto;
+  color: white;
+  border-radius: 5px;
+}
+
+page-settings ion-grid {
+  margin-top: 50px;
+  float: left;
+  text-align: center;
+}
+
+page-settings ion-grid img {
+  height: 100px;
+  margin: 0 auto;
+}
+
+page-settings ion-row.avatar-square {
+  background: #474143;
+  height: 40vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
+}
+
+page-settings ion-row.avatar-square .message-avatar {
+  position: absolute;
+  background: #00ada9;
+  width: 100px;
+  height: 70px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0;
+  right: 25px;
+  top: 50%;
+  margin-top: -40px;
+  color: white;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+page-settings ion-row.avatar-square .message-avatar:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #00ada9;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+}
+
+page-settings ion-row.avatar-square .icon {
+  position: absolute;
+  width: 100px;
+  height: auto !important;
+  left: 0;
+  top: 0;
+}
+
+page-settings ion-row.avatar-square img {
+  height: 30vh;
+  margin: 0 auto;
+}
+
+page-settings ion-row.buton-event {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 50px;
+  color: #474143;
+}
+
+page-settings ion-row.buton-event ion-icon {
+  margin-right: 10px;
+}
+
+page-settings ion-item-sliding[track=communication] ion-label {
+  border-left: 2px solid #8E8D93;
+  padding-left: 10px;
+}
+
+page-settings > ion-content {
+  width: 100vw;
+  background: white !important;
+  height: 100vh;
+}
+
+page-settings .ion-fab, page-settings .fab-md.activated, page-settings .fab-md {
+  color: #fff;
+  background-color: #ff6444 !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+page-settings .item-inner {
+  border: none !important;
+}
+
+page-settings .list-bill {
+  height: calc(100% - (40vh + 60px));
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #efefef;
+}
+
+page-settings .save {
+  background-color: #474143 !important;
+  width: 150px;
+  height: 35px;
+  float: right;
+  margin: 10px auto;
+  color: white;
+  border-radius: 5px;
+}
+
+page-settings ion-grid {
+  margin-top: 50px;
+  float: left;
+  text-align: center;
+}
+
+page-settings ion-grid img {
+  height: 100px;
+  margin: 0 auto;
+}
+
+page-settings ion-row.avatar-square {
+  background: #474143;
+  height: 40vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
+}
+
+page-settings ion-row.avatar-square .message-avatar {
+  position: absolute;
+  background: #00ada9;
+  width: 100px;
+  height: 70px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0;
+  right: 25px;
+  top: 50%;
+  margin-top: -40px;
+  color: white;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+page-settings ion-row.avatar-square .message-avatar:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #00ada9;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+}
+
+page-settings ion-row.avatar-square .icon {
+  position: absolute;
+  width: 100px;
+  height: auto !important;
+  left: 0;
+  top: 0;
+}
+
+page-settings ion-row.avatar-square img {
+  height: 30vh;
+  margin: 0 auto;
+}
+
+page-settings ion-row.buton-event {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 50px;
+  color: #474143;
+}
+
+page-settings ion-row.buton-event ion-icon {
+  margin-right: 10px;
+}
+
+page-settings ion-item-sliding[track=tooling] ion-label {
+  border-left: 2px solid #FE4C52;
+  padding-left: 10px;
+}
+
+page-settings > ion-content {
+  width: 100vw;
+  background: white !important;
+  height: 100vh;
+}
+
+page-settings .ion-fab, page-settings .fab-md.activated, page-settings .fab-md {
+  color: #fff;
+  background-color: #ff6444 !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+page-settings .item-inner {
+  border: none !important;
+}
+
+page-settings .list-bill {
+  height: calc(100% - (40vh + 60px));
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #efefef;
+}
+
+page-settings .save {
+  background-color: #474143 !important;
+  width: 150px;
+  height: 35px;
+  float: right;
+  margin: 10px auto;
+  color: white;
+  border-radius: 5px;
+}
+
+page-settings ion-grid {
+  margin-top: 50px;
+  float: left;
+  text-align: center;
+}
+
+page-settings ion-grid img {
+  height: 100px;
+  margin: 0 auto;
+}
+
+page-settings ion-row.avatar-square {
+  background: #474143;
+  height: 40vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
+}
+
+page-settings ion-row.avatar-square .message-avatar {
+  position: absolute;
+  background: #00ada9;
+  width: 100px;
+  height: 70px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0;
+  right: 25px;
+  top: 50%;
+  margin-top: -40px;
+  color: white;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+page-settings ion-row.avatar-square .message-avatar:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #00ada9;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+}
+
+page-settings ion-row.avatar-square .icon {
+  position: absolute;
+  width: 100px;
+  height: auto !important;
+  left: 0;
+  top: 0;
+}
+
+page-settings ion-row.avatar-square img {
+  height: 30vh;
+  margin: 0 auto;
+}
+
+page-settings ion-row.buton-event {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 50px;
+  color: #474143;
+}
+
+page-settings ion-row.buton-event ion-icon {
+  margin-right: 10px;
+}
+
+page-settings ion-item-sliding[track=services] ion-label {
+  border-left: 2px solid #FD8B2D;
+  padding-left: 10px;
+}
+
+page-settings > ion-content {
+  width: 100vw;
+  background: white !important;
+  height: 100vh;
+}
+
+page-settings .ion-fab, page-settings .fab-md.activated, page-settings .fab-md {
+  color: #fff;
+  background-color: #ff6444 !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+page-settings .item-inner {
+  border: none !important;
+}
+
+page-settings .list-bill {
+  height: calc(100% - (40vh + 60px));
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #efefef;
+}
+
+page-settings .save {
+  background-color: #474143 !important;
+  width: 150px;
+  height: 35px;
+  float: right;
+  margin: 10px auto;
+  color: white;
+  border-radius: 5px;
+}
+
+page-settings ion-grid {
+  margin-top: 50px;
+  float: left;
+  text-align: center;
+}
+
+page-settings ion-grid img {
+  height: 100px;
+  margin: 0 auto;
+}
+
+page-settings ion-row.avatar-square {
+  background: #474143;
+  height: 40vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
+}
+
+page-settings ion-row.avatar-square .message-avatar {
+  position: absolute;
+  background: #00ada9;
+  width: 100px;
+  height: 70px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0;
+  right: 25px;
+  top: 50%;
+  margin-top: -40px;
+  color: white;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+page-settings ion-row.avatar-square .message-avatar:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #00ada9;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+}
+
+page-settings ion-row.avatar-square .icon {
+  position: absolute;
+  width: 100px;
+  height: auto !important;
+  left: 0;
+  top: 0;
+}
+
+page-settings ion-row.avatar-square img {
+  height: 30vh;
+  margin: 0 auto;
+}
+
+page-settings ion-row.buton-event {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 50px;
+  color: #474143;
+}
+
+page-settings ion-row.buton-event ion-icon {
+  margin-right: 10px;
+}
+
+page-settings ion-item-sliding[track=design] ion-label {
+  border-left: 2px solid #FED035;
+  padding-left: 10px;
+}
+
+page-settings > ion-content {
+  width: 100vw;
+  background: white !important;
+  height: 100vh;
+}
+
+page-settings .ion-fab, page-settings .fab-md.activated, page-settings .fab-md {
+  color: #fff;
+  background-color: #ff6444 !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+page-settings .item-inner {
+  border: none !important;
+}
+
+page-settings .list-bill {
+  height: calc(100% - (40vh + 60px));
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #efefef;
+}
+
+page-settings .save {
+  background-color: #474143 !important;
+  width: 150px;
+  height: 35px;
+  float: right;
+  margin: 10px auto;
+  color: white;
+  border-radius: 5px;
+}
+
+page-settings ion-grid {
+  margin-top: 50px;
+  float: left;
+  text-align: center;
+}
+
+page-settings ion-grid img {
+  height: 100px;
+  margin: 0 auto;
+}
+
+page-settings ion-row.avatar-square {
+  background: #474143;
+  height: 40vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
+}
+
+page-settings ion-row.avatar-square .message-avatar {
+  position: absolute;
+  background: #00ada9;
+  width: 100px;
+  height: 70px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0;
+  right: 25px;
+  top: 50%;
+  margin-top: -40px;
+  color: white;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+page-settings ion-row.avatar-square .message-avatar:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #00ada9;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+}
+
+page-settings ion-row.avatar-square .icon {
+  position: absolute;
+  width: 100px;
+  height: auto !important;
+  left: 0;
+  top: 0;
+}
+
+page-settings ion-row.avatar-square img {
+  height: 30vh;
+  margin: 0 auto;
+}
+
+page-settings ion-row.buton-event {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 50px;
+  color: #474143;
+}
+
+page-settings ion-row.buton-event ion-icon {
+  margin-right: 10px;
+}
+
+page-settings ion-item-sliding[track=workshop] ion-label {
+  border-left: 2px solid #69BB7B;
+  padding-left: 10px;
+}
+
+page-settings > ion-content {
+  width: 100vw;
+  background: white !important;
+  height: 100vh;
+}
+
+page-settings .ion-fab, page-settings .fab-md.activated, page-settings .fab-md {
+  color: #fff;
+  background-color: #ff6444 !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+page-settings .item-inner {
+  border: none !important;
+}
+
+page-settings .list-bill {
+  height: calc(100% - (40vh + 60px));
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #efefef;
+}
+
+page-settings .save {
+  background-color: #474143 !important;
+  width: 150px;
+  height: 35px;
+  float: right;
+  margin: 10px auto;
+  color: white;
+  border-radius: 5px;
+}
+
+page-settings ion-grid {
+  margin-top: 50px;
+  float: left;
+  text-align: center;
+}
+
+page-settings ion-grid img {
+  height: 100px;
+  margin: 0 auto;
+}
+
+page-settings ion-row.avatar-square {
+  background: #474143;
+  height: 40vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
+}
+
+page-settings ion-row.avatar-square .message-avatar {
+  position: absolute;
+  background: #00ada9;
+  width: 100px;
+  height: 70px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0;
+  right: 25px;
+  top: 50%;
+  margin-top: -40px;
+  color: white;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+page-settings ion-row.avatar-square .message-avatar:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #00ada9;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+}
+
+page-settings ion-row.avatar-square .icon {
+  position: absolute;
+  width: 100px;
+  height: auto !important;
+  left: 0;
+  top: 0;
+}
+
+page-settings ion-row.avatar-square img {
+  height: 30vh;
+  margin: 0 auto;
+}
+
+page-settings ion-row.buton-event {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 50px;
+  color: #474143;
+}
+
+page-settings ion-row.buton-event ion-icon {
+  margin-right: 10px;
+}
+
+page-settings ion-item-sliding[track=food] ion-label {
+  border-left: 2px solid #3BC7C4;
+  padding-left: 10px;
+}
+
+page-settings > ion-content {
+  width: 100vw;
+  background: white !important;
+  height: 100vh;
+}
+
+page-settings .ion-fab, page-settings .fab-md.activated, page-settings .fab-md {
+  color: #fff;
+  background-color: #ff6444 !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+page-settings .item-inner {
+  border: none !important;
+}
+
+page-settings .list-bill {
+  height: calc(100% - (40vh + 60px));
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #efefef;
+}
+
+page-settings .save {
+  background-color: #474143 !important;
+  width: 150px;
+  height: 35px;
+  float: right;
+  margin: 10px auto;
+  color: white;
+  border-radius: 5px;
+}
+
+page-settings ion-grid {
+  margin-top: 50px;
+  float: left;
+  text-align: center;
+}
+
+page-settings ion-grid img {
+  height: 100px;
+  margin: 0 auto;
+}
+
+page-settings ion-row.avatar-square {
+  background: #474143;
+  height: 40vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
+}
+
+page-settings ion-row.avatar-square .message-avatar {
+  position: absolute;
+  background: #00ada9;
+  width: 100px;
+  height: 70px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0;
+  right: 25px;
+  top: 50%;
+  margin-top: -40px;
+  color: white;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+page-settings ion-row.avatar-square .message-avatar:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #00ada9;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+}
+
+page-settings ion-row.avatar-square .icon {
+  position: absolute;
+  width: 100px;
+  height: auto !important;
+  left: 0;
+  top: 0;
+}
+
+page-settings ion-row.avatar-square img {
+  height: 30vh;
+  margin: 0 auto;
+}
+
+page-settings ion-row.buton-event {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 50px;
+  color: #474143;
+}
+
+page-settings ion-row.buton-event ion-icon {
+  margin-right: 10px;
+}
+
+page-settings ion-item-sliding[track=documentation] ion-label {
+  border-left: 2px solid #B16BE3;
+  padding-left: 10px;
+}
+
+page-settings > ion-content {
+  width: 100vw;
+  background: white !important;
+  height: 100vh;
+}
+
+page-settings .ion-fab, page-settings .fab-md.activated, page-settings .fab-md {
+  color: #fff;
+  background-color: #ff6444 !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+page-settings .item-inner {
+  border: none !important;
+}
+
+page-settings .list-bill {
+  height: calc(100% - (40vh + 60px));
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #efefef;
+}
+
+page-settings .save {
+  background-color: #474143 !important;
+  width: 150px;
+  height: 35px;
+  float: right;
+  margin: 10px auto;
+  color: white;
+  border-radius: 5px;
+}
+
+page-settings ion-grid {
+  margin-top: 50px;
+  float: left;
+  text-align: center;
+}
+
+page-settings ion-grid img {
+  height: 100px;
+  margin: 0 auto;
+}
+
+page-settings ion-row.avatar-square {
+  background: #474143;
+  height: 40vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
+}
+
+page-settings ion-row.avatar-square .message-avatar {
+  position: absolute;
+  background: #00ada9;
+  width: 100px;
+  height: 70px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0;
+  right: 25px;
+  top: 50%;
+  margin-top: -40px;
+  color: white;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+page-settings ion-row.avatar-square .message-avatar:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #00ada9;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+}
+
+page-settings ion-row.avatar-square .icon {
+  position: absolute;
+  width: 100px;
+  height: auto !important;
+  left: 0;
+  top: 0;
+}
+
+page-settings ion-row.avatar-square img {
+  height: 30vh;
+  margin: 0 auto;
+}
+
+page-settings ion-row.buton-event {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 50px;
+  color: #474143;
+}
+
+page-settings ion-row.buton-event ion-icon {
+  margin-right: 10px;
+}
+
+page-settings ion-item-sliding[track=navigation] ion-label {
+  border-left: 2px solid #6600CC;
+  padding-left: 10px;
+}
+
+page-settings > ion-content {
+  width: 100vw;
+  background: white !important;
+  height: 100vh;
+}
+
+page-settings .ion-fab, page-settings .fab-md.activated, page-settings .fab-md {
+  color: #fff;
+  background-color: #ff6444 !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 30px;
+}
+
+page-settings .item-inner {
+  border: none !important;
+}
+
+page-settings .list-bill {
+  height: calc(100% - (40vh + 60px));
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #efefef;
+}
+
+page-settings .save {
+  background-color: #474143 !important;
+  width: 150px;
+  height: 35px;
+  float: right;
+  margin: 10px auto;
+  color: white;
+  border-radius: 5px;
+}
+
+page-settings ion-grid {
+  margin-top: 50px;
+  float: left;
+  text-align: center;
+}
+
+page-settings ion-grid img {
+  height: 100px;
+  margin: 0 auto;
+}
+
+page-settings ion-row.avatar-square {
+  background: #474143;
+  height: 40vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  float: left;
+  position: relative;
+  background-color: #ff6444 !important;
+  -webkit-background-image: url(../assets/img/textura.jpg);
+  background-image: url(../assets/img/textura.jpg);
+  background-size: 100% 100%;
+  background-blend-mode: darken;
+}
+
+page-settings ion-row.avatar-square .message-avatar {
+  position: absolute;
+  background: #00ada9;
+  width: 100px;
+  height: 70px;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 0;
+  right: 25px;
+  top: 50%;
+  margin-top: -40px;
+  color: white;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+page-settings ion-row.avatar-square .message-avatar:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-top: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #00ada9;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+}
+
+page-settings ion-row.avatar-square .icon {
+  position: absolute;
+  width: 100px;
+  height: auto !important;
+  left: 0;
+  top: 0;
+}
+
+page-settings ion-row.avatar-square img {
+  height: 30vh;
+  margin: 0 auto;
+}
+
+page-settings ion-row.buton-event {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  width: 50px;
+  color: #474143;
+}
+
+page-settings ion-row.buton-event ion-icon {
+  margin-right: 10px;
 }
 
 .speaker-detail img {

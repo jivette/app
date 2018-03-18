@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, Events } from 'ionic-angular';
 import { FacturaEditPage } from '../factura-edit/factura-edit';
 import { BillCreateProvider } from '../../providers/bill-create/bill-create';
+import { Storage } from '@ionic/storage';
 
 /**
  * Generated class for the FacturaCreatePage page.
@@ -25,15 +26,22 @@ export class FacturaCreatePage {
   };
 
   proveedores:any[] = [];
+  dir:any;
 
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
     public alertCtrl: AlertController, 
     public billCreateProvider: BillCreateProvider, 
-    public evts: Events
+    public evts: Events,
+    public storage: Storage
   ) {
     
+    this.storage.get('avatar').then((avatar) => {
+      this.dir = JSON.parse(avatar);
+    });
+
+
     this.step = 1;//The value of the first step, always 1
     this.stepCondition = false;//Set to true if you don't need condition in every step
     this.stepDefaultCondition = this.stepCondition;//Save the default condition for every step

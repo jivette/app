@@ -22,7 +22,16 @@ var BillCreateProvider = (function () {
         this.http = http;
     }
     BillCreateProvider.prototype.getProveedor = function () {
-        return this.http.post("api/recuerdame/api/proveedores", "");
+        return this.http.post("api/terecuerdo/api/proveedores", "");
+    };
+    BillCreateProvider.prototype.createBill = function (data) {
+        return this.http.post("api/terecuerdo/api/create_factura", data);
+    };
+    BillCreateProvider.prototype.updateBill = function (data) {
+        return this.http.post("api/terecuerdo/api/actualizar_factura", data);
+    };
+    BillCreateProvider.prototype.refreshStatus = function (factura) {
+        return this.http.post("api/terecuerdo/api/cambiar_estado", factura);
     };
     BillCreateProvider = __decorate([
         Injectable(),

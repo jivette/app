@@ -27,7 +27,7 @@ var BillService = (function () {
     BillService.prototype.getBill = function (userId) {
         //return this.http.get('http://codificandoideas.org/recuerdame/api/facturas');
         var postParams = { userId: userId };
-        return this.http.post("api/recuerdame/api/facturas", postParams);
+        return this.http.post("api/terecuerdo/api/facturas", postParams);
     };
     BillService = __decorate([
         Injectable(),

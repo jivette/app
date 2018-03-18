@@ -16,6 +16,15 @@ export class BillCreateProvider {
   }
 
   getProveedor(): Observable<any> {
-    return this.http.post("api/recuerdame/api/proveedores","");
+    return this.http.post("api/terecuerdo/api/proveedores","");
+  }
+  createBill(data): Observable<any> {
+    return this.http.post("api/terecuerdo/api/create_factura",data);
+  }
+  updateBill(data): Observable<any> {
+    return this.http.post("api/terecuerdo/api/actualizar_factura", data);
+  }
+  refreshStatus(factura): Observable<any> {
+    return this.http.post("api/terecuerdo/api/cambiar_estado", factura);
   }
 }

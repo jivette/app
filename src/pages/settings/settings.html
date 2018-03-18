@@ -8,17 +8,20 @@
   <ion-grid>
     <h2>Selecciona tu asistente</h2><br>
     <ion-row>
-      <ion-col col-4 class="option">
+      <ion-col col-4 class="option" 
+       (click)="activeButton = 'a'" [ngClass]="{ 'active': activeButton === 'a' }" >
         <img src="../assets/img/ella/habla.gif" (click)="avatar('ella')" alt="">
       </ion-col>
-      <ion-col col-4 class="option">
+      <ion-col col-4 class="option"
+       (click)="activeButton = 'b'" [ngClass]="{ 'active': activeButton === 'b' }">
         <img src="../assets/img/factura/habla.gif" (click)="avatar('factura')" alt="">
       </ion-col>
-      <ion-col col-4 class="option">
+      <ion-col col-4 class="option" 
+       (click)="activeButton = 'c'" [ngClass]="{ 'active': activeButton === 'c' }">
         <img src="../assets/img/el/habla.gif" (click)="avatar('el')" alt="">
       </ion-col>
     </ion-row>
-    <button class="save">Guardar</button>
+    <button class="save" (click)="saveAvatar()">Guardar</button>
   </ion-grid>
 
 </ion-content>

@@ -26,7 +26,7 @@ export class BillService {
  
     let postParams = { userId: userId };
     
-    return this.http.post("api/recuerdame/api/facturas", postParams);
+    return this.http.post("api/terecuerdo/api/facturas", postParams);
   }
 }
  
