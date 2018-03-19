@@ -56,7 +56,6 @@ page-factura-create {
 	
 	ion-row {
 		&.avatar-square {
-			background: $redLight;
 	    	height: 50vh;
 	    	display: flex;
 	    	align-items: flex-end;
@@ -64,11 +63,12 @@ page-factura-create {
 			width: 100%;
 			float: left;
 			position: relative;
-			background-color: $redLight !important;
+			background-color: $blueLight !important;
+			background-blend-mode: overlay;
+
 			-webkit-background-image: url(../assets/img/textura.jpg);
 			background-image: url(../assets/img/textura.jpg);
 			background-size: 100% 100%;
-			background-blend-mode: darken;
 			
 			.icon {
 			    position: absolute;
@@ -192,7 +192,7 @@ page-factura-create {
 		button {
 			width: 70px;
 			height: 30px;
-			background: $blueLight;
+			background: $redLight;
 			color: white;
 			border-radius: 10px;
 			

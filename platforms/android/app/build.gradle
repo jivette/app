@@ -33,6 +33,13 @@ buildscript {
     }
 }
 
+    // Placed configuration here. 
+    configurations.all {        
+        resolutionStrategy {      
+            force 'com.android.support:support-v4:27.1.0'                
+        }
+    } 
+
 // Allow plugins to declare Maven dependencies via build-extras.gradle.
 allprojects {
     repositories {

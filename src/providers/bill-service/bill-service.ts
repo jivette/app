@@ -18,7 +18,10 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class BillService {
 
+  proxy:any;
+
   constructor(public http: HttpClient) {
+    this.proxy = /*"/api"*/"https://codificandoideas.org";
   }
 
   getBill(userId: number): Observable<any> {
@@ -26,7 +29,7 @@ export class BillService {
  
     let postParams = { userId: userId };
     
-    return this.http.post("api/terecuerdo/api/facturas", postParams);
+    return this.http.post(this.proxy +"/terecuerdo/api/facturas", postParams);
   }
 }
  

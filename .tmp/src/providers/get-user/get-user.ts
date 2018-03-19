@@ -12,17 +12,20 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class GetUserProvider {
 
+  proxy: any;
+
   constructor(public http: HttpClient) {
+    this.proxy = /*"/api"*/"https://codificandoideas.org";
   }
 
   getUser(data): Observable<any> {
 
-    return this.http.post("api/terecuerdo/api/obtenerUsuario", data);
+    return this.http.post(this.proxy + "/terecuerdo/api/obtenerUsuario", data);
   }
 
 
   getSetting(data): Observable<any> {
-    return this.http.post("api/terecuerdo/api/editarConfiguracion", data);
+    return this.http.post(this.proxy + "/terecuerdo/api/editarConfiguracion", data);
   }
 
 }

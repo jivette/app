@@ -48,21 +48,11 @@ export class FacturaEditPage {
   }
 
   ionViewDidLoad() {
-    this.billCreateProvider.getProveedor()
-    .subscribe(
-      (data) => { // Success
-        if (data.code == 200) {
-
-          this.proveedores = data.proveedores;
-        } else {
-          alert("error!");
-        }
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-
+    this.storage.get('proveedores').then((proveedores) => {
+      this.proveedores = JSON.parse(proveedores);
+      console.log(this.proveedores);
+    });
+   
     if (this.data.id == "") {
       this.showModal();
     }

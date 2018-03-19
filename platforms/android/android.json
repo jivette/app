@@ -88,6 +88,23 @@
               "xml": "<uses-permission android:name=\"android.permission.USE_CREDENTIALS\" />",
               "count": 1
             }
+          ],
+          "/manifest/application/activity": [
+            {
+              "xml": "<activity android:windowSoftInputMode=\"adjustPan\" />",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml",
+              "oldAttrib": {
+                "android:configChanges": "orientation|keyboardHidden|keyboard|screenSize|locale",
+                "android:label": "@string/activity_name",
+                "android:launchMode": "singleTop",
+                "android:name": "MainActivity",
+                "android:screenOrientation": "portrait",
+                "android:theme": "@android:style/Theme.DeviceDefault.NoActionBar",
+                "android:windowSoftInputMode": "adjustPan"
+              }
+            }
           ]
         }
       },

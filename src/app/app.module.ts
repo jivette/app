@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { Keyboard } from '@ionic-native/keyboard';
 
 import { IonicStorageModule } from '@ionic/storage';
 
@@ -89,7 +90,8 @@ import { ModalPageEditPage } from '../pages/modal-page-edit/modal-page-edit';
     HttpClientModule,
     BillService,
     InAppBrowser,
-    SplashScreen,
+    SplashScreen, 
+    Keyboard,
     GooglePlus,
     ConferenceData,
     UserData,

@@ -23,11 +23,12 @@ import 'rxjs/add/operator/catch';
 var BillService = (function () {
     function BillService(http) {
         this.http = http;
+        this.proxy = "https://codificandoideas.org";
     }
     BillService.prototype.getBill = function (userId) {
         //return this.http.get('http://codificandoideas.org/recuerdame/api/facturas');
         var postParams = { userId: userId };
-        return this.http.post("api/terecuerdo/api/facturas", postParams);
+        return this.http.post(this.proxy + "/terecuerdo/api/facturas", postParams);
     };
     BillService = __decorate([
         Injectable(),

@@ -8,19 +8,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController /*, AlertController*/ } from 'ionic-angular';
 import { UserData } from '../../providers/user-data';
 import { SchedulePage } from '../schedule/schedule';
 import { SignupPage } from '../signup/signup';
-//import { GooglePlus } from '@ionic-native/google-plus';
+import { GooglePlus } from '@ionic-native/google-plus';
 import { Storage } from '@ionic/storage';
 import { GetUserProvider } from '../../providers/get-user/get-user';
 var LoginPage = (function () {
-    function LoginPage(navCtrl, userData, 
-        //private googlePlus: GooglePlus, 
-        getUserProvider, storage) {
+    function LoginPage(navCtrl, userData, googlePlus, getUserProvider, 
+        // private alertCtrl: AlertController,
+        storage) {
         this.navCtrl = navCtrl;
         this.userData = userData;
+        this.googlePlus = googlePlus;
         this.getUserProvider = getUserProvider;
         this.storage = storage;
         this.login = { username: '', password: '' };
@@ -38,37 +39,70 @@ var LoginPage = (function () {
         this.navCtrl.push(SignupPage);
     };
     LoginPage.prototype.loginGoogle = function () {
-        var _this = this;
-        var user = {
-            token: "56156165",
-            nombre: "Ivette",
-            correo: "correo@gmail.com"
-        };
-        this.getUserProvider.getUser(user)
-            .subscribe(function (data) {
-            if (data.code == 200) {
-                var token = JSON.stringify(user.token);
-                _this.storage.set('token', token);
-                var avatar = JSON.stringify("ella");
-                _this.storage.set('avatar', avatar);
-                var val = JSON.stringify(data.facturas);
-                _this.storage.set('facturas', val);
-                //this.users = data;
-                _this.navCtrl.push(SchedulePage);
+        /*  let user = {
+            token : "12545",
+            nombre : "Ivette",
+            correo : "correo@gmail.com"
+          }*/
+        /*
+            this.getUserProvider.getUser(user)
+              .subscribe(
+                (data) => { // Success
+                  console.log(data);
+        
+                  if(data.code == 200){
+                    let token = JSON.stringify(user.token);
+                    this.storage.set('token', token);
+                    
+                    if (data.avatar == 0){
+                      this.avatar = JSON.stringify("el");
+                    } else if(data.avatar == 1) {
+                      this.avatar = JSON.stringify("ella");
+                    } else {
+                      this.avatar = JSON.stringify("factura");
+                    }
+        
+                    this.storage.set('avatar', this.avatar);
+                   
+                    let val = JSON.stringify(data.facturas);
+                    this.storage.set('facturas', val);
+                    
+                    let proveedores = JSON.stringify(data.proveedores);
+                    this.storage.set('proveedores', proveedores);
+                    
+                    //this.users = data;
+        
+                    this.navCtrl.push(SchedulePage);
+                  } else {
+                    let alert = this.alertCtrl.create({
+                      title: 'Ha ocurrido un error!',
+                      subTitle: 'Verifica tu conexión',
+                      buttons: ['Aceptar']
+                    });
+                    alert.present();
+                  }
+                },
+                (error) => {
+                  console.error(error);
+                }
+            )
+        
+        */
+        this.googlePlus.getSigningCertificateFingerprint()
+            .then(function (res) { return console.log("22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222" + res); })
+            .catch(function (err) { return console.error("3333333333333333333333333333333333333333333333333333333333333333333322222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 inicia error " + err + ' termina error'); });
+        /* this.googlePlus.login({})
+           .then(res => console.log("22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222" + res))
+           .catch(err => console.error("3333333333333333333333333333333333333333333333333333333333333333333322222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 inicia error " + err +' termina error'));
+     */
+        /*  this.googlePlus.login({})
+          .then((res) => {
+            if (res) {
+              console.log(res);
+             this.navCtrl.push(SchedulePage);
             }
-            else {
-                alert("error!");
-            }
-        }, function (error) {
-            console.error(error);
-        });
-        /*    this.googlePlus.login({})
-            .then((res) => {
-              if (res) {
-               this.navCtrl.push(SchedulePage);
-              }
-            })
-            .catch(err => console.error(err));*/
+          })
+          .catch(err => console.error(err));*/
     };
     LoginPage = __decorate([
         Component({
@@ -76,6 +110,7 @@ var LoginPage = (function () {
         }),
         __metadata("design:paramtypes", [NavController,
             UserData,
+            GooglePlus,
             GetUserProvider,
             Storage])
     ], LoginPage);

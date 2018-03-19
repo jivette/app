@@ -11,7 +11,7 @@
 
   <ion-row class="btn-factura">
     <button (click)="activeButton = 'a'" 
-    [ngClass]="{ 'active': activeButton === 'a' }"
+    [ngClass]=" activeButton === 'a' ? 'active': (activeButton === 'b' ? '' : 'active')"
      ion-button icon-only color="danger" (click)="getPendientes()" >  
       Pendientes
     </button>
@@ -25,22 +25,30 @@
   <ion-scroll scrollY="true" class="list-bill">
   
 
+    <ion-row class="item-factura" *ngIf="getfacturas.length == 0">
+        <ion-item>
+            ¡No hay facturas para mostrar!
+        </ion-item>
+    </ion-row>
+
     <ion-row sticky ion-item *ngFor="let factura of getfacturas" class="item-factura">
       <ion-list>
         <ion-item-sliding #item>
           
           <ion-item>
-          <img src="../assets/img/claro.png" alt="" class="logo">
-            <ion-row class="buton-event">
+          <!--img src="assets/img/claro.png" alt="" class="logo"-->
+          <b class="blueColor"  (click)="itemTapped(factura)">{{ factura.proveedor.nombre }}</b>
+          <ion-row class="buton-event" *ngIf="!statusCanceladas">
             <ion-icon ios="ios-create" md="md-create" (click)="editBill(factura)" ></ion-icon>
             <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
           </ion-row>
+          
           <ion-row class="content-factura" (click)="itemTapped(factura)">
             <ion-row>
-              <b>{{ factura.no_factura }}</b>
+              <b>{{ factura.nombre }}</b>
             </ion-row>
             <ion-row>
-              <b>Fecha de pago:</b> {{ factura.fecha_pago }}
+              <b>Fecha de pago: </b> &nbsp; {{ factura.fecha_pago | date }}
             </ion-row>
             <ion-row class="price">
               <b>Q{{ factura.valor_factura }}</b>
@@ -48,7 +56,7 @@
           </ion-row>
         </ion-item>
 
-          <ion-item-options side="right">
+          <ion-item-options side="right" *ngIf="!statusCanceladas">
             <button ion-button color="danger" (click)="cancelBill(factura)">
               Cancelar <ion-icon name="checkbox-outline"></ion-icon>
             </button>

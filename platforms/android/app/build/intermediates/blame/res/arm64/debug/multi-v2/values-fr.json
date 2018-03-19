@@ -21,6 +21,23 @@
                     }
                 },
                 {
+                    "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/values-fr/values-fr.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "69",
+                        "startColumns": "4",
+                        "startOffsets": "6917",
+                        "endColumns": "100",
+                        "endOffsets": "7013"
+                    }
+                },
+                {
                     "source": "/root/.gradle/caches/transforms-1/files-1.1/xwalk_core_library-22.52.561.4.aar/84034ca26f65a6d26e57b6ba110d811a/res/values-fr/android_content_strings.xml",
                     "from": {
                         "startLines": "2,4,3,8,6,7,5,9,13,12,10,11",
@@ -69,23 +86,6 @@
                         "startOffsets": "3384",
                         "endColumns": "223",
                         "endOffsets": "3603"
-                    }
-                },
-                {
-                    "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-alpha1.aar/dc0c7d6a75dbb31aff9729e6370e9463/res/values-fr/values-fr.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "69",
-                        "startColumns": "4",
-                        "startOffsets": "6917",
-                        "endColumns": "100",
-                        "endOffsets": "7013"
                     }
                 }
             ]

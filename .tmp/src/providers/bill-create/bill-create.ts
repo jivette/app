@@ -12,19 +12,22 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class BillCreateProvider {
 
+  proxy:any;
+
   constructor(public http: HttpClient) {
+    this.proxy = /*"/api"*/"https://codificandoideas.org";
   }
 
   getProveedor(): Observable<any> {
-    return this.http.post("api/terecuerdo/api/proveedores","");
+    return this.http.post(this.proxy + "/terecuerdo/api/proveedores","");
   }
   createBill(data): Observable<any> {
-    return this.http.post("api/terecuerdo/api/create_factura",data);
+    return this.http.post(this.proxy + "/terecuerdo/api/create_factura",data);
   }
   updateBill(data): Observable<any> {
-    return this.http.post("api/terecuerdo/api/actualizar_factura", data);
+    return this.http.post(this.proxy + "/terecuerdo/api/actualizar_factura", data);
   }
   refreshStatus(factura): Observable<any> {
-    return this.http.post("api/terecuerdo/api/cambiar_estado", factura);
+    return this.http.post(this.proxy + "/terecuerdo/api/cambiar_estado", factura);
   }
 }

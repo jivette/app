@@ -79,6 +79,18 @@
  $blueLight: #00ada9;
  $greyLight: #474143;
 
+
+ .redColor {
+   color: $redLight;
+ }
+ .blueColor {
+   color: $blueLight;
+ }
+ .greyColor {
+   color: $greyLight;
+ }
+
  ion-modal {
     background-color: rgba(0, 0, 0, 0.5);
 }
+

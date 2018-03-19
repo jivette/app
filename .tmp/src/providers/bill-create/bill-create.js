@@ -20,18 +20,19 @@ import 'rxjs/add/operator/catch';
 var BillCreateProvider = (function () {
     function BillCreateProvider(http) {
         this.http = http;
+        this.proxy = "https://codificandoideas.org";
     }
     BillCreateProvider.prototype.getProveedor = function () {
-        return this.http.post("api/terecuerdo/api/proveedores", "");
+        return this.http.post(this.proxy + "/terecuerdo/api/proveedores", "");
     };
     BillCreateProvider.prototype.createBill = function (data) {
-        return this.http.post("api/terecuerdo/api/create_factura", data);
+        return this.http.post(this.proxy + "/terecuerdo/api/create_factura", data);
     };
     BillCreateProvider.prototype.updateBill = function (data) {
-        return this.http.post("api/terecuerdo/api/actualizar_factura", data);
+        return this.http.post(this.proxy + "/terecuerdo/api/actualizar_factura", data);
     };
     BillCreateProvider.prototype.refreshStatus = function (factura) {
-        return this.http.post("api/terecuerdo/api/cambiar_estado", factura);
+        return this.http.post(this.proxy + "/terecuerdo/api/cambiar_estado", factura);
     };
     BillCreateProvider = __decorate([
         Injectable(),

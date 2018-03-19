@@ -20,12 +20,13 @@ import 'rxjs/add/operator/catch';
 var GetUserProvider = (function () {
     function GetUserProvider(http) {
         this.http = http;
+        this.proxy = "https://codificandoideas.org";
     }
     GetUserProvider.prototype.getUser = function (data) {
-        return this.http.post("api/terecuerdo/api/obtenerUsuario", data);
+        return this.http.post(this.proxy + "/terecuerdo/api/obtenerUsuario", data);
     };
     GetUserProvider.prototype.getSetting = function (data) {
-        return this.http.post("api/terecuerdo/api/editarConfiguracion", data);
+        return this.http.post(this.proxy + "/terecuerdo/api/editarConfiguracion", data);
     };
     GetUserProvider = __decorate([
         Injectable(),

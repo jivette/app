@@ -67,12 +67,22 @@ page-schedule {
 			width: 100%;
 			float: left;
 			position: relative;
-			background-color: #00bfba !important;
+			background-color: $blueLight !important;
+			background-blend-mode: overlay;
 			-webkit-background-image: url(../assets/img/textura.jpg);
 			background-image: url(../assets/img/textura.jpg);
 			background-size: 100% 100%;
-			background-blend-mode: overlay;
-			
+		
+			.overflow_true {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: 1;
+				background: rgba(0,0,0, 0.48);
+				bottom: 0;
+
+			}	
+
 			.message-avatar {
 				position: absolute;
 				background: $greyLight;
@@ -186,6 +196,10 @@ page-schedule {
 	    border: 1px solid gainsboro;
 	    border-radius: 10px;
 
+		ion-item-sliding .item {
+			padding: 0 !important;
+		}
+
 		.logo{
 			width: 40px;
 		}
@@ -209,7 +223,7 @@ page-schedule {
 			    display: flex;
 			    flex-direction: column;
 			    background: gainsboro;
-			    padding: 5px 10px;
+			    padding: 10px;
 			    border-radius: 10px;
 			    margin-top: 5px;
 				color:$greyLight;
@@ -232,7 +246,7 @@ page-schedule {
 }
 
 .btn-factura button.active {
-    background: #fa6343 !important;
+    background: $redLight !important;
     color: white !important;
 }
 
@@ -273,20 +287,12 @@ page-schedule {
 		}
 }
 
-.avatar-square {
-	.overflow_true {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		z-index: 1;
-		background: rgba(0,0,0, 0.48);
-		bottom: 0;
+.label-md {
+    margin: 10px 0;
+}
 
-	}	
-
-	@keyframes example {
-		30%   {width:50px;}
-		70%  {width:100px;}
-		100%  {width:150px;}
-	}
+@keyframes example {
+	30%   {width:50px;}
+	70%  {width:100px;}
+	100%  {width:150px;}
 }
