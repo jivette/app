@@ -30,4 +30,7 @@ export class BillCreateProvider {
   refreshStatus(factura): Observable<any> {
     return this.http.post(this.proxy + "/terecuerdo/api/cambiar_estado", factura);
   }
+  deleteBill(deletebillObject): Observable<any> {
+    return this.http.post(this.proxy + "/terecuerdo/api/cambiar_estado", deletebillObject);
+  }
 }

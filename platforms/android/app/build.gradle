@@ -32,14 +32,11 @@ buildscript {
         classpath 'com.android.tools.build:gradle:3.0.0'
     }
 }
-
-    // Placed configuration here. 
-    configurations.all {        
-        resolutionStrategy {      
-            force 'com.android.support:support-v4:27.1.0'                
-        }
-    } 
-
+configurations.all {        
+    resolutionStrategy {      
+        force 'com.android.support:support-v4:27.1.0'                
+    }
+} 
 // Allow plugins to declare Maven dependencies via build-extras.gradle.
 allprojects {
     repositories {
@@ -98,7 +95,10 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "../cordova-plugin-crosswalk-webview/remember-xwalk.gradle"
+apply from: "../cordova-plugin-badge/terecuerdo-badge.gradle"
+apply from: "../cordova-plugin-crosswalk-webview/terecuerdo-xwalk.gradle"
+apply from: "../cordova-plugin-local-notification/terecuerdo-localnotification.gradle"
+apply from: "../onesignal-cordova-plugin/terecuerdo-build-extras-onesignal.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -269,6 +269,8 @@ dependencies {
     implementation(project(path: ":CordovaLib"))
     compile "com.google.android.gms:play-services-auth:+"
     compile "com.google.android.gms:play-services-identity:+"
+    compile "com.android.support:support-v4:26.+"
+    compile "com.onesignal:OneSignal:3.8.3"
     // SUB-PROJECT DEPENDENCIES END
 }
 

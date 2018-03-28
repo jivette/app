@@ -8,110 +8,77 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
-import { NavController /*, AlertController*/ } from 'ionic-angular';
-import { UserData } from '../../providers/user-data';
+import { NavController, AlertController } from 'ionic-angular';
 import { SchedulePage } from '../schedule/schedule';
-import { SignupPage } from '../signup/signup';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Storage } from '@ionic/storage';
 import { GetUserProvider } from '../../providers/get-user/get-user';
 var LoginPage = (function () {
-    function LoginPage(navCtrl, userData, googlePlus, getUserProvider, 
-        // private alertCtrl: AlertController,
-        storage) {
+    function LoginPage(navCtrl, googlePlus, getUserProvider, alertCtrl, storage) {
         this.navCtrl = navCtrl;
-        this.userData = userData;
         this.googlePlus = googlePlus;
         this.getUserProvider = getUserProvider;
+        this.alertCtrl = alertCtrl;
         this.storage = storage;
-        this.login = { username: '', password: '' };
-        this.submitted = false;
-        this.users = [];
     }
-    LoginPage.prototype.onLogin = function (form) {
-        this.submitted = true;
-        if (form.valid) {
-            this.userData.login(this.login.username);
-            this.navCtrl.push(SchedulePage);
-        }
-    };
-    LoginPage.prototype.onSignup = function () {
-        this.navCtrl.push(SignupPage);
-    };
     LoginPage.prototype.loginGoogle = function () {
-        /*  let user = {
-            token : "12545",
-            nombre : "Ivette",
-            correo : "correo@gmail.com"
-          }*/
-        /*
-            this.getUserProvider.getUser(user)
-              .subscribe(
-                (data) => { // Success
-                  console.log(data);
-        
-                  if(data.code == 200){
-                    let token = JSON.stringify(user.token);
-                    this.storage.set('token', token);
-                    
-                    if (data.avatar == 0){
-                      this.avatar = JSON.stringify("el");
-                    } else if(data.avatar == 1) {
-                      this.avatar = JSON.stringify("ella");
-                    } else {
-                      this.avatar = JSON.stringify("factura");
-                    }
-        
-                    this.storage.set('avatar', this.avatar);
-                   
-                    let val = JSON.stringify(data.facturas);
-                    this.storage.set('facturas', val);
-                    
-                    let proveedores = JSON.stringify(data.proveedores);
-                    this.storage.set('proveedores', proveedores);
-                    
-                    //this.users = data;
-        
-                    this.navCtrl.push(SchedulePage);
-                  } else {
-                    let alert = this.alertCtrl.create({
-                      title: 'Ha ocurrido un error!',
-                      subTitle: 'Verifica tu conexión',
-                      buttons: ['Aceptar']
-                    });
-                    alert.present();
-                  }
-                },
-                (error) => {
-                  console.error(error);
-                }
-            )
-        
-        */
-        this.googlePlus.getSigningCertificateFingerprint()
-            .then(function (res) { return console.log("22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222" + res); })
-            .catch(function (err) { return console.error("3333333333333333333333333333333333333333333333333333333333333333333322222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 inicia error " + err + ' termina error'); });
-        /* this.googlePlus.login({})
-           .then(res => console.log("22222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222" + res))
-           .catch(err => console.error("3333333333333333333333333333333333333333333333333333333333333333333322222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222222 inicia error " + err +' termina error'));
-     */
-        /*  this.googlePlus.login({})
-          .then((res) => {
+        var _this = this;
+        this.googlePlus.login({})
+            .then(function (res) {
             if (res) {
-              console.log(res);
-             this.navCtrl.push(SchedulePage);
+                _this.user = {
+                    token: res.userId,
+                    nombre: res.displayName,
+                    correo: res.email,
+                    session: "true"
+                };
+                var userStorage = JSON.stringify(_this.user);
+                _this.storage.set('user', userStorage);
+                _this.getUserProvider.getUser(_this.user)
+                    .subscribe(function (data) {
+                    console.log(data);
+                    if (data.code == 200) {
+                        var token = JSON.stringify(_this.user.token);
+                        _this.storage.set('token', token);
+                        if (data.avatar == 0) {
+                            _this.avatar = JSON.stringify("el");
+                        }
+                        else if (data.avatar == 1) {
+                            _this.avatar = JSON.stringify("ella");
+                        }
+                        else {
+                            _this.avatar = JSON.stringify("factura");
+                        }
+                        _this.storage.set('avatar', _this.avatar);
+                        var val = JSON.stringify(data.facturas);
+                        _this.storage.set('facturas', val);
+                        var proveedores = JSON.stringify(data.proveedores);
+                        _this.storage.set('proveedores', proveedores);
+                        _this.navCtrl.push(SchedulePage);
+                    }
+                    else {
+                        var alert_1 = _this.alertCtrl.create({
+                            title: 'Ha ocurrido un error!',
+                            subTitle: 'Verifica tu conexión',
+                            buttons: ['Aceptar']
+                        });
+                        alert_1.present();
+                    }
+                }, function (error) {
+                    console.error(error);
+                });
             }
-          })
-          .catch(err => console.error(err));*/
+        })
+            .catch(function (err) { return console.error(err); });
     };
     LoginPage = __decorate([
         Component({
             selector: 'page-user',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/login/login.html"*/'<ion-content>\n	<div class="logo">\n		<div class="logo-cont">\n			<img src="assets/img/logo.png" alt="Ionic logo">\n		</div>\n	</div>\n\n	<ion-row responsive-xs>\n		<h1>¡Bienvenido!</h1>\n		<h6>Inicia sesión para empezar</h6>\n	</ion-row>\n\n	<ion-row responsive-xs>\n		<ion-col>\n			<button ion-button (click)="loginGoogle()" color="danger" block>\n				<ion-icon ios="logo-googleplus" md="logo-googleplus"></ion-icon>\n 				Iniciar sesión\n			</button>\n		</ion-col>\n	</ion-row>\n</ion-content>\n'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/login/login.html"*/
         }),
         __metadata("design:paramtypes", [NavController,
-            UserData,
             GooglePlus,
             GetUserProvider,
+            AlertController,
             Storage])
     ], LoginPage);
     return LoginPage;

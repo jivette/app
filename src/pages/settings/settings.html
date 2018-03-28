@@ -2,7 +2,7 @@
   <global-header></global-header>
 
   <ion-row class="avatar-square">
-    <img src="../assets/img/{{image}}/habla.gif" />
+    <img src="assets/img/{{image}}/habla.gif" />
     <div class="message-avatar" id="message">¡Hola, yo sere tu asistente!</div>
   </ion-row>
   <ion-grid>
@@ -10,15 +10,15 @@
     <ion-row>
       <ion-col col-4 class="option" 
        (click)="activeButton = 'a'" [ngClass]="{ 'active': activeButton === 'a' }" >
-        <img src="../assets/img/ella/habla.gif" (click)="avatar('ella')" alt="">
+        <img src="assets/img/ella/habla.gif" (click)="avatar('ella')" alt="">
       </ion-col>
       <ion-col col-4 class="option"
        (click)="activeButton = 'b'" [ngClass]="{ 'active': activeButton === 'b' }">
-        <img src="../assets/img/factura/habla.gif" (click)="avatar('factura')" alt="">
+        <img src="assets/img/factura/habla.gif" (click)="avatar('factura')" alt="">
       </ion-col>
       <ion-col col-4 class="option" 
        (click)="activeButton = 'c'" [ngClass]="{ 'active': activeButton === 'c' }">
-        <img src="../assets/img/el/habla.gif" (click)="avatar('el')" alt="">
+        <img src="assets/img/el/habla.gif" (click)="avatar('el')" alt="">
       </ion-col>
     </ion-row>
     <button class="save" (click)="saveAvatar()">Guardar</button>

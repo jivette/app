@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 
 import { AlertController,/* App, ModalController, */ 
-         ViewController ,NavController, ToastController} from 'ionic-angular';
+  ViewController, Platform, NavController, ToastController} from 'ionic-angular';
 
 import { FacturaDetailPage } from '../factura-detail/factura-detail';
 import { FacturaCreatePage } from '../factura-create/factura-create';
 import { FacturaEditPage } from '../factura-edit/factura-edit';
+import { LoginPage } from '../login/login';
 import { Storage } from '@ionic/storage';
 import { BillCreateProvider } from '../../providers/bill-create/bill-create';
 
@@ -24,6 +25,7 @@ export class SchedulePage {
   messageAvatarHome:any;
   emptyBill:any;
   statusCanceladas:any;
+  session:any;
 
   constructor(
     public navCtrl: NavController,
@@ -31,18 +33,46 @@ export class SchedulePage {
     public billCreateProvider: BillCreateProvider,
     public storage: Storage,
     public viewCtrl: ViewController,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    public platform: Platform
   ){
 
     this.messageAvatarHome = "¡Hola, este es tu dashboard!";
     this.statusCanceladas = false;
+
+
+    platform.registerBackButtonAction(() => {
+      this.storage.get('user').then(data => {
+        if (data) { 
+        } else {
+          let errorLogin = this.alertCtrl.create({
+            title: '¡Error!',
+            subTitle: 'No haz iniciado sesion',
+            buttons: [
+              {
+                text: 'Iniciar Sesión',
+                handler: () => {
+                  this.navCtrl.push(LoginPage);
+                }
+              }
+            ]
+
+          });
+          errorLogin.present();
+     
+        }
+      });
+    });
   }
+
 
   ionViewWillEnter() {
     this.viewCtrl.showBackButton(false);  
   }
 
   ionViewDidLoad() {
+    
+
     this.storage.get('facturas').then((facturas) => {
       this.localFacturas = JSON.parse(facturas);
 
@@ -123,13 +153,84 @@ export class SchedulePage {
                     this.storage.set('facturas', val);
 
 
-                    this.storage.get('facturas').then((facturas) => {
-                      this.localFacturas = JSON.parse(facturas);
-                      this.getfacturas = this.localFacturas.pendientes;
-                    });
+                    this.localFacturas = data.facturas;
+                    this.getfacturas = data.facturas.pendientes;
 
                     let toast = this.toastCtrl.create({
                       message: 'Tu factura se ha cancelado',
+                      duration: 3000,
+                      position: 'top'
+                    });
+
+                    toast.onDidDismiss(() => {
+                      console.log('Dismissed toast');
+                    });
+
+                    toast.present();
+
+                  } else {
+                    let cancelError = this.alertCtrl.create({
+                      title: '¡Error!',
+                      subTitle: 'Verfica tu conexión',
+                      buttons: ['Continuar']
+                    });
+                    cancelError.present();                  
+                  }
+                },
+                (error) => {
+                  console.error(error);
+                  let cancelErrorSuscribe = this.alertCtrl.create({
+                    title: '¡Error!',
+                    subTitle: 'Verfica tu conexión',
+                    buttons: ['Continuar']
+                  });
+                  cancelErrorSuscribe.present();                  
+
+                }
+              );
+          }
+        }
+      ]
+    });
+    alertCancel.present();
+
+  }
+  deleteBill(deletebillObject){
+    deletebillObject = {
+      uuid: deletebillObject.uuid,
+      estado_id: 3,
+      token: this.tokenCode
+    };
+    
+
+    let alertCancel = this.alertCtrl.create({
+      title: 'Eliminar factura',
+      message: 'Estas seguro que deseas eliminar esta factura?',
+      buttons: [
+        {
+          text: 'No',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Si',
+          handler: () => {
+            this.billCreateProvider.deleteBill(deletebillObject)
+              .subscribe(
+                (data) => { // Success
+                  console.log(data);
+                  if (data.code == 200) {
+                    let val = JSON.stringify(data.facturas);
+                    this.storage.set('facturas', val);
+
+
+                    this.localFacturas = data.facturas;
+                    this.getfacturas = data.facturas.pendientes;
+
+                    let toast = this.toastCtrl.create({
+                      message: 'Tu factura se ha eliminado',
                       duration: 3000,
                       position: 'top'
                     });

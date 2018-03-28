@@ -36,7 +36,7 @@ var ModalPageEditPage = (function () {
     };
     ModalPageEditPage = __decorate([
         Component({
-            selector: 'page-modal-page-edit',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/modal-page-edit/modal-page-edit.html"*/'<ion-content padding>\n    <ion-row class="circle">\n        <img src="../assets/img/{{ dir }}/habla.gif" alt=""> \n    </ion-row>\n    <ion-row class="message">\n        ¡Muy bien! Ahora puedes llenar el resto de informaciòn para que pueda recordarte.\n    </ion-row>\n    <ion-row>\n      <button ion-button (click)="closeModal()">Continuar</button>\n    </ion-row>\n</ion-content>'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/modal-page-edit/modal-page-edit.html"*/,
+            selector: 'page-modal-page-edit',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/modal-page-edit/modal-page-edit.html"*/'<ion-content padding>\n    <ion-row class="circle">\n        <img src="assets/img/{{ dir }}/habla.gif" alt=""> \n    </ion-row>\n    <ion-row class="message">\n        ¡Muy bien! Ahora puedes llenar el resto de informaciòn para que pueda recordarte.\n    </ion-row>\n    <ion-row>\n      <button ion-button (click)="closeModal()">Continuar</button>\n    </ion-row>\n</ion-content>'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/modal-page-edit/modal-page-edit.html"*/,
         }),
         __metadata("design:paramtypes", [NavController,
             Storage,

@@ -34,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GetUserProvider } from '../providers/get-user/get-user';
 import { BillCreateProvider } from '../providers/bill-create/bill-create';
 import { ModalPageEditPage } from '../pages/modal-page-edit/modal-page-edit';
+import { OneSignal } from '@ionic-native/onesignal';
 var AppModule = (function () {
     function AppModule() {
     }
@@ -99,7 +100,8 @@ var AppModule = (function () {
                 UserData,
                 AnimationService,
                 GetUserProvider,
-                BillCreateProvider
+                BillCreateProvider,
+                OneSignal
             ]
         })
     ], AppModule);

@@ -40,7 +40,7 @@
           <b class="blueColor"  (click)="itemTapped(factura)">{{ factura.proveedor.nombre }}</b>
           <ion-row class="buton-event" *ngIf="!statusCanceladas">
             <ion-icon ios="ios-create" md="md-create" (click)="editBill(factura)" ></ion-icon>
-            <ion-icon ios="ios-trash" md="md-trash"></ion-icon>
+            <ion-icon ios="ios-trash" md="md-trash"  (click)="deleteBill(factura)"></ion-icon>
           </ion-row>
           
           <ion-row class="content-factura" (click)="itemTapped(factura)">

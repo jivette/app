@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component, ViewChild } from '@angular/core';
-import { Events, MenuController, Nav, Platform } from 'ionic-angular';
+import { Events, MenuController, Nav, Platform, AlertController } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Storage } from '@ionic/storage';
 //import { AboutPage } from '../pages/about/about';
@@ -18,13 +18,14 @@ import { LoginPage } from '../pages/login/login';
 //import { SignupPage } from '../pages/signup/signup';
 //import { TabsPage } from '../pages/tabs-page/tabs-page';
 import { TutorialPage } from '../pages/tutorial/tutorial';
-//import { SchedulePage } from '../pages/schedule/schedule';
+import { SchedulePage } from '../pages/schedule/schedule';
 //import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 //import { SupportPage } from '../pages/support/support';
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
+import { OneSignal } from '@ionic-native/onesignal';
 var ConferenceApp = (function () {
-    function ConferenceApp(events, userData, menu, platform, confData, storage, splashScreen) {
+    function ConferenceApp(events, userData, menu, platform, confData, storage, splashScreen, alertCtrl, oneSignal) {
         var _this = this;
         this.events = events;
         this.userData = userData;
@@ -33,6 +34,8 @@ var ConferenceApp = (function () {
         this.confData = confData;
         this.storage = storage;
         this.splashScreen = splashScreen;
+        this.alertCtrl = alertCtrl;
+        this.oneSignal = oneSignal;
         // List of pages that can be navigated to from the left menu
         // the left menu only works after login
         // the login page disables the left menu
@@ -41,13 +44,25 @@ var ConferenceApp = (function () {
         this.loggedOutPages = [
             { title: 'Login', name: 'LoginPage', component: LoginPage, icon: 'log-in' },
         ];
+        console.log(this.storage.get('hasSeenTutorial'));
+        console.log(this.storage.get('user'));
         // Check if the user has already seen the tutorial
         this.storage.get('hasSeenTutorial')
             .then(function (hasSeenTutorial) {
             if (hasSeenTutorial) {
-                _this.rootPage = LoginPage;
+                _this.storage.get('user')
+                    .then(function (user) {
+                    if (user) {
+                        _this.rootPage = SchedulePage;
+                    }
+                    else {
+                        _this.rootPage = LoginPage;
+                    }
+                    _this.platformReady();
+                });
             }
             else {
+                console.log(2);
                 _this.rootPage = TutorialPage;
             }
             _this.platformReady();
@@ -110,7 +125,24 @@ var ConferenceApp = (function () {
         // Call any initial plugins when ready
         this.platform.ready().then(function () {
             _this.splashScreen.hide();
+            _this.handlerNotifications();
         });
+    };
+    ConferenceApp.prototype.handlerNotifications = function () {
+        var _this = this;
+        this.oneSignal.startInit('4758999e-2df7-4638-93ac-40ad27392935', '350404005595');
+        this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
+        this.oneSignal.handleNotificationOpened()
+            .subscribe(function (jsonData) {
+            var alert = _this.alertCtrl.create({
+                title: jsonData.notification.payload.title + "llega",
+                subTitle: jsonData.notification.payload.body,
+                buttons: ['OK']
+            });
+            alert.present();
+            console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+        });
+        this.oneSignal.endInit();
     };
     ConferenceApp.prototype.isActive = function (page) {
         var childNav = this.nav.getActiveChildNavs()[0];
@@ -139,7 +171,9 @@ var ConferenceApp = (function () {
             Platform,
             ConferenceData,
             Storage,
-            SplashScreen])
+            SplashScreen,
+            AlertController,
+            OneSignal])
     ], ConferenceApp);
     return ConferenceApp;
 }());

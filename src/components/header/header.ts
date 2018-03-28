@@ -25,8 +25,10 @@ export class HeaderComponent {
   }
 
   logoutGoogle(){
+    this.storage.clear();
     this.googlePlus.logout();
     this.navCtrl.push(LoginPage);
+
   }
 
   settings(){

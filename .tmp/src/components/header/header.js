@@ -26,6 +26,7 @@ var HeaderComponent = (function () {
         this.navCtrl = navCtrl;
     }
     HeaderComponent.prototype.logoutGoogle = function () {
+        this.storage.clear();
         this.googlePlus.logout();
         this.navCtrl.push(LoginPage);
     };

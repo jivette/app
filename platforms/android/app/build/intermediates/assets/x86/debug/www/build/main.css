@@ -42243,36 +42243,6 @@ page-user .list {
   margin-bottom: 0;
 }
 
-page-map ion-content {
-  background: #e5e3df;
-}
-
-page-map #map_canvas {
-  height: 500px;
-  width: 320px;
-  background-color: transparent;
-}
-
-page-map ion-content {
-  background: #e5e3df;
-}
-
-page-map #map_canvas {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  -webkit-transition: opacity 150ms ease-in;
-  transition: opacity 150ms ease-in;
-}
-
-page-map #map_canvas.show-map {
-  opacity: 1;
-}
-
-ion-app._gmaps_cdv_ .nav-decor {
-  background-color: transparent !important;
-}
-
 page-modal-page-edit ion-content {
   top: 20%;
   left: 10%;
@@ -46431,63 +46401,16 @@ page-settings ion-row.buton-event ion-icon {
   margin-right: 10px;
 }
 
-.speaker-detail img {
-  max-width: 140px;
-  border-radius: 50%;
+page-tutorial ion-slide:nth-child(1) {
+  background: #ff6444;
 }
 
-.speaker-detail p {
-  color: #60646B;
+page-tutorial ion-slide:nth-child(2) {
+  background: #00ada9;
 }
 
-page-speaker-list .scroll-content {
-  background: #EDEDED;
-}
-
-page-speaker-list .speaker-card {
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-
-page-speaker-list .speaker-card ion-card-content {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-}
-
-@media (min-width: 769px) {
-  page-speaker-list .speaker-card {
-    height: 370px;
-  }
-}
-
-page-speaker-list .speaker-card ion-card-header .item {
-  padding: 4px 16px;
-}
-
-page-speaker-list .speaker-card ion-card-content {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.tabbar {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.tab-button {
-  max-width: 200px;
+page-tutorial ion-slide:nth-child(3) {
+  background: #474143;
 }
 
 page-tutorial .toolbar-background {
@@ -46501,6 +46424,7 @@ page-tutorial .slide-zoom {
 
 page-tutorial .slide-title {
   margin-top: 2.8rem;
+  color: white;
 }
 
 page-tutorial .slide-image {
@@ -46517,9 +46441,9 @@ page-tutorial p {
   padding: 0 40px;
   font-size: 14px;
   line-height: 1.5;
-  color: #60646B;
+  color: white;
 }
 
 page-tutorial p b {
-  color: #000000;
+  color: white;
 }

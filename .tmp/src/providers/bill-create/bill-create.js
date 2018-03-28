@@ -34,6 +34,9 @@ var BillCreateProvider = (function () {
     BillCreateProvider.prototype.refreshStatus = function (factura) {
         return this.http.post(this.proxy + "/terecuerdo/api/cambiar_estado", factura);
     };
+    BillCreateProvider.prototype.deleteBill = function (deletebillObject) {
+        return this.http.post(this.proxy + "/terecuerdo/api/cambiar_estado", deletebillObject);
+    };
     BillCreateProvider = __decorate([
         Injectable(),
         __metadata("design:paramtypes", [HttpClient])

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, ToastController/*, Platform*/ } from 'ionic-angular';
 import { BillCreateProvider } from '../../providers/bill-create/bill-create';
 import { ModalPageEditPage } from '../modal-page-edit/modal-page-edit';
 import { Storage } from '@ionic/storage';
 import { SchedulePage } from '../schedule/schedule';
+//import { LocalNotifications } from '@ionic-native/local-notifications';
  
 /**
  * Generated class for the FacturaEditPage page.
@@ -27,7 +28,9 @@ export class FacturaEditPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public billCreateProvider: BillCreateProvider, public modalCtrl: ModalController,
     public storage: Storage,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    //public platform: Platform,
+   // private localNotifications: LocalNotifications
   ) {
     this.data = navParams.get('data');
 
@@ -73,8 +76,12 @@ export class FacturaEditPage {
           console.log(data);
           if (data.code == 200) {
 
+            this.alertNotification(this.data);
+
             let val = JSON.stringify(data.facturas);
             this.storage.set('facturas', val);
+
+            //this.notification();
 
             let toast = this.toastCtrl.create({
               message: 'Has creado tu factura',
@@ -130,5 +137,42 @@ export class FacturaEditPage {
         }
       );
     }
+  }
+
+
+
+  alertNotification(dataNoti){
+    let nombre = dataNoti.nombre;
+    let mensaje = "¡Tu factura " + nombre + " está próxima a vencer!";
+    let fecha_pago = dataNoti.fecha_pago;
+    fecha_pago = fecha_pago.replace("-", "/");
+
+    let dias = dataNoti.dias;
+    let date = new Date(fecha_pago);
+    let dayOfMonth = date.getDate();
+
+    date.setDate(dayOfMonth - dias);
+    date.setHours(13,0,0);
+    
+
+
+    window["plugins"].OneSignal.getIds(function (ids) {
+      var notificationObj = {
+
+        contents: { en: mensaje },
+        include_player_ids: [ids.userId],
+        send_after: date,
+      };
+
+      window["plugins"].OneSignal.postNotification(notificationObj,
+        function (successResponse) {
+          console.log("Notification Post Success:", successResponse);
+        },
+        function (failedResponse) {
+          console.log("Notification Post Failed: ", failedResponse);
+          alert("Notification Post Failed:\n" + JSON.stringify(failedResponse));
+        }
+      );
+    });          
   }
 }

@@ -4,7 +4,7 @@ import { MenuController, NavController, Slides } from 'ionic-angular';
 
 import { Storage } from '@ionic/storage';
 
-import { SchedulePage } from '../schedule/schedule';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-tutorial',
@@ -23,7 +23,7 @@ export class TutorialPage {
   ) { }
 
   startApp() {
-    this.navCtrl.push(SchedulePage).then(() => {
+    this.navCtrl.push(LoginPage).then(() => {
       this.storage.set('hasSeenTutorial', 'true');
     })
   }

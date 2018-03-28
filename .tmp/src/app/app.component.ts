@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 
-import { Events, MenuController, Nav, Platform } from 'ionic-angular';
+import { Events, MenuController, Nav, Platform, AlertController } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Storage } from '@ionic/storage';
@@ -12,12 +12,13 @@ import { LoginPage } from '../pages/login/login';
 //import { SignupPage } from '../pages/signup/signup';
 //import { TabsPage } from '../pages/tabs-page/tabs-page';
 import { TutorialPage } from '../pages/tutorial/tutorial';
-//import { SchedulePage } from '../pages/schedule/schedule';
+import { SchedulePage } from '../pages/schedule/schedule';
 //import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 //import { SupportPage } from '../pages/support/support';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
+import { OneSignal } from '@ionic-native/onesignal';
 
 export interface PageInterface {
   title: string;
@@ -29,7 +30,6 @@ export interface PageInterface {
   tabName?: string;
   tabComponent?: any;
 }
-
 
 @Component({
   templateUrl: 'app.template.html'
@@ -59,6 +59,7 @@ export class ConferenceApp {
    // { title: 'Signup', name: 'SignupPage', component: SignupPage, icon: 'person-add' }
   ];
   rootPage: any;
+  session: any;
 
   constructor(
     public events: Events,
@@ -67,19 +68,33 @@ export class ConferenceApp {
     public platform: Platform,
     public confData: ConferenceData,
     public storage: Storage,
-    public splashScreen: SplashScreen
-  ) {
+    public splashScreen: SplashScreen,
+    public alertCtrl: AlertController,
+    private oneSignal: OneSignal
 
+  ) {
+    console.log(this.storage.get('hasSeenTutorial'));
+    console.log(this.storage.get('user'));
     // Check if the user has already seen the tutorial
     this.storage.get('hasSeenTutorial')
       .then((hasSeenTutorial) => {
         if (hasSeenTutorial) {
-          this.rootPage = LoginPage;
+          this.storage.get('user')
+            .then((user) => {
+              if (user) {
+                this.rootPage = SchedulePage;
+              } else {
+                this.rootPage = LoginPage;
+              }
+              this.platformReady()
+            });
         } else {
+          console.log(2);
           this.rootPage = TutorialPage;
         }
         this.platformReady()
       });
+
 
     // load the conference data
     confData.load();
@@ -148,7 +163,25 @@ export class ConferenceApp {
     // Call any initial plugins when ready
     this.platform.ready().then(() => {
       this.splashScreen.hide();
+
+      this.handlerNotifications();
     });
+  }
+
+  private handlerNotifications() {
+    this.oneSignal.startInit('4758999e-2df7-4638-93ac-40ad27392935', '350404005595');
+    this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
+    this.oneSignal.handleNotificationOpened()
+      .subscribe(jsonData => {
+        let alert = this.alertCtrl.create({
+          title: jsonData.notification.payload.title + "llega",
+          subTitle: jsonData.notification.payload.body,
+          buttons: ['OK']
+        });
+        alert.present();
+        console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+      });
+    this.oneSignal.endInit();
   }
 
   isActive(page: PageInterface) {
@@ -167,4 +200,7 @@ export class ConferenceApp {
     }
     return;
   }
+
+
+
 }

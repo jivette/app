@@ -1,7 +1,7 @@
 [
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xhdpi_ic_action_next_item.png.flat",
@@ -41,7 +41,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable_notification_tile_bg.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable/notification_tile_bg.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable/notification_tile_bg.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xhdpi_ic_action_remove.png.flat",
@@ -53,7 +53,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xhdpi_ic_warning.png.flat",
@@ -93,7 +93,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/color_common_google_signin_btn_text_dark.xml.flat",
@@ -117,7 +117,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/menu_select_action_menu.xml.flat",
@@ -125,19 +125,19 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout-v21_notification_template_icon_group.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/layout-v21/notification_template_icon_group.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/layout-v21/notification_template_icon_group.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_template_big_media_custom.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/a3877e499af9610d67fd1be41e5966fb/res/layout/notification_template_big_media_custom.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1920bf5281f476fd4004af6588ab995c/res/layout/notification_template_big_media_custom.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-hdpi-v4_googleg_standard_color_18.png.flat",
@@ -173,7 +173,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/mipmap-mdpi_icon.png.flat",
@@ -184,12 +184,16 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/xwalk_core_library-22.52.561.4.aar/84034ca26f65a6d26e57b6ba110d811a/res/drawable-hdpi/bubble.9.png"
     },
     {
+        "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_onesignal_bgimage_notif_layout.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/OneSignal-3.8.3.aar/684771469d929ca2b800466c0c5d3633/res/layout/onesignal_bgimage_notif_layout.xml"
+    },
+    {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/raw_wifidirect_api.js.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/xwalk_core_library-22.52.561.4.aar/84034ca26f65a6d26e57b6ba110d811a/res/raw/wifidirect_api.js"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xxhdpi_verify_checkmark.png.flat",
@@ -197,7 +201,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_template_big_media_narrow.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/a3877e499af9610d67fd1be41e5966fb/res/layout/notification_template_big_media_narrow.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1920bf5281f476fd4004af6588ab995c/res/layout/notification_template_big_media_narrow.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable_common_google_signin_btn_icon_disabled.xml.flat",
@@ -221,15 +225,15 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_template_part_chronometer.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/layout/notification_template_part_chronometer.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/layout/notification_template_part_chronometer.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable_common_google_signin_btn_text_dark_normal.xml.flat",
@@ -249,7 +253,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_template_big_media.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/a3877e499af9610d67fd1be41e5966fb/res/layout/notification_template_big_media.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1920bf5281f476fd4004af6588ab995c/res/layout/notification_template_big_media.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable_dropdown_label_color.xml.flat",
@@ -269,7 +273,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/mipmap-xxhdpi_icon.png.flat",
@@ -277,7 +281,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout-v21_notification_action_tombstone.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/layout-v21/notification_action_tombstone.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/layout-v21/notification_action_tombstone.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-v21_button_compat.xml.flat",
@@ -285,11 +289,11 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout-v21_notification_action.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/layout-v21/notification_action.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/layout-v21/notification_action.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_template_lines_media.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/a3877e499af9610d67fd1be41e5966fb/res/layout/notification_template_lines_media.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1920bf5281f476fd4004af6588ab995c/res/layout/notification_template_lines_media.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xxhdpi-v4_googleg_standard_color_18.png.flat",
@@ -310,6 +314,10 @@
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-port-hdpi_screen.png.flat",
         "source": "/home/ivette/Documentos/alex/app/platforms/android/app/src/main/res/drawable-port-hdpi/screen.png"
+    },
+    {
+        "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-mdpi-v4_ic_os_notification_fallback_white_24dp.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/OneSignal-3.8.3.aar/684771469d929ca2b800466c0c5d3633/res/drawable-mdpi-v4/ic_os_notification_fallback_white_24dp.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xxhdpi_ic_warning.png.flat",
@@ -337,11 +345,11 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-v21_notification_action_background.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-v21/notification_action_background.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-v21/notification_action_background.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xxxhdpi_ic_menu_share_holo_light.png.flat",
@@ -369,7 +377,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout-v16_notification_template_custom_big.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/layout-v16/notification_template_custom_big.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/layout-v16/notification_template_custom_big.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xhdpi-v4_common_google_signin_btn_text_dark_normal_background.9.png.flat",
@@ -377,7 +385,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_template_media.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/a3877e499af9610d67fd1be41e5966fb/res/layout/notification_template_media.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1920bf5281f476fd4004af6588ab995c/res/layout/notification_template_media.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xxhdpi_ic_action_remove.png.flat",
@@ -397,7 +405,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_template_media_custom.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/a3877e499af9610d67fd1be41e5966fb/res/layout/notification_template_media_custom.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1920bf5281f476fd4004af6588ab995c/res/layout/notification_template_media_custom.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xhdpi_ic_action_previous_item.png.flat",
@@ -432,12 +440,24 @@
         "source": "/root/.gradle/caches/transforms-1/files-1.1/xwalk_core_library-22.52.561.4.aar/84034ca26f65a6d26e57b6ba110d811a/res/raw/xwalk_100_percent.pak"
     },
     {
+        "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/raw_consumer_onesignal_keep.xml.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/OneSignal-3.8.3.aar/684771469d929ca2b800466c0c5d3633/res/raw/consumer_onesignal_keep.xml"
+    },
+    {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-hdpi_dropdown_popup_background_down.9.png.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/xwalk_core_library-22.52.561.4.aar/84034ca26f65a6d26e57b6ba110d811a/res/drawable-hdpi/dropdown_popup_background_down.9.png"
     },
     {
+        "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/xml_localnotification_provider_paths.xml.flat",
+        "source": "/home/ivette/Documentos/alex/app/platforms/android/app/src/main/res/xml/localnotification_provider_paths.xml"
+    },
+    {
+        "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xxxhdpi-v4_ic_os_notification_fallback_white_24dp.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/OneSignal-3.8.3.aar/684771469d929ca2b800466c0c5d3633/res/drawable-xxxhdpi-v4/ic_os_notification_fallback_white_24dp.png"
+    },
+    {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout-v21_notification_template_custom_big.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/layout-v21/notification_template_custom_big.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/layout-v21/notification_template_custom_big.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-mdpi-v4_googleg_standard_color_18.png.flat",
@@ -445,11 +465,11 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_template_icon_group.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/layout/notification_template_icon_group.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/layout/notification_template_icon_group.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable_notification_bg_low.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable/notification_bg_low.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable/notification_bg_low.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-hdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",
@@ -481,7 +501,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable_notification_bg.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable/notification_bg.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable/notification_bg.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-hdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
@@ -533,7 +553,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-hdpi-v4/notification_bg_normal.9.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xxhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
@@ -548,8 +568,12 @@
         "source": "/home/ivette/Documentos/alex/app/platforms/android/app/src/main/res/drawable-xxhdpi/ic_action_next_item.png"
     },
     {
+        "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xhdpi-v4_ic_os_notification_fallback_white_24dp.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/OneSignal-3.8.3.aar/684771469d929ca2b800466c0c5d3633/res/drawable-xhdpi-v4/ic_os_notification_fallback_white_24dp.png"
+    },
+    {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_media_cancel_action.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/a3877e499af9610d67fd1be41e5966fb/res/layout/notification_media_cancel_action.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1920bf5281f476fd4004af6588ab995c/res/layout/notification_media_cancel_action.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xhdpi-v4_common_google_signin_btn_text_light_normal_background.9.png.flat",
@@ -557,7 +581,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_media_action.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/a3877e499af9610d67fd1be41e5966fb/res/layout/notification_media_action.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1920bf5281f476fd4004af6588ab995c/res/layout/notification_media_action.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/raw_xwalk.pak.flat",
@@ -565,7 +589,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_template_big_media_narrow_custom.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.1.0.aar/a3877e499af9610d67fd1be41e5966fb/res/layout/notification_template_big_media_narrow_custom.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-media-compat-26.1.0.aar/1920bf5281f476fd4004af6588ab995c/res/layout/notification_template_big_media_narrow_custom.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout-v17_autofill_keyboard_accessory_item.xml.flat",
@@ -605,11 +629,15 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_action.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/layout/notification_action.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/layout/notification_action.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable_common_google_signin_btn_text_dark.xml.flat",
         "source": "/root/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/2df38729311ac60170ae015ab4ce64f8/res/drawable/common_google_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xxhdpi-v4_ic_os_notification_fallback_white_24dp.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/OneSignal-3.8.3.aar/684771469d929ca2b800466c0c5d3633/res/drawable-xxhdpi-v4/ic_os_notification_fallback_white_24dp.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xhdpi-v4_common_full_open_on_phone.png.flat",
@@ -621,7 +649,11 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-hdpi-v4_ic_os_notification_fallback_white_24dp.png.flat",
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/OneSignal-3.8.3.aar/684771469d929ca2b800466c0c5d3633/res/drawable-hdpi-v4/ic_os_notification_fallback_white_24dp.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable_common_google_signin_btn_icon_light.xml.flat",
@@ -629,7 +661,7 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable-hdpi_verify_checkmark.png.flat",
@@ -673,15 +705,15 @@
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/drawable_notification_icon_background.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/drawable/notification_icon_background.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/drawable/notification_icon_background.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_action_tombstone.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/layout/notification_action_tombstone.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/layout/notification_action_tombstone.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout_notification_template_part_time.xml.flat",
-        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.0.aar/47b938a4e70f4bda88958ea851f6382c/res/layout/notification_template_part_time.xml"
+        "source": "/root/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/79af224e1f5eaabd945eba614dddd0a6/res/layout/notification_template_part_time.xml"
     },
     {
         "merged": "/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/res/merged/x86_64/debug/layout-v17_color_picker_advanced_component.xml.flat",
