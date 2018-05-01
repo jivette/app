@@ -5,7 +5,8 @@ import { ModalPageEditPage } from '../modal-page-edit/modal-page-edit';
 import { Storage } from '@ionic/storage';
 import { SchedulePage } from '../schedule/schedule';
 //import { LocalNotifications } from '@ionic-native/local-notifications';
- 
+import { GlobalProvider } from '../../providers/global/global';
+
 /**
  * Generated class for the FacturaEditPage page.
  *
@@ -21,33 +22,64 @@ import { SchedulePage } from '../schedule/schedule';
 export class FacturaEditPage {
   //selectedItem: any;
 
-
+  today: String = new Date().toISOString();
+  dateNow: any;
   proveedores: any[] = [];
+  dayCont: any[] = [];
   tokenCode:any;
+  newDate:any;
+  diff:any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public billCreateProvider: BillCreateProvider, public modalCtrl: ModalController,
     public storage: Storage,
     public toastCtrl: ToastController,
+    public globalProvider: GlobalProvider
     //public platform: Platform,
    // private localNotifications: LocalNotifications
   ) {
+    this.today = new Date().toISOString();
     this.data = navParams.get('data');
 
     this.storage.get('token').then((token) => {
       this.tokenCode = JSON.parse(token);
     });
 
+    this.globalProvider.showLogout = false;
   }
+
   data = {
     id: "",
     token: ""
   };
 
-
+  ionViewWillEnter() {
+    this.globalProvider.showLogout = false;
+  }
   showModal() {
     let modal = this.modalCtrl.create(ModalPageEditPage);
     modal.present();
+  }
+
+  onChange(event){
+    this.dateNow = new Date();
+    event = new Date(event);
+
+    let valor = event - this.dateNow;
+    this.diff = valor / (1000 * 60 * 60 * 24);
+    this.diff = Math.round(this.diff);
+    
+    this.calculate(this.diff);
+  }
+ 
+  calculate(diff){
+    this.dayCont = [];
+    if(diff > 31){
+      diff = 31;
+    }
+    for (let index = 1; index <= diff; index++) {
+      this.dayCont.push({ id: index });
+    }
   }
 
   ionViewDidLoad() {
@@ -58,6 +90,7 @@ export class FacturaEditPage {
    
     if (this.data.id == "") {
       this.showModal();
+      this.calculate(31);
     }
   }
 
@@ -142,7 +175,7 @@ export class FacturaEditPage {
 
 
   alertNotification(dataNoti){
-    let nombre = dataNoti.nombre_factura;
+    let nombre = dataNoti.nombre;
     let mensaje = "¡Tu factura " + nombre + " está próxima a vencer!";
     let fecha_pago = dataNoti.fecha_pago;
     fecha_pago = fecha_pago.replace("-", "/");
@@ -153,7 +186,6 @@ export class FacturaEditPage {
 
     date.setDate(dayOfMonth - dias);
     date.setHours(13,0,0);
-    alert(date);
     
 
 

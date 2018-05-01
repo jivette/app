@@ -15,8 +15,9 @@ import { FacturaEditPage } from '../factura-edit/factura-edit';
 import { LoginPage } from '../login/login';
 import { Storage } from '@ionic/storage';
 import { BillCreateProvider } from '../../providers/bill-create/bill-create';
+import { GlobalProvider } from '../../providers/global/global';
 var SchedulePage = (function () {
-    function SchedulePage(navCtrl, alertCtrl, billCreateProvider, storage, viewCtrl, toastCtrl, platform) {
+    function SchedulePage(navCtrl, alertCtrl, billCreateProvider, storage, viewCtrl, toastCtrl, platform, globalProvider) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.alertCtrl = alertCtrl;
@@ -25,7 +26,9 @@ var SchedulePage = (function () {
         this.viewCtrl = viewCtrl;
         this.toastCtrl = toastCtrl;
         this.platform = platform;
+        this.globalProvider = globalProvider;
         this.getfacturas = [];
+        this.globalProvider.showLogout = false;
         this.messageAvatarHome = "¡Hola, este es tu dashboard!";
         this.statusCanceladas = false;
         platform.registerBackButtonAction(function () {
@@ -52,6 +55,7 @@ var SchedulePage = (function () {
     }
     SchedulePage.prototype.ionViewWillEnter = function () {
         this.viewCtrl.showBackButton(false);
+        this.globalProvider.showLogout = false;
     };
     SchedulePage.prototype.ionViewDidLoad = function () {
         var _this = this;
@@ -231,7 +235,8 @@ var SchedulePage = (function () {
             Storage,
             ViewController,
             ToastController,
-            Platform])
+            Platform,
+            GlobalProvider])
     ], SchedulePage);
     return SchedulePage;
 }());

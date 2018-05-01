@@ -10,72 +10,46 @@
 		      <ion-item class="item-no-factura">
   		        <ion-label>No:</ion-label>
 		          <ion-input required class="no-factura" type="number" [(ngModel)]="data.no_factura" name="no_factura"></ion-input>
-		      </ion-item>
+		        </ion-item>
 
+				<ion-item>
+					<ion-label>Nombre de factura:</ion-label>
+					<ion-input required type="text" [(ngModel)]="data.nombre" name="nombre"></ion-input>
+				</ion-item>
+
+				<ion-list>
 					<ion-item>
-						<ion-label>Nombre de factura:</ion-label>
-						<ion-input required type="text" [(ngModel)]="data.nombre" name="nombre"></ion-input>
+						<ion-label>Provedor</ion-label>
+								<ion-select required [(ngModel)]="data.proveedor_id" name="proveedor_id">
+									<ion-option value="{{proveedor.id}}" *ngFor="let proveedor of proveedores">{{proveedor.nombre}}</ion-option>
+								</ion-select>
 					</ion-item>
+				</ion-list>
+
+				<ion-item>
+					<ion-label>No. Servicio:</ion-label>
+					<ion-input type="number" required [(ngModel)]="data.no_servicio" name="no_servicio"></ion-input>
+				</ion-item>
+
+		        <ion-item> 
+		       		<ion-label>Fecha de pago:</ion-label>
+					<ion-datetime 
+					monthNames="Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, 
+					Agosto, Septiembre, Octubre, Noviembre, Diciembre" 
+					displayFormat="MMMM DD YYYY" cancelText="Cancelar" 
+					doneText="Seleccionar" [(ngModel)]="data.fecha_pago" 
+					name="fecha_pago" required min="{{today}}"
+					(ngModelChange)="onChange($event)">
+					</ion-datetime>
+				</ion-item>
 
 					<ion-list>
-						<ion-item>
-							<ion-label>Provedor</ion-label>
-									<ion-select required [(ngModel)]="data.proveedor_id" name="proveedor_id">
-										<ion-option value="{{proveedor.id}}" *ngFor="let proveedor of proveedores">{{proveedor.nombre}}</ion-option>
-									</ion-select>
-						</ion-item>
-					</ion-list>
-
-					<ion-item>
-						<ion-label>No. Servicio:</ion-label>
-						<ion-input type="number" required [(ngModel)]="data.no_servicio" name="no_servicio"></ion-input>
-					</ion-item>
-
-		      <ion-item>
-		        <ion-label>Fecha de pago:</ion-label>
-							<ion-datetime 
-							monthNames="Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, 
-							Agosto, Septiembre, Octubre, Noviembre, Diciembre" 
-							displayFormat="MMMM DD YYYY" cancelText="Cancelar" doneText="Seleccionar"
-							[(ngModel)]="data.fecha_pago" 
-							name="fecha_pago" required>
-							</ion-datetime>
-		      </ion-item>
-
-					<ion-list>
-						<ion-item>
+						<ion-item> 
 							<ion-label>Recuerdame</ion-label>
 							<ion-select [(ngModel)]="data.dias" name="dias" required>
-								<ion-option value="1">1 días antes</ion-option>
-								<ion-option value="2">2 días antes</ion-option>
-								<ion-option value="3">3 días antes</ion-option>
-								<ion-option value="4">4 días antes</ion-option>
-								<ion-option value="5">5 días antes</ion-option>
-								<ion-option value="6">6 días antes</ion-option>
-								<ion-option value="7">7 días antes</ion-option>
-								<ion-option value="8">8 días antes</ion-option>
-								<ion-option value="9">9 días antes</ion-option>
-								<ion-option value="10">10 días antes</ion-option>
-								<ion-option value="11">11 días antes</ion-option>
-								<ion-option value="12">12 días antes</ion-option>
-								<ion-option value="13">13 días antes</ion-option>
-								<ion-option value="14">14 días antes</ion-option>
-								<ion-option value="15">15 días antes</ion-option>
-								<ion-option value="16">16 días antes</ion-option>
-								<ion-option value="17">17 días antes</ion-option>
-								<ion-option value="18">18 días antes</ion-option>
-								<ion-option value="19">19 días antes</ion-option>
-								<ion-option value="20">20 días antes</ion-option>
-								<ion-option value="21">21 días antes</ion-option>
-								<ion-option value="22">22 días antes</ion-option>
-								<ion-option value="23">23 días antes</ion-option>
-								<ion-option value="24">24 días antes</ion-option>
-								<ion-option value="25">25 días antes</ion-option>
-								<ion-option value="26">26 días antes</ion-option>
-								<ion-option value="27">27 días antes</ion-option>
-								<ion-option value="28">28 días antes</ion-option>
-								<ion-option value="29">29 días antes</ion-option>
-								<ion-option value="30">30 días antes</ion-option>
+								<ion-option value="{{cont.id}}" *ngFor="let cont of dayCont" >
+									{{cont.id}} días antes
+								</ion-option>
 							</ion-select>
 
 							<!--ion-label>En cuantos días te recuerdo</ion-label>

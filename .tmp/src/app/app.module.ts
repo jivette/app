@@ -36,6 +36,7 @@ import { BillCreateProvider } from '../providers/bill-create/bill-create';
 
 import { ModalPageEditPage } from '../pages/modal-page-edit/modal-page-edit';
 import { OneSignal } from '@ionic-native/onesignal';
+import { GlobalProvider } from '../providers/global/global';
 
 @NgModule({
   declarations: [
@@ -99,7 +100,8 @@ import { OneSignal } from '@ionic-native/onesignal';
     AnimationService,
     GetUserProvider,
     BillCreateProvider,
-    OneSignal
+    OneSignal,
+    GlobalProvider
   ]
 })
 export class AppModule { }

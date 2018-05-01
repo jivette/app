@@ -9,6 +9,7 @@ import { FacturaEditPage } from '../factura-edit/factura-edit';
 import { LoginPage } from '../login/login';
 import { Storage } from '@ionic/storage';
 import { BillCreateProvider } from '../../providers/bill-create/bill-create';
+import { GlobalProvider } from '../../providers/global/global';
 
 
 @Component({
@@ -34,8 +35,10 @@ export class SchedulePage {
     public storage: Storage,
     public viewCtrl: ViewController,
     public toastCtrl: ToastController,
-    public platform: Platform
+    public platform: Platform,
+    public globalProvider: GlobalProvider
   ){
+    this.globalProvider.showLogout = false;
 
     this.messageAvatarHome = "¡Hola, este es tu dashboard!";
     this.statusCanceladas = false;
@@ -68,6 +71,7 @@ export class SchedulePage {
 
   ionViewWillEnter() {
     this.viewCtrl.showBackButton(false);  
+    this.globalProvider.showLogout = false;
   }
 
   ionViewDidLoad() {

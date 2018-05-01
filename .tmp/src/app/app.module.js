@@ -35,6 +35,7 @@ import { GetUserProvider } from '../providers/get-user/get-user';
 import { BillCreateProvider } from '../providers/bill-create/bill-create';
 import { ModalPageEditPage } from '../pages/modal-page-edit/modal-page-edit';
 import { OneSignal } from '@ionic-native/onesignal';
+import { GlobalProvider } from '../providers/global/global';
 var AppModule = (function () {
     function AppModule() {
     }
@@ -101,7 +102,8 @@ var AppModule = (function () {
                 AnimationService,
                 GetUserProvider,
                 BillCreateProvider,
-                OneSignal
+                OneSignal,
+                GlobalProvider
             ]
         })
     ], AppModule);

@@ -93,7 +93,7 @@ var ConferenceApp = (function () {
         else {
             // Set the root of the nav with params if it's a tab index
             this.nav.setRoot(page.name, params).catch(function (err) {
-                console.log("Didn't set nav root: " + err);
+                console.log(err);
             });
         }
         if (page.logsOut === true) {
@@ -135,7 +135,7 @@ var ConferenceApp = (function () {
         this.oneSignal.handleNotificationOpened()
             .subscribe(function (jsonData) {
             var alert = _this.alertCtrl.create({
-                title: jsonData.notification.payload.title + "llega",
+                title: jsonData.notification.payload.title,
                 subTitle: jsonData.notification.payload.body,
                 buttons: ['OK']
             });

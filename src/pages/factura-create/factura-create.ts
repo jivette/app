@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController, Events } from 'io
 import { FacturaEditPage } from '../factura-edit/factura-edit';
 import { BillCreateProvider } from '../../providers/bill-create/bill-create';
 import { Storage } from '@ionic/storage';
+import { GlobalProvider } from '../../providers/global/global';
 
 /**
  * Generated class for the FacturaCreatePage page.
@@ -34,9 +35,12 @@ export class FacturaCreatePage {
     public alertCtrl: AlertController, 
     public billCreateProvider: BillCreateProvider, 
     public evts: Events,
-    public storage: Storage
+    public storage: Storage,
+    public globalProvider: GlobalProvider
   ) {
     
+    this.globalProvider.showLogout = false;
+
     this.storage.get('avatar').then((avatar) => {
       this.dir = JSON.parse(avatar);
     });
@@ -59,6 +63,7 @@ export class FacturaCreatePage {
       this.stepCondition = true;
 
     });
+
   }
 
   onFinish() {
@@ -80,7 +85,7 @@ export class FacturaCreatePage {
     return this.stepCondition ? 'unlock' : 'lock';
   }
 
-  getIconStep3() {
+  getIconStep3() { 
     return this.stepCondition ? 'happy' : 'sad';
   }
   getLikeIcon() {
@@ -88,11 +93,17 @@ export class FacturaCreatePage {
   }
 
   textChange(e) {
+    
     if (e.target.value && e.target.value.trim() !== '') {
       this.stepCondition = true;
     } else {
       this.stepCondition = false;
     }
+    
+    
+    //var k = e.keyCode;
+    //alert(k);
+    //return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
   }
   
   selectProvider() {
@@ -105,8 +116,11 @@ export class FacturaCreatePage {
       data: this.data
     });
   }
-
+  ionViewWillEnter() {
+    this.globalProvider.showLogout = false;
+  }
   ionViewDidLoad() {
+
     this.storage.get('proveedores').then((proveedores) => {
       this.proveedores = JSON.parse(proveedores);
       console.log(this.proveedores);
@@ -114,6 +128,21 @@ export class FacturaCreatePage {
     
   }
 
+
+
+      check(e) {
+        let tecla = (document.all) ? e.keyCode : e.which;
+
+        //Tecla de retroceso para borrar, siempre la permite
+        if (tecla == 8) {
+          return true;
+        }
+
+        // Patron de entrada, en este caso solo acepta numeros y letras
+        let patron = /[A-Za-z0-9]/;
+        let tecla_final = String.fromCharCode(tecla);
+        return patron.test(tecla_final);
+      }
 
 }
   

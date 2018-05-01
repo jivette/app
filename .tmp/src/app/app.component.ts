@@ -126,7 +126,7 @@ export class ConferenceApp {
     } else {
       // Set the root of the nav with params if it's a tab index
       this.nav.setRoot(page.name, params).catch((err: any) => {
-        console.log(`Didn't set nav root: ${err}`);
+        console.log(err);
       });
     }
 
@@ -174,7 +174,7 @@ export class ConferenceApp {
     this.oneSignal.handleNotificationOpened()
       .subscribe(jsonData => {
         let alert = this.alertCtrl.create({
-          title: jsonData.notification.payload.title + "llega",
+          title: jsonData.notification.payload.title,
           subTitle: jsonData.notification.payload.body,
           buttons: ['OK']
         });

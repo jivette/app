@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 import { GetUserProvider } from '../../providers/get-user/get-user';
 import { Storage } from '@ionic/storage';
 import { SchedulePage } from '../schedule/schedule';
+import { GlobalProvider } from '../../providers/global/global';
 
 /**
  * Generated class for the SettingsPage page.
@@ -32,9 +33,11 @@ export class SettingsPage {
     public navParams: NavParams,
     public storage: Storage,
     public toastCtrl: ToastController,
-    public getUserProvider: GetUserProvider
+    public getUserProvider: GetUserProvider, 
+    public globalProvider: GlobalProvider
     ) {
 
+    this.globalProvider.showLogout = true;
 
     //this.image = "ella";
     //this.animator = animationService.builder();

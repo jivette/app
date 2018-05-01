@@ -126,7 +126,7 @@ export class ConferenceApp {
     } else {
       // Set the root of the nav with params if it's a tab index
       this.nav.setRoot(page.name, params).catch((err: any) => {
-        console.log(`Didn't set nav root: ${err}`);
+        console.log(err);
       });
     }
 

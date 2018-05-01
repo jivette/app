@@ -12,6 +12,7 @@ import { NavController, NavParams, AlertController, Events } from 'ionic-angular
 import { FacturaEditPage } from '../factura-edit/factura-edit';
 import { BillCreateProvider } from '../../providers/bill-create/bill-create';
 import { Storage } from '@ionic/storage';
+import { GlobalProvider } from '../../providers/global/global';
 /**
  * Generated class for the FacturaCreatePage page.
  *
@@ -19,7 +20,7 @@ import { Storage } from '@ionic/storage';
  * Ionic pages and navigation.
  */
 var FacturaCreatePage = (function () {
-    function FacturaCreatePage(navCtrl, navParams, alertCtrl, billCreateProvider, evts, storage) {
+    function FacturaCreatePage(navCtrl, navParams, alertCtrl, billCreateProvider, evts, storage, globalProvider) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
@@ -27,10 +28,12 @@ var FacturaCreatePage = (function () {
         this.billCreateProvider = billCreateProvider;
         this.evts = evts;
         this.storage = storage;
+        this.globalProvider = globalProvider;
         this.data = {
             id: ""
         };
         this.proveedores = [];
+        this.globalProvider.showLogout = false;
         this.storage.get('avatar').then(function (avatar) {
             _this.dir = JSON.parse(avatar);
         });
@@ -81,6 +84,9 @@ var FacturaCreatePage = (function () {
         else {
             this.stepCondition = false;
         }
+        //var k = e.keyCode;
+        //alert(k);
+        //return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
     };
     FacturaCreatePage.prototype.selectProvider = function () {
         //  this.data.proveedor = e;
@@ -91,6 +97,9 @@ var FacturaCreatePage = (function () {
             data: this.data
         });
     };
+    FacturaCreatePage.prototype.ionViewWillEnter = function () {
+        this.globalProvider.showLogout = false;
+    };
     FacturaCreatePage.prototype.ionViewDidLoad = function () {
         var _this = this;
         this.storage.get('proveedores').then(function (proveedores) {
@@ -98,16 +107,28 @@ var FacturaCreatePage = (function () {
             console.log(_this.proveedores);
         });
     };
+    FacturaCreatePage.prototype.check = function (e) {
+        var tecla = (document.all) ? e.keyCode : e.which;
+        //Tecla de retroceso para borrar, siempre la permite
+        if (tecla == 8) {
+            return true;
+        }
+        // Patron de entrada, en este caso solo acepta numeros y letras
+        var patron = /[A-Za-z0-9]/;
+        var tecla_final = String.fromCharCode(tecla);
+        return patron.test(tecla_final);
+    };
     FacturaCreatePage = __decorate([
         Component({
-            selector: 'page-factura-create',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/factura-create/factura-create.html"*/'\n<ion-content>\n  <global-header></global-header>\n    \n  <ion-row class="avatar-square">\n    <img src="assets/img/{{dir}}/personaje.png"/>\n\n    <ion-simple-wizard [(step)]="step" [showSteps]="false" (finish)="onFinish()" [finishIcon]="\'done-all\'" [(stepCondition)]="stepCondition">\n      <ion-wizard-step>\n        <ion-card class="card-wizard">\n          <ion-card-content>\n            <p>\n              Selecciona un proveedor\n              <ion-list>\n                <ion-item>\n                  <ion-select [(ngModel)]="data.proveedor_id" name="proveedor_id" (ionChange)="selectProvider()">\n                    <ion-option value="{{proveedor.id}}" *ngFor="let proveedor of proveedores">{{proveedor.nombre}}</ion-option>\n                  </ion-select>\n\n                </ion-item>\n              </ion-list>\n            </p>\n          </ion-card-content>\n        </ion-card>\n      </ion-wizard-step>\n      <ion-wizard-step>\n        <ion-card class="card-wizard">\n          <ion-card-content>\n            <p>\n              Nombre de factura\n              <ion-list>\n                <ion-item style="height: 35px;">\n                  <ion-input [(ngModel)]="data.nombre" name="nombre" (input)="textChange($event)" type="text" placeholder=""></ion-input>\n                </ion-item>\n              </ion-list>\n            </p>\n          </ion-card-content>\n        </ion-card>\n      </ion-wizard-step>\n\n    </ion-simple-wizard>\n\n  </ion-row>\n\n\n \n</ion-content>'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/factura-create/factura-create.html"*/,
+            selector: 'page-factura-create',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/factura-create/factura-create.html"*/'\n<ion-content>\n  <global-header></global-header>\n    \n  <ion-row class="avatar-square">\n    <img src="assets/img/{{dir}}/personaje.png"/>\n\n    <ion-simple-wizard [(step)]="step" [showSteps]="false" (finish)="onFinish()" [finishIcon]="\'done-all\'" [(stepCondition)]="stepCondition">\n      <ion-wizard-step>\n        <ion-card class="card-wizard">\n          <ion-card-content>\n            <p>\n              Selecciona un proveedor\n              <ion-list>\n                <ion-item>\n                  <ion-select [(ngModel)]="data.proveedor_id" name="proveedor_id" (ionChange)="selectProvider()">\n                    <ion-option value="{{proveedor.id}}" *ngFor="let proveedor of proveedores">{{proveedor.nombre}}</ion-option>\n                  </ion-select>\n\n                </ion-item>\n              </ion-list>\n            </p>\n          </ion-card-content>\n        </ion-card>\n      </ion-wizard-step>\n      <ion-wizard-step>\n        <ion-card class="card-wizard">\n          <ion-card-content>\n            <p>\n              Nombre de factura\n              <ion-list>\n                <ion-item style="height: 35px;">\n                  <ion-input [(ngModel)]="data.nombre" name="nombre" (keyup)="textChange($event)" type="text" placeholder=""></ion-input>\n                </ion-item>\n              </ion-list>\n            </p>\n          </ion-card-content>\n        </ion-card>\n      </ion-wizard-step>\n\n    </ion-simple-wizard>\n\n  </ion-row>\n\n\n \n</ion-content>'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/factura-create/factura-create.html"*/,
         }),
         __metadata("design:paramtypes", [NavController,
             NavParams,
             AlertController,
             BillCreateProvider,
             Events,
-            Storage])
+            Storage,
+            GlobalProvider])
     ], FacturaCreatePage);
     return FacturaCreatePage;
 }());

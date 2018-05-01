@@ -12,6 +12,7 @@ import { NavController, NavParams, ToastController } from 'ionic-angular';
 import { GetUserProvider } from '../../providers/get-user/get-user';
 import { Storage } from '@ionic/storage';
 import { SchedulePage } from '../schedule/schedule';
+import { GlobalProvider } from '../../providers/global/global';
 /**
  * Generated class for the SettingsPage page.
  *
@@ -19,15 +20,17 @@ import { SchedulePage } from '../schedule/schedule';
  * Ionic pages and navigation.
  */
 var SettingsPage = (function () {
-    function SettingsPage(navCtrl, navParams, storage, toastCtrl, getUserProvider) {
+    function SettingsPage(navCtrl, navParams, storage, toastCtrl, getUserProvider, globalProvider) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.storage = storage;
         this.toastCtrl = toastCtrl;
         this.getUserProvider = getUserProvider;
+        this.globalProvider = globalProvider;
         this.classSelector = "active";
         this.name = "";
+        this.globalProvider.showLogout = true;
         //this.image = "ella";
         //this.animator = animationService.builder();
         this.storage.get('token').then(function (token) {
@@ -105,7 +108,8 @@ var SettingsPage = (function () {
             NavParams,
             Storage,
             ToastController,
-            GetUserProvider])
+            GetUserProvider,
+            GlobalProvider])
     ], SettingsPage);
     return SettingsPage;
 }());

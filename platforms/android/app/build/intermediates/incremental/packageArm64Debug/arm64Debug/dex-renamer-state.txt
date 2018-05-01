@@ -1,4 +1,4 @@
-#Mon Mar 26 21:32:12 CST 2018
+#Sat Apr 14 21:08:59 CST 2018
 base.0=/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/transforms/dexMerger/arm64/debug/0
 renamed.0=classes.dex
 file.0=/home/ivette/Documentos/alex/app/platforms/android/app/build/intermediates/transforms/dexMerger/arm64/debug/0/classes.dex

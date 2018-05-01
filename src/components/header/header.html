@@ -8,8 +8,8 @@
       </button>
     </ion-buttons>
 
-    <ion-buttons end>
-    <button ion-button icon-only (click)="logoutGoogle()">
+    <ion-buttons end *ngIf="globalProvider.showLogout">
+    <button ion-button class="logoutBtn" icon-only (click)="logoutGoogle()">
       <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon>
     </button>
     </ion-buttons>
