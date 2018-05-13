@@ -7,6 +7,8 @@ import { SchedulePage } from '../schedule/schedule';
 //import { LocalNotifications } from '@ionic-native/local-notifications';
 import { GlobalProvider } from '../../providers/global/global';
 
+import { LocalNotifications } from '@ionic-native/local-notifications';
+import { SpinnerDialog } from '@ionic-native/spinner-dialog';
 /**
  * Generated class for the FacturaEditPage page.
  *
@@ -21,8 +23,9 @@ import { GlobalProvider } from '../../providers/global/global';
 })
 export class FacturaEditPage {
   //selectedItem: any;
-
-  today: String = new Date().toISOString();
+  tomorrow = new Date();
+  
+  today: String;
   dateNow: any;
   proveedores: any[] = [];
   dayCont: any[] = [];
@@ -34,11 +37,16 @@ export class FacturaEditPage {
     public billCreateProvider: BillCreateProvider, public modalCtrl: ModalController,
     public storage: Storage,
     public toastCtrl: ToastController,
-    public globalProvider: GlobalProvider
+    public globalProvider: GlobalProvider,
+    private localNotifications: LocalNotifications,
+    private spinnerDialog: SpinnerDialog
     //public platform: Platform,
    // private localNotifications: LocalNotifications
   ) {
-    this.today = new Date().toISOString();
+    this.tomorrow.setDate(this.tomorrow.getDate() + 2);
+    this.today = this.tomorrow.toISOString();
+
+    //this.today = new Date().toISOString();
     this.data = navParams.get('data');
 
     this.storage.get('token').then((token) => {
@@ -95,6 +103,8 @@ export class FacturaEditPage {
   }
 
   save(){
+    this.spinnerDialog.show();
+
     this.data.token = this.tokenCode;
 
     console.log("save");
@@ -109,12 +119,13 @@ export class FacturaEditPage {
           console.log(data);
           if (data.code == 200) {
 
-            this.alertNotification(this.data);
+            this.createAlertNotification(data.factura_actual);
 
             let val = JSON.stringify(data.facturas);
             this.storage.set('facturas', val);
 
             //this.notification();
+            this.spinnerDialog.hide();
 
             let toast = this.toastCtrl.create({
               message: 'Has creado tu factura',
@@ -138,19 +149,25 @@ export class FacturaEditPage {
         }
       );
     } else {
-      console.log("editar");
-      console.log(this.data);
-
       this.billCreateProvider.updateBill(this.data)
       .subscribe(
         (data) => { // Success
           console.log(data);
           if (data.code == 200) {
+         
+            this.createAlertNotification(data.factura_actual);
+
             let toast = this.toastCtrl.create({
               message: 'Se ha actualizado con éxito',
               duration: 3000,
               position: 'top'
             });
+
+
+            let updateVal = JSON.stringify(data.facturas);
+            this.storage.set('facturas', updateVal);
+            this.spinnerDialog.hide();
+
 
             toast.onDidDismiss(() => {
               console.log('Dismissed toast');
@@ -174,22 +191,21 @@ export class FacturaEditPage {
 
 
 
-  alertNotification(dataNoti){
-    let nombre = dataNoti.nombre;
+  createAlertNotification(factura_actual){
+    let nombre = factura_actual.nombre;
     let mensaje = "¡Tu factura " + nombre + " está próxima a vencer!";
-    let fecha_pago = dataNoti.fecha_pago;
+    let fecha_pago = factura_actual.fecha_pago;
     fecha_pago = fecha_pago.replace("-", "/");
 
-    let dias = dataNoti.dias;
+    let dias = factura_actual.dias;
     let date = new Date(fecha_pago);
     let dayOfMonth = date.getDate();
 
     date.setDate(dayOfMonth - dias);
     date.setHours(13,0,0);
     
-
-
-    window["plugins"].OneSignal.getIds(function (ids) {
+    alert(date);
+    /*window["plugins"].OneSignal.getIds(function (ids) {
       var notificationObj = {
 
         contents: { en: mensaje },
@@ -206,6 +222,17 @@ export class FacturaEditPage {
           alert("Notification Post Failed:\n" + JSON.stringify(failedResponse));
         }
       );
-    });          
+    }); */
+    
+//    let now = new Date(new Date().getTime() + 25000);
+    this.localNotifications.schedule({
+      id: factura_actual.id,
+      text: mensaje,
+      trigger: { at: date },
+      icon: '../assets/img/logo.png'
+    });
+
+
   }
+  
 }

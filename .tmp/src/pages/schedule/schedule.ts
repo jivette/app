@@ -10,6 +10,7 @@ import { LoginPage } from '../login/login';
 import { Storage } from '@ionic/storage';
 import { BillCreateProvider } from '../../providers/bill-create/bill-create';
 import { GlobalProvider } from '../../providers/global/global';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 
 @Component({
@@ -36,7 +37,9 @@ export class SchedulePage {
     public viewCtrl: ViewController,
     public toastCtrl: ToastController,
     public platform: Platform,
-    public globalProvider: GlobalProvider
+    public globalProvider: GlobalProvider,
+    private localNotifications: LocalNotifications
+
   ){
     this.globalProvider.showLogout = false;
 
@@ -126,12 +129,13 @@ export class SchedulePage {
       data: factura
     });
   }
+
   cancelBill(estado){
     estado = {
       uuid: estado.uuid,
       estado_id: 2,
       token: this.tokenCode
-    };
+    }; 
     
 
     let alertCancel = this.alertCtrl.create({
@@ -153,6 +157,12 @@ export class SchedulePage {
                 (data) => { // Success
                   console.log(data);
                   if (data.code == 200) {
+                    
+                    this.localNotifications.cancel(data.factura_actual.id).then(function (result) {
+                      console.log(result);
+                    });
+                    
+
                     let val = JSON.stringify(data.facturas);
                     this.storage.set('facturas', val);
 
@@ -226,6 +236,10 @@ export class SchedulePage {
                 (data) => { // Success
                   console.log(data);
                   if (data.code == 200) {
+                    this.localNotifications.cancel(data.factura_actual.id).then(function (result) {
+                      console.log(result);
+                    });
+
                     let val = JSON.stringify(data.facturas);
                     this.storage.set('facturas', val);
 

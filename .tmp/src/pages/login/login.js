@@ -13,13 +13,15 @@ import { SchedulePage } from '../schedule/schedule';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Storage } from '@ionic/storage';
 import { GetUserProvider } from '../../providers/get-user/get-user';
+import { SpinnerDialog } from '@ionic-native/spinner-dialog';
 var LoginPage = (function () {
-    function LoginPage(navCtrl, googlePlus, getUserProvider, alertCtrl, storage) {
+    function LoginPage(navCtrl, googlePlus, getUserProvider, alertCtrl, storage, spinnerDialog) {
         this.navCtrl = navCtrl;
         this.googlePlus = googlePlus;
         this.getUserProvider = getUserProvider;
         this.alertCtrl = alertCtrl;
         this.storage = storage;
+        this.spinnerDialog = spinnerDialog;
     }
     LoginPage.prototype.loginGoogle = function () {
         var _this = this;
@@ -34,6 +36,7 @@ var LoginPage = (function () {
                 };
                 var userStorage = JSON.stringify(_this.user);
                 _this.storage.set('user', userStorage);
+                _this.spinnerDialog.show();
                 _this.getUserProvider.getUser(_this.user)
                     .subscribe(function (data) {
                     console.log(data);
@@ -54,6 +57,8 @@ var LoginPage = (function () {
                         _this.storage.set('facturas', val);
                         var proveedores = JSON.stringify(data.proveedores);
                         _this.storage.set('proveedores', proveedores);
+                        _this.spinner = false;
+                        _this.spinnerDialog.hide();
                         _this.navCtrl.push(SchedulePage);
                     }
                     else {
@@ -73,13 +78,14 @@ var LoginPage = (function () {
     };
     LoginPage = __decorate([
         Component({
-            selector: 'page-user',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/login/login.html"*/'<ion-content>\n	<div class="logo">\n		<div class="logo-cont">\n			<img src="assets/img/logo.png" alt="Ionic logo">\n		</div>\n	</div>\n\n	<ion-row responsive-xs>\n		<h1>¡Bienvenido!</h1>\n		<h6>Inicia sesión para empezar</h6>\n	</ion-row>\n\n	<ion-row responsive-xs>\n		<ion-col>\n			<button ion-button (click)="loginGoogle()" color="danger" block>\n				<ion-icon ios="logo-googleplus" md="logo-googleplus"></ion-icon>\n 				Iniciar sesión\n			</button>\n		</ion-col>\n	</ion-row>\n</ion-content>\n'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/login/login.html"*/
+            selector: 'page-user',template:/*ion-inline-start:"/home/ivette/Documentos/alex/app/src/pages/login/login.html"*/'<ion-content>\n	<div class="logo">\n		<div class="logo-cont">\n			<img src="assets/img/logo.png" alt="Ionic logo">\n		</div>\n	</div>\n\n	<ion-row responsive-xs>\n		<h1>¡Bienvenido!</h1>\n		<h6>Inicia sesión para empezar</h6>\n	</ion-row>\n\n	<ion-row responsive-xs>\n		<ion-col>\n			<button ion-button (click)="loginGoogle()" color="danger" block>\n				<ion-icon ios="logo-googleplus" md="logo-googleplus"></ion-icon>\n 				Iniciar sesión\n			</button>\n		</ion-col>\n	</ion-row>\n</ion-content>\n\n'/*ion-inline-end:"/home/ivette/Documentos/alex/app/src/pages/login/login.html"*/
         }),
         __metadata("design:paramtypes", [NavController,
             GooglePlus,
             GetUserProvider,
             AlertController,
-            Storage])
+            Storage,
+            SpinnerDialog])
     ], LoginPage);
     return LoginPage;
 }());

@@ -16,8 +16,9 @@ import { LoginPage } from '../login/login';
 import { Storage } from '@ionic/storage';
 import { BillCreateProvider } from '../../providers/bill-create/bill-create';
 import { GlobalProvider } from '../../providers/global/global';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 var SchedulePage = (function () {
-    function SchedulePage(navCtrl, alertCtrl, billCreateProvider, storage, viewCtrl, toastCtrl, platform, globalProvider) {
+    function SchedulePage(navCtrl, alertCtrl, billCreateProvider, storage, viewCtrl, toastCtrl, platform, globalProvider, localNotifications) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.alertCtrl = alertCtrl;
@@ -27,6 +28,7 @@ var SchedulePage = (function () {
         this.toastCtrl = toastCtrl;
         this.platform = platform;
         this.globalProvider = globalProvider;
+        this.localNotifications = localNotifications;
         this.getfacturas = [];
         this.globalProvider.showLogout = false;
         this.messageAvatarHome = "¡Hola, este es tu dashboard!";
@@ -125,6 +127,9 @@ var SchedulePage = (function () {
                             .subscribe(function (data) {
                             console.log(data);
                             if (data.code == 200) {
+                                _this.localNotifications.cancel(data.factura_actual.id).then(function (result) {
+                                    console.log(result);
+                                });
                                 var val = JSON.stringify(data.facturas);
                                 _this.storage.set('facturas', val);
                                 _this.localFacturas = data.facturas;
@@ -187,6 +192,9 @@ var SchedulePage = (function () {
                             .subscribe(function (data) {
                             console.log(data);
                             if (data.code == 200) {
+                                _this.localNotifications.cancel(data.factura_actual.id).then(function (result) {
+                                    console.log(result);
+                                });
                                 var val = JSON.stringify(data.facturas);
                                 _this.storage.set('facturas', val);
                                 _this.localFacturas = data.facturas;
@@ -236,7 +244,8 @@ var SchedulePage = (function () {
             ViewController,
             ToastController,
             Platform,
-            GlobalProvider])
+            GlobalProvider,
+            LocalNotifications])
     ], SchedulePage);
     return SchedulePage;
 }());

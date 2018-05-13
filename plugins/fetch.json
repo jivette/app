@@ -82,7 +82,7 @@
   "cordova-plugin-local-notification": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-local-notification"
+      "id": "cordova-plugin-local-notification@^0.9.0-beta.2"
     },
     "is_top_level": true,
     "variables": {}
@@ -99,6 +99,14 @@
     "source": {
       "type": "registry",
       "id": "onesignal-cordova-plugin"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-native-spinner": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-native-spinner@^1.1.3"
     },
     "is_top_level": true,
     "variables": {}

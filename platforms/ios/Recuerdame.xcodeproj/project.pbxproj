@@ -62,6 +62,7 @@
 		BA18EBC690674BC3842D4D88 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFE5BF8773848069505214F /* UserNotifications.framework */; };
 		165F17C39EA740C1B672E65A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943BDEDE514B45FE9815A8DE /* CoreLocation.framework */; };
 		80895DDB32AC47E48EF9F1F5 /* OneSignalPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CEDAC4154140D78674CE62 /* OneSignalPush.m */; };
+		E59F7B834BA34B2B828A2217 /* CDVSpinnerDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A712296891448D4847DCC19 /* CDVSpinnerDialog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +181,8 @@
 		943BDEDE514B45FE9815A8DE /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		96CEDAC4154140D78674CE62 /* OneSignalPush.m */ = {isa = PBXFileReference; name = "OneSignalPush.m"; path = "onesignal-cordova-plugin/OneSignalPush.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		2C4B2E6EC4634DEC9BE28660 /* OneSignalPush.h */ = {isa = PBXFileReference; name = "OneSignalPush.h"; path = "onesignal-cordova-plugin/OneSignalPush.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		5A712296891448D4847DCC19 /* CDVSpinnerDialog.m */ = {isa = PBXFileReference; name = "CDVSpinnerDialog.m"; path = "cordova-plugin-native-spinner/CDVSpinnerDialog.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		115DA5E7032B4633A0275192 /* CDVSpinnerDialog.h */ = {isa = PBXFileReference; name = "CDVSpinnerDialog.h"; path = "cordova-plugin-native-spinner/CDVSpinnerDialog.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +380,8 @@
 				BA3F5DD5ECDD4F30BCECD136 /* UNNotificationRequest+APPLocalNotification.h */,
 				96CEDAC4154140D78674CE62 /* OneSignalPush.m */,
 				2C4B2E6EC4634DEC9BE28660 /* OneSignalPush.h */,
+				5A712296891448D4847DCC19 /* CDVSpinnerDialog.m */,
+				115DA5E7032B4633A0275192 /* CDVSpinnerDialog.h */,
 			);
 			name = Plugins;
 			path = "Recuerdame/Plugins";
@@ -519,6 +524,7 @@
 				5C2E5A36AF864468923C7D22 /* UNUserNotificationCenter+APPLocalNotification.m in Sources */,
 				4862B34440934C629A791538 /* UNNotificationRequest+APPLocalNotification.m in Sources */,
 				80895DDB32AC47E48EF9F1F5 /* OneSignalPush.m in Sources */,
+				E59F7B834BA34B2B828A2217 /* CDVSpinnerDialog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,6 +44,9 @@
     },
     "onesignal-cordova-plugin": {
       "PACKAGE_NAME": "com.ionicframework.terecuerdo"
+    },
+    "cordova-plugin-native-spinner": {
+      "PACKAGE_NAME": "com.ionicframework.terecuerdo"
     }
   },
   "dependent_plugins": {

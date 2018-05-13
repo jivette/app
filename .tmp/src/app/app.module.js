@@ -36,6 +36,8 @@ import { BillCreateProvider } from '../providers/bill-create/bill-create';
 import { ModalPageEditPage } from '../pages/modal-page-edit/modal-page-edit';
 import { OneSignal } from '@ionic-native/onesignal';
 import { GlobalProvider } from '../providers/global/global';
+import { LocalNotifications } from '@ionic-native/local-notifications';
+import { SpinnerDialog } from '@ionic-native/spinner-dialog';
 var AppModule = (function () {
     function AppModule() {
     }
@@ -103,7 +105,9 @@ var AppModule = (function () {
                 GetUserProvider,
                 BillCreateProvider,
                 OneSignal,
-                GlobalProvider
+                GlobalProvider,
+                LocalNotifications,
+                SpinnerDialog
             ]
         })
     ], AppModule);

@@ -4,7 +4,7 @@ import { SchedulePage } from '../schedule/schedule';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Storage } from '@ionic/storage';
 import { GetUserProvider } from '../../providers/get-user/get-user';
-
+import { SpinnerDialog } from '@ionic-native/spinner-dialog';
 @Component({
   selector: 'page-user',
   templateUrl: 'login.html'
@@ -17,11 +17,13 @@ export class LoginPage {
     private googlePlus: GooglePlus, 
     public getUserProvider: GetUserProvider,
     private alertCtrl: AlertController,
-    public storage: Storage) { }
+    public storage: Storage,
+    private spinnerDialog: SpinnerDialog) { }
 
   responseGoogle:any;
   user:any;
   avatar:any;
+  spinner:any;
 
   loginGoogle(){
     this.googlePlus.login({})
@@ -38,6 +40,7 @@ export class LoginPage {
         let userStorage = JSON.stringify(this.user);
         this.storage.set('user', userStorage);
 
+        this.spinnerDialog.show();
         this.getUserProvider.getUser(this.user)
           .subscribe(
             (data) => { // Success
@@ -62,6 +65,9 @@ export class LoginPage {
 
                 let proveedores = JSON.stringify(data.proveedores);
                 this.storage.set('proveedores', proveedores);
+                
+                this.spinner = false;
+                this.spinnerDialog.hide();
 
                 this.navCtrl.push(SchedulePage);
               } else {
